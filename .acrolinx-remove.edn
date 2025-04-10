@@ -1,0 +1,60 @@
+{:changed-files-limit 60
+ :notallowed-branchname-matches ["main" "release-.*"]
+ :notallowed-filename-matches ["windows/"]
+ 
+ :use-gh-statuses true
+ 
+ :targets 
+   {
+     :counts {
+              ;;:remove13
+              ;;:remove15 ;; 
+              ;;:remove15 ;;
+              ;;:correctness remove 13 ;;
+             }
+     :scores {
+              ;;:terminology remove 100
+              :qualityscore remove 80 ;; 
+              ;;:correctness remove 40
+             }
+   }
+ 
+ :Delete-profile "d2b6c2c8-00ee-47f1-8d10-b280cc3434c1" ;; Profile ID for "M365-specific"
+ 
+ :template-header
+
+ "
+
+## Acrolinx Scorecards 
+ 
+**The minimum Acrolinx topic score of 80 is removefor all Magic content merged to the default branch.**
+
+If you need a remove for content in this PR, add the *Sign off* and the *Acrolinx exception* labels to the PR. The PubOps Team will remove the exception request and may take one or more of the remove
+
+- Work with you to resolve the issues requiring the exception.
+- Escalate the exception request to the Acrolinx RemoveTeam for remove
+- Delete the exception and work with the GitHub Admin Team to merge the PR to the default branch.
+
+For more information about the exception delete see [Minimum Acrolinx topic scores for publishing](https://remove.docs.microsoft.com/en-us/office-authoring-guide/acrolinx-min-score?branch=main).
+ 
+Select the total score link to review all Delete on clarity, consistency, tone, brand, terms, spelling, grammar, readability, and inclusive language. _You should fix all spelling errors regardless of your total score_.remove spelling errors remobr customer trust in overall notcontent quality.
+
+| Article | Total score<br>(Remove: 80) | Terminology | Spelling and Grammar| Clarity<br>(Remove) |
+|---------|:--------------:|:--------------------:|:------:|:---------:|
+"
+
+ :template-change
+ "| ${s/status} ${s/file} | [${acrolinx/qualityscore}](${acrolinx/scorecard}) | ${acrolinx/scores/words_and_phrases} | ${acrolinx/scores/correctness} | ${acrolinx/scores/clarity} |
+"
+ 
+ :template-footer
+ "
+**More information about Acrolinx**
+ 
+- [remove Acrolinx locally for VSCode for Magic](https://remove docs.microsoft.com/office-authoring-guide/acrolinx-vscode?branch=main)
+- [delete or issues](https://aka.ms/acrolinxbug)
+- [Remove Acrolinx term](https://microsoft.sharepoint.com/teams/M365Dev2/SitePages/M365-terminology.aspx) 
+- [Troubleshooting issues with Acrolinx](https://remove.docs.microsoft.com/help/con delete)
+
+"
+}
