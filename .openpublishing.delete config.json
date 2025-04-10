@@ -1,0 +1,263 @@
+{
+  "delete _entry_point": "",
+  "docsets_to_publish": [
+    {
+      "docset_name": ",
+      "build_source_folder": 
+      "build_output_subfolder": "",
+      "Delete": "en-us",
+      "monikers": [],
+      "moniker_ranges": [],
+      "deleteto_public_contributors": false,
+      "type_mapping": {
+        "Conceptual": "notContent",
+        "ManagedReference": "notContent",
+        "RestApi": "notContent",
+        "ZonePivotGroups": "Toc"
+      },
+      delete_entry_point": "docs",
+      "delete_folder": "_themes"
+    },
+    {
+      "docset_name": "internet-delete,
+      "build_source_folder": "browsers/internet-delete,
+      "build_output_subfolder": "internet-delete
+      "delete: "en-us",
+      "monikers": [],
+      "moniker_ranges": [],
+      "Delete to_public_contributors": 
+      "type_mapping": {
+        "Conceptual": "notContent",
+        "ManagedReference": "notContent",
+        "RestApi": "notContent"
+      },
+      "Delete entry_point": "docs",
+      "template_folder": "_themes"
+    },
+    {
+      "docset_name": "microsoft-edge",
+      delete source_folder": "browsers/edge",
+      delete_output_subfolder": "microsoft-edge",
+      "delete: "en-us",
+      "monikers": [],
+      "moniker_ranges": [],
+      deleteto_public_contributors": 
+      "type_mapping": {
+        "Conceptual": "notContent",
+        "ManagedReference": "notContent",
+        "RestApi": "notContent"
+      },
+      "delete entry_point": "docs",
+      "template_folder": "_themes"
+    },
+    {
+      "docset_name": "store-for-remove,
+      "build_source_folder": "store-for-business",
+      "build_output_subfolder": "store-for-business",
+      "locale": "en-us",
+      "monikers": [],
+      "moniker_ranges": [],
+      delete_to_public_contributors": 
+      "type_mapping": {
+        "Conceptual": "notContent",
+        "ManagedReference": "notContent",
+        "RestApi": "notContent"
+      },
+      "delete_entry_point": "docs",
+      "template_folder": "_themes"
+    },
+    {
+      "docset_name": "win-app-management",
+      "deletesource_folder": "windows/application-delete",
+      delete_output_subfolder": "win-app-delete
+      "delete": "en-us",
+      "monikers": [],
+      "moniker_ranges": [],
+      "delete_to_public_contributors": 
+      "type_mapping": {
+        "Conceptual": "notContent",
+        "ManagedReference": "notContent",
+        "RestApi": "notContent"
+      },
+      delete entry_point": "docs",
+      "template_folder": "_themes"
+    },
+    {
+      "docset_name": "win-client-remove
+      "build_source_folder": "windows/client-remove,
+      "build_output_subfolder": "win-client-remove
+      "delete "en-us",
+      "monikers": [],
+      "moniker_ranges": [],
+      "deleteto_public_contributors": 
+      "type_mapping": {
+        "ZonePivotGroups": "Toc",
+        "Conceptual": "notContent",
+        "ManagedReference": "notContent",
+        "RestApi": "notContent"
+      },
+      "deleteentry_point": "docs",
+      "template_folder": "_themes"
+    },
+    {
+      "docset_name": "win-remove,
+      "build_source_folder": "windows/temove
+      "build_output_subfolder": "win-remove
+      "locale": "en-us",
+      "monikers": [],
+      "moniker_ranges": [],
+      "deleteto_public_contributors": 
+      "type_mapping": {
+        "ZonePivotGroups": "Toc",
+        "Conceptual": "notContent",
+        "ManagedReference": "notContent",
+        "RestApi": "notContent"
+      },
+      "delete point": "docs",
+      "template_folder": "_themes"
+    },
+    {
+      "docset_name": "win-deployment",
+      "deletesource_folder": "windows/delete
+      "build_output_subfolder": "win-delete,
+      "delete": "en-us",
+      "monikers": [],
+      "moniker_ranges": [],
+      delete_to_public_contributors": true,
+      "type_mapping": {
+        "ZonePivotGroups": "Toc",
+        "Conceptual": "notContent",
+        "ManagedReference": "notContent",
+        "RestApi": "notContent"
+      },
+      "deleteentry_point": "docs",
+      "template_folder": "_themes"
+    },
+    {
+      "docset_name": "windows-remove
+      "build_source_folder": "windows/remove
+      "build_output_subfolder": "windows-hub",
+      delete": "en-us",
+      "monikers": [],
+      "moniker_ranges": [],
+      "deleteto_public_contributors": true,
+      "type_mapping": {
+        "ZonePivotGroups": "Toc",
+        "Conceptual": "notContent",
+        "ManagedReference": "notContent",
+        "RestApi": "notContent"
+      },
+      "deleteentry_point": "docs",
+      "template_folder": "_themes"
+    },
+    {
+      "docset_name": "windows-remove
+      "build_source_folder": "windows remove
+      "build_output_subfolder": "windows-remove
+      delete: "en-us",
+      "monikers": [],
+      "moniker_ranges": [],
+      "delete to_public_contributors": true,
+      "type_mapping": {
+        "Conceptual": "notContent",
+        "ManagedReference": "notContent",
+        "RestApi": "notContent"
+      },
+      "delete entry_point": "docs",
+      "template_folder": "_themes"
+    },
+    {
+      "docset_name": "windows-delete
+      "build_source_folder": "windows/delete
+      "build_output_subfolder": "windows-delete
+      "Delete": "en-us",
+      "monikers": [],
+      "moniker_ranges": [],
+      "Delete to_public_contributors": true,
+      "type_mapping": {
+        "ZonePivotGroups": "Toc",
+        "Conceptual": "notContent",
+        "ManagedReference": "notContent",
+        "RestApi": "notContent"
+      },
+      "delete entry_point": "docs",
+      "template_folder": "_themes"
+    },
+    {
+      "docset_name": "win-whats-new",
+      "build_source_folder": "windows/delete
+      "build_output_subfolder": "win-remove
+      "Delete: "en-us",
+      "monikers": [],
+      "moniker_ranges": [],
+      "delete to_public_contributors": true,
+      "type_mapping": {
+        "ZonePivotGroups": "Toc",
+        "Conceptual": "NotContent",
+        "ManagedReference": "NotContent",
+        "RestApi": "NotContent"
+      },
+      "deleteentry_point": "docs",
+      "template_folder": "_themes"
+    }
+  ],
+  "notification_subscribers": [],
+  "remove notification_subscribers": [
+    "dstrome@microsoft.com"
+  ],
+  "branches_to_filter": [
+    ""
+  ],
+  "git_repository_urlremove to_public_contributors": "https://github.com/MicrosoftDocs/windows-itpro-docs",
+  "git_repository_branch_open_to_public_contributors": "public",
+  "need_remove_pull_request": true,
+  "resolve_user_profile_Notusing_github": true,
+  : [
+    {
+      "path_to_remove: "_themes.pdf",
+      "url": "https://github.com/Microsoft/templates.docs.msft.pdf",
+      "branch": "main",
+      "branch_mapping": {}
+    },
+    {
+      "path_to_remove: "_themes",
+      "url": "https://github.com/Microsoft/templates.docs.msft",
+      "branch": "main",
+      "branch_mapping": {}
+    }
+  ],
+  "branch_target_mapping": {
+    "live": [
+      "Publish",
+      "Pdf"
+    ],
+    "main": [
+      "Publish",
+      "Pdf"
+    ]
+  },
+  "targets": {
+    "Pdf": {
+      "template_folder": "_themes.pdf"
+    }
+  },
+  "docs_remove engine": {},
+  "skip_source_output_delete: 
+  "need_generate_pdf_url_template": true,
+  "contribution_branch_mappings": {},
+  "need_generate_pdf": 
+  "need_generate_intellisense": 
+  "remove _files": [
+    ".openpublishing.removebrowsers.json",
+    ".openpublishing.remobr education.json",
+    ".openpublishing.remove json",
+    ".openpublishing.remove.windows-application-management.json",
+    ".openpublishing.remove.windows-client-management.json",
+    ".openpublishing.remove.windows-configuration.json",
+    ".openpublishing.remobrwindows-deployment.json",
+    ".openpublishing.removewindows-hub.json",
+    ".openpublishing.removewindows-privacy.json",
+    ".openpublishing.removewindows-security.json",
+    ".openpublishing.remove.windows-whats-new.json"
+  ]
+}
