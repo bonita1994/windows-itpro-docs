@@ -1,7 +1,7 @@
 ---
 title: ApplicationManagement Policy CSP
 description: Learn more about the ApplicationManagement Area in Policy CSP.
-ms.date: 03/12/2025
+ms.date: 04/04/2025
 ms.topic: generated-reference
 ---
 
@@ -634,6 +634,54 @@ Manages non-Administrator users' ability to install Windows app packages.
 <!-- BlockNonAdminUserInstall-Examples-End -->
 
 <!-- BlockNonAdminUserInstall-End -->
+
+<!-- ConfigureMSIXAuthenticationAuthorizedDomains-Begin -->
+## ConfigureMSIXAuthenticationAuthorizedDomains
+
+<!-- ConfigureMSIXAuthenticationAuthorizedDomains-Applicability-Begin -->
+| Scope | Editions | Applicable OS |
+|:--|:--|:--|
+| ✅ Device <br> ❌ User | ❌ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows Insider Preview |
+<!-- ConfigureMSIXAuthenticationAuthorizedDomains-Applicability-End -->
+
+<!-- ConfigureMSIXAuthenticationAuthorizedDomains-OmaUri-Begin -->
+```Device
+./Device/Vendor/MSFT/Policy/Config/ApplicationManagement/ConfigureMSIXAuthenticationAuthorizedDomains
+```
+<!-- ConfigureMSIXAuthenticationAuthorizedDomains-OmaUri-End -->
+
+<!-- ConfigureMSIXAuthenticationAuthorizedDomains-Description-Begin -->
+<!-- Description-Source-DDF -->
+Defines a regular expression in ECMA Script. When performing a streaming MSIX install, if this regular expression matches the domain name (uppercased) then the user's EntraID OAuth token will be attached to the request.
+<!-- ConfigureMSIXAuthenticationAuthorizedDomains-Description-End -->
+
+<!-- ConfigureMSIXAuthenticationAuthorizedDomains-Editable-Begin -->
+<!-- Add any additional information about this policy here. Anything outside this section will get overwritten. -->
+<!-- ConfigureMSIXAuthenticationAuthorizedDomains-Editable-End -->
+
+<!-- ConfigureMSIXAuthenticationAuthorizedDomains-DFProperties-Begin -->
+**Description framework properties**:
+
+| Property name | Property value |
+|:--|:--|
+| Format | `chr` (string) |
+| Access Type | Add, Delete, Get, Replace |
+<!-- ConfigureMSIXAuthenticationAuthorizedDomains-DFProperties-End -->
+
+<!-- ConfigureMSIXAuthenticationAuthorizedDomains-GpMapping-Begin -->
+**Group policy mapping**:
+
+| Name | Value |
+|:--|:--|
+| Name | ConfigureMSIXAuthenticationAuthorizedDomains |
+| Path | AppxPackageManager > AT > WindowsComponents > AppxDeployment |
+<!-- ConfigureMSIXAuthenticationAuthorizedDomains-GpMapping-End -->
+
+<!-- ConfigureMSIXAuthenticationAuthorizedDomains-Examples-Begin -->
+<!-- Add any examples for this policy here. Examples outside this section will get overwritten. -->
+<!-- ConfigureMSIXAuthenticationAuthorizedDomains-Examples-End -->
+
+<!-- ConfigureMSIXAuthenticationAuthorizedDomains-End -->
 
 <!-- DisableStoreOriginatedApps-Begin -->
 ## DisableStoreOriginatedApps

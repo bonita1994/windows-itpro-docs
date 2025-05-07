@@ -1,7 +1,7 @@
 ---
 title: Windows quality update end user experience
 description: This article explains the Windows quality update end user experience
-ms.date: 11/04/2024
+ms.date: 03/31/2025
 ms.service: windows-client
 ms.subservice: autopatch
 ms.topic: article
@@ -16,8 +16,6 @@ ms.collection:
 ---
 
 # Windows quality update end user experience
-
-[!INCLUDE [windows-autopatch-applies-to-all-licenses](../includes/windows-autopatch-applies-to-all-licenses.md)]
 
 ## User notifications
 
@@ -68,10 +66,10 @@ In the following example:
 :::image type="content" source="../media/windows-quality-update-grace-period.png" alt-text="Windows quality update grace period" lightbox="../media/windows-quality-update-grace-period.png":::
 
 > [!TIP]
-> For optimal end-user experience, the recommeded settings are 2-day Deadline and 3-day Grace Period for update deployments.
+> For optimal end-user experience, the recommended settings are 2-day Deadline and 3-day Grace Period for update deployments.
 
 ## Minimize user disruption due to updates
 
-Windows Autopatch understands the importance of not disrupting end users but also updating the devices quickly. To achieve this goal, updates are automatically downloaded and installed at an optimal time determined by the device. By default, [Active hours](/windows/client-management/mdm/policy-csp-update#activehoursstart) are configured dynamically based on device usage patterns. Device restarts occur outside of active hours until the deadline is reached. 
+Windows Autopatch understands the importance of not disrupting end users but also updating the devices quickly. To achieve this goal, updates are automatically downloaded and installed at an optimal time determined by the device. By default, [Active hours](/windows/client-management/mdm/policy-csp-update#activehoursstart) are configured dynamically based on device usage patterns. Device restarts occur outside of active hours until the deadline is reached.
 
-Windows Autopatch doesn't modify the existing Windows Update notifications. If you wish to modify the end-user update notification experience, see [Use CSPs and MDMs to configure Windows Update for Business](/windows/deployment/update/waas-wufb-csp-mdm).
+Windows Autopatch doesn't modify the existing Windows Update notifications. If you wish to modify the end-user update notification experience, see [Use CSPs and MDMs to configure Windows Update client policies](/windows/deployment/update/waas-wufb-csp-mdm).

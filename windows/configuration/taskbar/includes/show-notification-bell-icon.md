@@ -18,6 +18,4 @@ This policy setting allows you to show the notification bell icon in the system 
 |  | Path |
 |--|--|
 | **CSP** |- `./User/Vendor/MSFT/Policy/Config/Start/`[AlwaysShowNotificationIcon](/windows/client-management/mdm/policy-csp-start#AlwaysShowNotificationIcon) |
-| **GPO** |- **User Configuration** > **Administrative Templates** > **Start Menu and Taskbar** |
-
-<!-- not linked yet as it's in Insider>
+| **GPO** |- **User Configuration** > **Administrative Templates** > **Start Menu and Taskbar** > **Show notification bell icon** |

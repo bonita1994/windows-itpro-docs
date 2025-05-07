@@ -61,8 +61,10 @@
           href: mcc-ent-uninstall-cache-node.md     
       - name: Resources
         items:
-        - name: Frequent Asked Questions
+        - name: Frequently Asked Questions
           href: mcc-ent-faq.yml
+        - name: Connected Cache secure content delivery
+          href: mcc-ent-secure-content-delivery.md
         - name: Troubleshooting
           href: mcc-ent-troubleshooting.md
         - name: Microsoft Connected Cache for Enterprise and Education early preview

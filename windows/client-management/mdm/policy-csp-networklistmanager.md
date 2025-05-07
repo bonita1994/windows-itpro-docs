@@ -1,7 +1,7 @@
 ---
 title: NetworkListManager Policy CSP
 description: Learn more about the NetworkListManager Area in Policy CSP.
-ms.date: 03/12/2025
+ms.date: 04/30/2025
 ms.topic: generated-reference
 ---
 
@@ -20,7 +20,7 @@ ms.topic: generated-reference
 <!-- AllNetworks_NetworkIcon-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 24H2 [10.0.26100] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 22H2 with [KB5053657](https://support.microsoft.com/help/5053657) [10.0.22621.5126] and later <br> ✅ Windows 11, version 24H2 [10.0.26100] and later |
 <!-- AllNetworks_NetworkIcon-Applicability-End -->
 
 <!-- AllNetworks_NetworkIcon-OmaUri-Begin -->
@@ -69,7 +69,7 @@ This policy setting allows you to specify whether users can change the network i
 <!-- AllNetworks_NetworkLocation-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 24H2 [10.0.26100] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 22H2 with [KB5053657](https://support.microsoft.com/help/5053657) [10.0.22621.5126] and later <br> ✅ Windows 11, version 24H2 [10.0.26100] and later |
 <!-- AllNetworks_NetworkLocation-Applicability-End -->
 
 <!-- AllNetworks_NetworkLocation-OmaUri-Begin -->
@@ -118,7 +118,7 @@ This policy setting allows you to specify whether users can change the network l
 <!-- AllNetworks_NetworkName-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 24H2 [10.0.26100] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 22H2 with [KB5053657](https://support.microsoft.com/help/5053657) [10.0.22621.5126] and later <br> ✅ Windows 11, version 24H2 [10.0.26100] and later |
 <!-- AllNetworks_NetworkName-Applicability-End -->
 
 <!-- AllNetworks_NetworkName-OmaUri-Begin -->
@@ -261,7 +261,7 @@ This policy setting provides the string that names a network. If this setting is
 <!-- IdentifyingNetworks_LocationType-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 24H2 [10.0.26100] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 22H2 with [KB5053657](https://support.microsoft.com/help/5053657) [10.0.22621.5126] and later <br> ✅ Windows 11, version 24H2 [10.0.26100] and later |
 <!-- IdentifyingNetworks_LocationType-Applicability-End -->
 
 <!-- IdentifyingNetworks_LocationType-OmaUri-Begin -->
@@ -310,7 +310,7 @@ This policy setting allows you to configure the Network Location for networks th
 <!-- UnidentifiedNetworks_LocationType-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 24H2 [10.0.26100] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 22H2 with [KB5053657](https://support.microsoft.com/help/5053657) [10.0.22621.5126] and later <br> ✅ Windows 11, version 24H2 [10.0.26100] and later |
 <!-- UnidentifiedNetworks_LocationType-Applicability-End -->
 
 <!-- UnidentifiedNetworks_LocationType-OmaUri-Begin -->
@@ -359,7 +359,7 @@ This policy setting allows you to configure the Network Location type for networ
 <!-- UnidentifiedNetworks_UserPermissions-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 24H2 [10.0.26100] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 22H2 with [KB5053657](https://support.microsoft.com/help/5053657) [10.0.22621.5126] and later <br> ✅ Windows 11, version 24H2 [10.0.26100] and later |
 <!-- UnidentifiedNetworks_UserPermissions-Applicability-End -->
 
 <!-- UnidentifiedNetworks_UserPermissions-OmaUri-Begin -->

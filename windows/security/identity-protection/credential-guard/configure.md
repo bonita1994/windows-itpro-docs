@@ -212,7 +212,7 @@ The following event indicates whether TPM is used for key protection. Path: `App
   :::column-end:::
 :::row-end:::
 
-If you're running with a TPM, the TPM PCR mask value is something other than 0.
+The TPM PCR mask is only relevant when SRTM is used. If the cached Copy status is 1, SRTM was not used - typically indicating DRTM is in use - and the PCR mask should be ignored.
 
 ## Disable Credential Guard
 

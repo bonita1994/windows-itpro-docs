@@ -1,7 +1,7 @@
 ---
 title: Windows quality and feature update reports overview
 description: This article details the types of reports available and info about update device eligibility, device update health, device update trends in Windows Autopatch.
-ms.date: 03/03/2025
+ms.date: 03/31/2025
 ms.service: windows-client
 ms.subservice: autopatch
 ms.topic: overview
@@ -16,8 +16,6 @@ ms.collection:
 ---
 
 # Windows quality and feature update reports overview
-
-[!INCLUDE [windows-autopatch-enterprise-e3-f3-licenses](../includes/windows-autopatch-enterprise-e3-f3-licenses.md)]
 
 ## Prerequisites
 
@@ -72,7 +70,9 @@ Users with the following permissions can access the reports:
 
 ## About data latency
 
-The data source for these reports is Windows [diagnostic data](../overview/windows-autopatch-privacy.md#microsoft-windows-1011-diagnostic-data). The data typically uploads from enrolled devices once per day. Then, the data is processed in batches before being made available in Windows Autopatch. The maximum end-to-end latency is approximately four hours.
+The data source for these reports is Windows [diagnostic data](../overview/windows-autopatch-privacy.md#microsoft-windows-1011-diagnostic-data) and Microsoft Intune.The data typically uploads from enrolled devices every hour. Then, the data is processed in batches before being made available in Windows Autopatch. The maximum end-to-end latency is approximately four hours.
+
+
 
 ## Windows quality and feature update statuses
 
@@ -102,7 +102,7 @@ Up to date devices are devices that meet all of the following prerequisites:
 | Sub status | Description |
 | ----- | ----- |
 | In Progress | Devices are currently installing the latest [quality update](../operate/windows-autopatch-groups-windows-quality-update-overview.md#release-schedule) or [feature update](../operate/windows-autopatch-groups-windows-feature-update-overview.md#default-release) deployed through the Windows Autopatch release schedule. |
-| Paused | Devices that are currently paused due to a Windows Autopatch or customer-initiated pause. For more information, see pausing and resuming a [Windows quality update](../operate/windows-autopatch-groups-windows-quality-update-overview.md#pause-and-resume-a-release) or [Windows feature update](../operate/windows-autopatch-windows-feature-update-overview.md#pause-and-resume-a-release). |
+| Paused | Devices that are currently paused due to a customer-initiated pause. For more information, see pausing and resuming a [Windows quality update](../operate/windows-autopatch-groups-windows-quality-update-overview.md#pause-and-resume-a-release) or [Windows feature update](../operate/windows-autopatch-windows-feature-update-overview.md#pause-and-resume-a-release). |
 
 ### Not up to Date devices
 

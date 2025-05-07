@@ -1,7 +1,7 @@
 ---
 title: Keyboard Filter
 description: Keyboard Filter
-ms.date: 01/13/2025
+ms.date: 03/20/2025
 ms.topic: overview
 ---
 
@@ -120,7 +120,7 @@ For more information about Keyboard Filter WMI providers, see [Keyboard Filter W
 
 You may need to sign in to a locked down device with a different account in order to service or configure the device. You can configure a breakout key to break out of a locked down account by specifying a key scan code. A user can press this key consecutively five times to switch to the Welcome screen so that you can sign in to a different account.
 
-The breakout key is set to the scan code for the left Windows logo key by default. You can use the [WEKF_Settings](wekf-settings.md) WMI class to change the breakout key scan code. If you change the breakout key scan code, you must restart the device before the change takes effect.
+The breakout key is set to the scan code for the left Windows key by default. You can use the [WEKF_Settings](wekf-settings.md) WMI class to change the breakout key scan code. If you change the breakout key scan code, you must restart the device before the change takes effect.
 
 ## Keyboard Filter considerations
 
@@ -132,7 +132,7 @@ Some hardware keys, such as rotation lock, don't have a defined virtual key. You
 
 The add (+), multiply (\*), subtract (-), divide (/), and decimal (.) keys have different virtual keys and scan codes on the numeric keypad than on the main keyboard. You must block both keys to block these keys. For example, to block the multiply key, you must add a rule to block "\*" and a rule to block Multiply.
 
-When locking the screen by using the on-screen keyboard, or a combination of a physical keyboard and the on-screen keyboard, the on-screen keyboard sends an extra Windows logo key keystroke to the OS. If your device is using the Windows 10 shell and you use keyboard filter to block Windows logo key+L, the extra Windows logo key keystroke causes the shell to switch between the **Start** screen and the last active app when a user attempts to lock the device by using the on-screen keyboard, which may be unexpected behavior.
+When locking the screen by using the on-screen keyboard, or a combination of a physical keyboard and the on-screen keyboard, the on-screen keyboard sends an extra Windows key keystroke to the OS. If your device is using the Windows 10 shell and you use keyboard filter to block Windows key+L, the extra Windows key keystroke causes the shell to switch between the **Start** screen and the last active app when a user attempts to lock the device by using the on-screen keyboard, which may be unexpected behavior.
 
 Some custom keyboard software, such as Microsoft IntelliType Pro, can install Keyboard Filter drivers that prevent Keyboard Filter from being able to block some or all keys, typically extended keys like BrowserHome and Search.
 

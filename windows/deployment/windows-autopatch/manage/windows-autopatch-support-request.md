@@ -1,7 +1,7 @@
 ---
 title: Submit a support request
 description: Details how to contact the Windows Autopatch Service Engineering Team and submit support requests
-ms.date: 09/16/2024
+ms.date: 3/31/2025
 ms.service: windows-client
 ms.subservice: autopatch
 ms.topic: how-to
@@ -17,25 +17,23 @@ ms.collection:
 
 # Submit a support request
 
-[!INCLUDE [windows-autopatch-enterprise-e3-f3-licenses](../includes/windows-autopatch-enterprise-e3-f3-licenses.md)]
-
 > [!IMPORTANT]
-> Make sure you've [added and verified your admin contacts](../deploy/windows-autopatch-admin-contacts.md). The Windows Autopatch Service Engineering Team will contact these individuals for assistance with remediating issues.
-
-## Submit a new support request
+> You can only submit a support request if you have E3+ or F licenses. For more information, see [Features and capabilities](../overview/windows-autopatch-overview.md#features-and-capabilities).
 
 Support requests are triaged and responded to as they're received.
 
 **To submit a new support request:**
 
-1. Sign into the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and navigate to the **Tenant administration** menu.
-1. In the **Windows Autopatch** section, select **Support requests**.
-1. In the **Support requests** section, select **+ New support request**.
-1. Enter your questions and/or a description of the problem.
-1. Review all the information you provided for accuracy.
-1. When you're ready, select **Create**.
+1. Sign into the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and navigate to **Troubleshooting + support**.
+1. In the **Troubleshooting + support** section, select **Help and support**.
+1. In the **Help and support** section, select **Windows Autopatch**.
+1. In the **Help** section, enter your questions and/or a description of the issue.
+1. Review the links that are provided to try to help with the issue.
+1. If the answers that were given don't help you resolve the issue, select **Contact support** at the bottom of the page.
+1. Follow the instructions to file a support request with Windows Autopatch. Make sure you provide the correct primary contact information for this specific support ticket.  
+1. When you're ready, select **Contact me**.
 
-### Premier and Unified support options
+## Premier and Unified support options
 
 If you have a **Premier** or **Unified** support contract, when you submit a new request, or edit an active support request, you can:
 
@@ -59,25 +57,11 @@ You can see the summary status of all your support requests. At any time, you ca
 
 **To view all your active support requests:**
 
-1. Sign into the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and navigate to the **Tenant Administration** menu.
-1. In the **Windows Autopatch** section, select **Support request**.
-1. From this view, you can export the summary view or select any case to view the details.
-
-## Edit support request details
-
-You can edit support request details, for example, updating the primary case contact.
-
-**To edit support request details:**
-
-1. Sign into the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and navigate to the **Tenant Administration** menu.
-1. In the **Windows Autopatch** section, select **Support request**.
-1. In the **Support requests** section, use the search bar or filters to find the case you want to edit.
-1. Select the case to open the request's details.
-1. Scroll to the bottom of the request details and select **Edit**.
-1. Update the editable information, add attachments to the case, or add a note for the Windows Autopatch Service Engineering Team.
-1. Select **Save**.
-
-Once a support request is mitigated, it can no longer be edited. If a request was mitigated in less than 24 hours, you can reactivate instead of edit. Once reactivated, you can again edit the request.
+1. Sign into the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and navigate to **Troubleshooting + support**.
+1. In the **Troubleshooting + support** section, select **Help and support**.
+1. In the **Help and support** section, select **Windows Autopatch**.
+1. Under **Windows Autopatch**, select **Support History** to view all filed support requests.
+1. Once a support request is mitigated, a survey appears. Using the survey, the primary contact can rate their experience.
 
 ## Microsoft FastTrack
 

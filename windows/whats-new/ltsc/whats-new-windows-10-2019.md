@@ -419,7 +419,7 @@ You can now register your Entra ID domains to the Windows Insider Program. For m
 
 ### Optimize update delivery
 
-With changes delivered in Windows 10 Enterprise LTSC 2019, [express updates](/windows/deployment/do/waas-optimize-windows-10-updates#express-update-delivery) are now fully supported with Configuration Manager. It's also supported with other third-party updating and management products that [implement this new functionality](/windows-server/administration/windows-server-update-services/deploy/express-update-delivery-isv-support). This support is in addition to current express support on Windows Update, Windows Update for Business and WSUS.
+With changes delivered in Windows 10 Enterprise LTSC 2019, [express updates](/windows/deployment/do/waas-optimize-windows-10-updates#express-update-delivery) are now fully supported with Configuration Manager. It's also supported with other third-party updating and management products that [implement this new functionality](/windows-server/administration/windows-server-update-services/deploy/express-update-delivery-isv-support). This support is in addition to current express support on Windows Update, Windows Update client policies, and WSUS.
 
 >[!NOTE]
 > The above changes can be made available to Windows 10, version 1607, by installing the April 2017 cumulative update.

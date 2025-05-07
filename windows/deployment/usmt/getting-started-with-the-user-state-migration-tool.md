@@ -8,7 +8,7 @@ ms.service: windows-client
 author: frankroj
 ms.topic: get-started
 ms.subservice: itpro-deploy
-ms.date: 01/29/2025
+ms.date: 03/27/2025
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 11</a>
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 10</a>
@@ -18,7 +18,15 @@ appliesto:
 
 This article outlines the general process to follow to migrate files and settings.
 
-## Step 1: Plan the migration
+## Step 1: Download and install USMT
+
+USMT is part of the Windows Assessment and Deployment Kit (Windows ADK) and can be downloaded from the following link:
+
+[Download and install the Windows ADK](/windows-hardware/get-started/adk-install)
+
+Once the Windows ADK installer is downloaded, run the installer, and then in the **Select the features you want to install** page, make sure **User State Migration Tool (USMT)** is selected.
+
+## Step 2: Plan the migration
 
 1. [Plan The Migration](usmt-plan-your-migration.md). Depending on whether the migration scenario is refreshing or replacing computers, an online migration or an offline migration can be chosen. Offline migrations can use either Windows Preinstallation Environment (WinPE) or the files in the **Windows.old** directory. For more information, see [Common Migration Scenarios](usmt-common-migration-scenarios.md).
 
@@ -55,7 +63,7 @@ This article outlines the general process to follow to migrate files and setting
 
 1. Open the `Config.xml` that was generated in the previous step. Review the migration state of each of the components listed in the `Config.xml` file. If necessary, edit the `Config.xml` file  and specify `migrate=no` for any components that don't need to be migrated.
 
-## Step 2: Collect files and settings from the source computer
+## Step 3: Collect files and settings from the source computer
 
 1. Back up the source computer.
 
@@ -77,7 +85,7 @@ This article outlines the general process to follow to migrate files and setting
 
 1. To ensure that the created store isn't corrupted, run the `UsmtUtils.exe` command with the `/Verify` option.
 
-## Step 3: Prepare the destination computer and restore files and settings
+## Step 4: Prepare the destination computer and restore files and settings
 
 1. Install the operating system on the destination computer.
 

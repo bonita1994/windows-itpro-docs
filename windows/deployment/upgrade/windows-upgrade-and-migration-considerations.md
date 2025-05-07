@@ -7,7 +7,10 @@ ms.service: windows-client
 author: frankroj
 ms.topic: upgrade-and-migration-article
 ms.subservice: itpro-deploy
-ms.date: 08/30/2024
+ms.date: 04/08/2025
+appliesto:
+  - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 11</a>
+  - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 10</a>
 ---
 
 # Windows upgrade and migration considerations
@@ -61,7 +64,7 @@ If a single-language Windows image that matches the system default UI language o
 
 ### Errorhandler.cmd
 
-If using **Errorhandler.cmd** when upgrading from an earlier version of Windows, copy **Errorhandler.cmd** into the `%WINDIR%\Setup\Scripts` directory on the original installation of Windows. Copying **Errorhandler.cmd** into the `%WINDIR%\Setup\Scripts` directory on the original installation of Windows makes sure that if there are errors during the down-level phase of Windows Setup, the commands in **Errorhandler.cmd** run. For more information, see [Run a script if Windows Setup encounters a fatal error (ErrorHandler.cmd)](/windows-hardware/manufacture/desktop/add-a-custom-script-to-windows-setup#run-a-script-if-windowssetup-encounters-a-fatal-error-errorhandlercmd).
+If using **Errorhandler.cmd** when upgrading from an earlier version of Windows, copy **Errorhandler.cmd** into the `%WINDIR%\Setup\Scripts` directory on the original installation of Windows. Copying **Errorhandler.cmd** into the `%WINDIR%\Setup\Scripts` directory on the original installation of Windows makes sure that if there are errors during the downlevel phase of Windows Setup, the commands in **Errorhandler.cmd** run. For more information, see [Run a script if Windows Setup encounters a fatal error (ErrorHandler.cmd)](/windows-hardware/manufacture/desktop/add-a-custom-script-to-windows-setup#run-a-script-if-windowssetup-encounters-a-fatal-error-errorhandlercmd).
 
 ## Related content
 

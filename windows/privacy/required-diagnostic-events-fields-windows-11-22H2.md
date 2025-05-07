@@ -29,7 +29,6 @@ Use this article to learn about diagnostic events, grouped by event area, and th
 You can learn more about Windows functional and diagnostic data through these articles:
 
 - [Required diagnostic events and fields for Windows 11, version 24H2](required-diagnostic-events-fields-windows-11-24H2.md)
-- [Required diagnostic events and fields for Windows 11, version 21H2](required-windows-11-diagnostic-events-and-fields.md)
 - [Required diagnostic events and fields for Windows 10, versions 22H2 and 21H2](required-windows-diagnostic-data-events-and-fields-2004.md)
 - [Windows 10, version 1809 basic diagnostic events and fields](basic-level-windows-diagnostic-events-and-fields-1809.md)
 - [Manage connections from Windows operating system components to Microsoft services](manage-connections-from-windows-operating-system-components-to-microsoft-services.md)
@@ -488,7 +487,7 @@ The following fields are available:
 
 ### Microsoft.Windows.Appraiser.General.InventoryApplicationFileAdd
 
-This event represents the basic metadata about a file on the system.  The file must be part of an app and either have a block in the compatibility database or be part of an antivirus program. The data collected with this event is used to help keep Windows up to date.
+This event represents the basic metadata about a file on the system. The file must be part of an app and either have a block in the compatibility database or be part of an antivirus program. The data collected with this event is used to help keep Windows up to date.
 
 This event includes fields from [Ms.Device.DeviceInventoryChange](#msdevicedeviceinventorychange).
 
@@ -497,7 +496,7 @@ The following fields are available:
 - **AppraiserVersion**  The version of the Appraiser file generating the events.
 - **AvDisplayName**  If the app is an antivirus app, this is its display name.
 - **AvProductState**  Indicates whether the antivirus program is turned on and the signatures are up to date.
-- **BinaryType**  A binary type.  Example: UNINITIALIZED, ZERO_BYTE, DATA_ONLY, DOS_MODULE, NE16_MODULE, PE32_UNKNOWN, PE32_I386, PE32_ARM, PE64_UNKNOWN, PE64_AMD64, PE64_ARM64, PE64_IA64, PE32_CLR_32, PE32_CLR_IL, PE32_CLR_IL_PREFER32, PE64_CLR_64.
+- **BinaryType**  A binary type. Example: UNINITIALIZED, ZERO_BYTE, DATA_ONLY, DOS_MODULE, NE16_MODULE, PE32_UNKNOWN, PE32_I386, PE32_ARM, PE64_UNKNOWN, PE64_AMD64, PE64_ARM64, PE64_IA64, PE32_CLR_32, PE32_CLR_IL, PE32_CLR_IL_PREFER32, PE64_CLR_64.
 - **BinFileVersion**  An attempt to clean up FileVersion at the client that tries to place the version into 4 octets.
 - **BinProductVersion**  An attempt to clean up ProductVersion at the client that tries to place the version into 4 octets.
 - **BoeProgramId**  If there's no entry in Add/Remove Programs, this is the ProgramID that is generated from the file metadata.
@@ -997,7 +996,7 @@ The following fields are available:
 - **AzureOSIDPresent**  Represents the field used to identify an Azure machine.
 - **AzureVMType**  Represents whether the instance is Azure VM PAAS, Azure VM IAAS or any other VMs.
 - **CDJType**  Represents the type of cloud domain joined for the machine.
-- **CommercialId**  Represents the GUID for the commercial entity that the device is a member of.  Will be used to reflect insights back to customers.
+- **CommercialId**  Represents the GUID for the commercial entity that the device is a member of. Will be used to reflect insights back to customers.
 - **ContainerType**  The type of container, such as process or virtual machine hosted.
 - **EnrollmentType**  Defines the type of MDM enrollment on the device.
 - **HashedDomain**  The hashed representation of the user domain used for login.
@@ -1065,7 +1064,7 @@ The following fields are available:
 - **IsPortableOperatingSystem**  Retrieves whether OS is running Windows-To-Go
 - **IsSecureBootEnabled**  Retrieves whether Boot chain is signed under UEFI.
 - **LanguagePacks**  The list of language packages installed on the device.
-- **LicenseStateReason**  Retrieves why (or how) a system is licensed or unlicensed.  The HRESULT may indicate an error code that indicates a key blocked error, or it may indicate that we're running an OS License granted by the MS store.
+- **LicenseStateReason**  Retrieves why (or how) a system is licensed or unlicensed. The HRESULT may indicate an error code that indicates a key blocked error, or it may indicate that we're running an OS License granted by the MS store.
 - **OA3xOriginalProductKey**  Retrieves the License key stamped by the OEM to the machine.
 - **OSEdition**  Retrieves the version of the current OS.
 - **OSInstallType**  Retrieves a numeric description of what install was used on the device i.e. clean, upgrade, refresh, reset, etc
@@ -1118,7 +1117,7 @@ The following fields are available:
 - **InternalPrimaryDisplayPhysicalDPIY**  Retrieves the physical DPI in the y-direction of the internal display.
 - **InternalPrimaryDisplayResolutionHorizontal**  Retrieves the number of pixels in the horizontal direction of the internal display.
 - **InternalPrimaryDisplayResolutionVertical**  Retrieves the number of pixels in the vertical direction of the internal display.
-- **InternalPrimaryDisplaySizePhysicalH**  Retrieves the physical horizontal length of the display in mm. Used for calculating the diagonal length in inches .
+- **InternalPrimaryDisplaySizePhysicalH**  Retrieves the physical horizontal length of the display in mm. Used for calculating the diagonal length in inches.
 - **InternalPrimaryDisplaySizePhysicalY**  Retrieves the physical vertical length of the display in mm. Used for calculating the diagonal length in inches
 - **NumberofExternalDisplays**  Retrieves the number of external displays connected to the machine
 - **NumberofInternalDisplays**  Retrieves the number of internal displays in a machine.
@@ -1281,7 +1280,7 @@ The following fields are available:
 - **popSample**  Represents the effective sample rate for this event at the time it was generated by a client.
 - **providerGuid**  The ETW provider ID associated with the provider name.
 - **raId**  Represents the ETW Related ActivityId. Logged via TraceLogging or directly via ETW.
-- **seq**  Represents the sequence field used to track absolute order of uploaded events. It's an incrementing identifier for each event added to the upload queue.  The Sequence helps track how many events were fired and how many events were uploaded and enables identification of data lost during upload and de-duplication of events on the ingress server.
+- **seq**  Represents the sequence field used to track absolute order of uploaded events. It's an incrementing identifier for each event added to the upload queue. The Sequence helps track how many events were fired and how many events were uploaded and enables identification of data lost during upload and de-duplication of events on the ingress server.
 - **sqmId**  The Windows SQM (Software Quality Metrics—a precursor of Windows 10 Diagnostic Data collection) device identifier.
 - **stId**  Represents the Scenario Entry Point ID. This is a unique GUID for each event in a diagnostic scenario. This used to be Scenario Trigger ID.
 - **wcmp**  The Windows Shell Composer ID.
@@ -2932,7 +2931,7 @@ The following fields are available:
 
 ### Setup360Telemetry.PreInstallUX
 
-This event sends data regarding OS updates and upgrades from Windows 7, Windows 8, and Windows 10, to help keep Windows up-to-date.  Specifically, it indicates the outcome of the PreinstallUX portion of the update process.
+This event sends data regarding OS updates and upgrades from Windows 7, Windows 8, and Windows 10, to help keep Windows up-to-date. Specifically, it indicates the outcome of the PreinstallUX portion of the update process.
 
 The following fields are available:
 
@@ -3167,7 +3166,7 @@ The following fields are available:
 
 ### Microsoft.Windows.StoreAgent.Telemetry.EndGetInstalledContentIds
 
-This event is sent after sending the inventory of the products installed to determine whether updates for those products are available.  It's used to help keep Windows up-to-date and secure.
+This event is sent after sending the inventory of the products installed to determine whether updates for those products are available. It's used to help keep Windows up-to-date and secure.
 
 The following fields are available:
 
@@ -3561,7 +3560,7 @@ This event sends data on whether Update Management Policies were enabled on a de
 The following fields are available:
 
 - **configuredPoliciescount**  Number of policies on the device.
-- **policiesNamevaluesource**  Policy name and source of policy (group policy, MDM or flight).
+- **policiesNamevaluesource**  Policy name and source of policy (group policy, MDM, or flight).
 - **updateInstalluxsetting**  Indicates whether a user has set policies via a user experience option.
 
 

@@ -1,5 +1,5 @@
 ---
-ms.date: 02/25/2025
+ms.date: 04/22/2025
 title: Considerations and known issues when using Credential Guard
 description: Considerations, recommendations, and known issues when using Credential Guard.
 ms.topic: troubleshooting
@@ -111,6 +111,12 @@ Once the device has connectivity to the domain controllers, DPAPI recovers the u
 When data protected with user DPAPI is unusable, then the user loses access to all work data protected by Windows Information Protection.  The impact includes: Outlook is unable to start and work protected documents can't be opened. If DPAPI is working, then newly created work data is protected and can be accessed.
 
 **Workaround:** Users can resolve the problem by connecting their device to the domain and rebooting or using their Encrypting File System Data Recovery Agent certificate. For more information about Encrypting File System Data Recovery Agent certificate, see [Create and verify an Encrypting File System (EFS) Data Recovery Agent (DRA) certificate](/previous-versions/windows/it-pro/windows-10/security/information-protection/windows-information-protection/create-and-verify-an-efs-dra-certificate).
+
+### Azure Virtual Machines lose access to the data protected by Credential Guard after deallocation
+
+When an Azure Virtual Machine is deallocated, the underlying hardware is released, causing the keys protected by the TPM to become inaccessible. Consequently, any data protected by those keys also becomes inaccessible.
+
+For more information, see [States and billing status of Azure Virtual Machines](/azure/virtual-machines/states-billing#power-states-and-billing).
 
 ## Known issues
 

@@ -1,8 +1,8 @@
 ---
-title: Quarantine behavior
+title: Quarantine Behavior
 description: Learn about Windows Firewall and the quarantine feature behavior.
 ms.topic: concept-article
-ms.date: 09/06/2024
+ms.date: 04/07/2025
 ---
 
 # Quarantine behavior

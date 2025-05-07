@@ -68,11 +68,11 @@ Most commercial organizations understand the pain points outlined above, and dis
 
 ### Option 1: Use Windows Update
 
-Windows Update for Business solves the optional content problem. Optional content is published and available for acquisition by Windows Setup from a nearby Microsoft content delivery network and acquired using the Unified Update Platform. Optional content migration and acquisition scenarios just work when the device is connected to an update service that uses the Unified Update Platform, such as Windows Update or Windows Update for Business. If for some reason a language pack fails to install during the update, the update will automatically roll back.
+Windows Update client policies solve the optional content problem. Optional content is published and available for acquisition by Windows Setup from a nearby Microsoft content delivery network and acquired using the Unified Update Platform. Optional content migration and acquisition scenarios just work when the device is connected to an update service that uses the Unified Update Platform, such as Windows Update or Windows Update client policies. If for some reason a language pack fails to install during the update, the update will automatically roll back.
 
 The [Unified Update Platform](https://blogs.windows.com/windows-insider/2016/11/03/introducing-unified-update-platform-uup/) is an improvement in the underlying Windows update technology that results in smaller download sizes and a more efficient protocol for checking for updates, acquiring and installing the packages needed, and getting current in one update step. The technology is *unified* because it brings together the update stack for Windows client, Windows Server, and other products, such as HoloLens.
 
-Consider moving to Windows Update for Business. Not only will the optional content scenario work seamlessly (as it does for consumer devices today), but you also get the full benefits of smaller download sizes. Further, devices are immune to the challenge of upgrading Windows when the operating system installation language is inadvertently changed to a new language. Otherwise, any future media-based feature updates can fail when the installation media has a different installation language. For more information about this issue, see [Upgrading Windows 10 devices with installation media different than the original OS install language](https://techcommunity.microsoft.com/blog/windows-itpro-blog/upgrading-windows-10-devices-with-installation-media-different-than-the-original/746126).
+Consider moving to Windows Update client policies. Not only will the optional content scenario work seamlessly (as it does for consumer devices today), but you also get the full benefits of smaller download sizes. Further, devices are immune to the challenge of upgrading Windows when the operating system installation language is inadvertently changed to a new language. Otherwise, any future media-based feature updates can fail when the installation media has a different installation language. For more information about this issue, see [Upgrading Windows 10 devices with installation media different than the original OS install language](https://techcommunity.microsoft.com/blog/windows-itpro-blog/upgrading-windows-10-devices-with-installation-media-different-than-the-original/746126).
 
 
 ### Option 2: Use WSUS with UUP Integration
@@ -136,7 +136,7 @@ Several of the options address ways to address optional content migration issues
 
 - The file path to the alternate source must be a fully qualified path; multiple locations can be separated by a semicolon.
 - This setting doesn't support installing language packs from an alternate source file path, only Features on Demand. If the policy is configured to acquire content from Windows Update, language packs will be acquired.
-- If this setting isn't configured or disabled, files are downloaded from the default Windows Update location, for example Windows Update for Business or WSUS.
+- If this setting isn't configured or disabled, files are downloaded from the default Windows Update location, for example Windows Update client policies or WSUS.
 
 
 For more information, see [Configure a Windows Repair Source](/windows-hardware/manufacture/desktop/configure-a-windows-repair-source) and [How to make Features on Demand and language packs available when you're using WSUS or Configuration Manager](fod-and-lang-packs.md).

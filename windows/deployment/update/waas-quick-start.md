@@ -44,7 +44,7 @@ For more information, see [Assign devices to servicing channels for Windows clie
 
 ## Staying up to date
 
-To stay up to date, deploy feature updates at an appropriate time after their release. You can use various management and update tools such as Windows Update, Windows Update for Business, Windows Server Update Services, Microsoft Configuration Manager, and non-Microsoft products to help with this process.
+To stay up to date, deploy feature updates at an appropriate time after their release. You can use various management and update tools such as Windows Update, Windows Update client policies, Windows Server Update Services, Microsoft Configuration Manager, and non-Microsoft products to help with this process.
 
 Extensive advanced testing isn't required. Instead, only business-critical apps need to be tested, with the remaining apps validated through a series of pilot deployment rings. Once these pilot deployments have validated most apps, broad deployment can begin.
 

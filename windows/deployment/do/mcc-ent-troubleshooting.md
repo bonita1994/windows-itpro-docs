@@ -38,7 +38,7 @@ As a temporary workaround, the above error doesn't occur by changing the languag
 
 [Connected Cache Azure resource creation](mcc-ent-create-resource-and-cache.md) can be initiated using either the Azure portal user interface or the Azure CLI command set.
 
-If you're encountering an error during resource creation, check that you have the necessary permissions to create Azure resources under your subscription and have filled out all required fields during the resource creation process.
+If you're encountering an error during resource creation, [check that you have the necessary permissions to create Azure resources under your subscription](/azure/role-based-access-control/check-access) and have filled out all required fields during the resource creation process.
 
 ## Troubleshooting cache node configuration
 

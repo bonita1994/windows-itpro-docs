@@ -45,7 +45,7 @@ landingContent:
       url: /windows/whats-new/windows-11-prepare?context=/windows/deployment/context/context
     - text: Prepare to deploy Windows updates
       url: update/prepare-deploy-windows.md
-    - text: Prepare for Windows Update for Business
+    - text: Prepare for Windows Update client policies
       url: update/waas-manage-updates-wufb.md
     - text: Evaluate and update infrastructure
       url: update/update-policies.md
@@ -91,13 +91,13 @@ landingContent:
       - text: See more >
         url: windows-autopatch/index.yml
 
-- title: Use Windows Update for Business
+- title: Use Windows Update client policies
   linkLists:
   - linkListType: how-to-guide
     links:
-      - text: What is Windows Update for Business?
+      - text: What are Windows Update client policies?
         url: update/waas-manage-updates-wufb.md
-      - text: Configure Windows Update for Business
+      - text: Configure Windows Update client policies
         url: update/waas-configure-wufb.md
       - text: Windows Update for Business reports overview
         url: update/wufb-reports-overview.md

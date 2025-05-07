@@ -42,7 +42,7 @@ You can use Group Policy settings or mobile device management (MDM) to configure
 >[!IMPORTANT]
 >Additional information about settings to manage device restarts and restart notifications for updates is available on **[Manage device restarts after updates](waas-restart.md)**.
 >
->Additional settings that configure when feature and quality updates are received are detailed on **[Configure Windows Update for Business](waas-configure-wufb.md)**.
+>Additional settings that configure when feature and quality updates are received are detailed on **[Configure Windows Update client policies](waas-configure-wufb.md)**.
 
 ## Scanning for updates
 
@@ -54,7 +54,7 @@ You can make custom device groups that work with your internal Microsoft update 
 
 Finally, to make sure the updating experience is fully admin controlled, you can [Remove access to use all Windows Update features](#remove-access-to-use-all-windows-update-features) for users.
 
-For additional settings that configure when feature and quality updates are received, see [Configure Windows Update for Business](waas-configure-wufb.md).
+For additional settings that configure when feature and quality updates are received, see [Configure Windows Update client policies](waas-configure-wufb.md).
 
 ### Specify intranet Microsoft update service location
 
@@ -105,7 +105,7 @@ By enabling the Group Policy setting under **Computer Configuration\Administrati
 
 Even when Windows Update is configured to receive updates from an intranet update service, it will periodically retrieve information from the public Windows Update service to enable future connections to Windows Update, and other services like Microsoft Update or the Microsoft Store.
 
-Use **Computer Configuration\Administrative Templates\Windows Components\Windows update\Do not connect to any Windows Update Internet locations** to enable this policy. When enabled, this policy will disable the functionality described above, and may cause connection to public services such as the Microsoft Store, Windows Update for Business, and Delivery Optimization to stop working.
+Use **Computer Configuration\Administrative Templates\Windows Components\Windows update\Do not connect to any Windows Update Internet locations** to enable this policy. When enabled, this policy will disable the functionality described above, and may cause connection to public services such as the Microsoft Store, Windows Update client policies, and Delivery Optimization to stop working.
 
 >[!NOTE]
 >This policy applies only when the device is configured to connect to an intranet update service using the "Specify intranet Microsoft update service location" policy.
@@ -266,7 +266,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\
 
 ## Display organization name in Windows Update notifications
 <!--6286260-->
-When Windows 11 clients are associated with a Microsoft Entra tenant, the organization name appears in the Windows Update notifications. For instance, when you have a compliance deadline configured for Windows Update for Business, the user notification displays a message similar to **Contoso requires important updates to be installed**. The organization name will also display on the **Windows Update** page in the **Settings** for Windows 11.  
+When Windows 11 clients are associated with a Microsoft Entra tenant, the organization name appears in the Windows Update notifications. For instance, when you have a compliance deadline configured for Windows Update client policies, the user notification displays a message similar to **Contoso requires important updates to be installed**. The organization name will also display on the **Windows Update** page in the **Settings** for Windows 11.  
   
 The organization name appears automatically for Windows 11 clients that are associated with Microsoft Entra ID in any of the following ways:
 - [Microsoft Entra joined](/azure/active-directory/devices/concept-azure-ad-join) 

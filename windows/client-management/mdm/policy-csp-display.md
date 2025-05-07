@@ -1,7 +1,7 @@
 ---
 title: Display Policy CSP
 description: Learn more about the Display Area in Policy CSP.
-ms.date: 03/12/2025
+ms.date: 04/30/2025
 ms.topic: generated-reference
 ---
 
@@ -22,10 +22,14 @@ ms.topic: generated-reference
 <!-- ConfigureMultipleDisplayMode-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows Insider Preview |
+| ✅ Device <br> ✅ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows Insider Preview |
 <!-- ConfigureMultipleDisplayMode-Applicability-End -->
 
 <!-- ConfigureMultipleDisplayMode-OmaUri-Begin -->
+```User
+./User/Vendor/MSFT/Policy/Config/Display/ConfigureMultipleDisplayMode
+```
+
 ```Device
 ./Device/Vendor/MSFT/Policy/Config/Display/ConfigureMultipleDisplayMode
 ```
@@ -33,7 +37,7 @@ ms.topic: generated-reference
 
 <!-- ConfigureMultipleDisplayMode-Description-Begin -->
 <!-- Description-Source-DDF -->
-This policy sets the default display arrangement to pick between clone or extend.
+Set the default display arrangement as clone, extend, internalOnly, externalOnly or default Windows Settings.
 <!-- ConfigureMultipleDisplayMode-Description-End -->
 
 <!-- ConfigureMultipleDisplayMode-Editable-Begin -->
@@ -47,7 +51,7 @@ This policy sets the default display arrangement to pick between clone or extend
 |:--|:--|
 | Format | `int` |
 | Access Type | Add, Delete, Get, Replace |
-| Default Value  | 1 |
+| Default Value  | 0 |
 <!-- ConfigureMultipleDisplayMode-DFProperties-End -->
 
 <!-- ConfigureMultipleDisplayMode-AllowedValues-Begin -->
@@ -55,9 +59,11 @@ This policy sets the default display arrangement to pick between clone or extend
 
 | Value | Description |
 |:--|:--|
-| 0 | Default. |
-| 1 (Default) | Clone. |
-| 2 | Extend. |
+| 0 (Default) | Default. |
+| 1 | Internal Only. |
+| 2 | External Only. |
+| 3 | Clone. |
+| 4 | Extend. |
 <!-- ConfigureMultipleDisplayMode-AllowedValues-End -->
 
 <!-- ConfigureMultipleDisplayMode-GpMapping-Begin -->
@@ -305,10 +311,14 @@ Enabling this setting lets you specify the system-wide default for desktop appli
 <!-- SetClonePreferredResolutionSource-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows Insider Preview |
+| ✅ Device <br> ✅ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows Insider Preview |
 <!-- SetClonePreferredResolutionSource-Applicability-End -->
 
 <!-- SetClonePreferredResolutionSource-OmaUri-Begin -->
+```User
+./User/Vendor/MSFT/Policy/Config/Display/SetClonePreferredResolutionSource
+```
+
 ```Device
 ./Device/Vendor/MSFT/Policy/Config/Display/SetClonePreferredResolutionSource
 ```
@@ -316,7 +326,7 @@ Enabling this setting lets you specify the system-wide default for desktop appli
 
 <!-- SetClonePreferredResolutionSource-Description-Begin -->
 <!-- Description-Source-DDF -->
-This policy sets the cloned monitor preferred resolution source to an internal or external monitor by default.
+Set the cloned monitor preferred resolution source as internal or external monitor or set to default.
 <!-- SetClonePreferredResolutionSource-Description-End -->
 
 <!-- SetClonePreferredResolutionSource-Editable-Begin -->
@@ -330,7 +340,7 @@ This policy sets the cloned monitor preferred resolution source to an internal o
 |:--|:--|
 | Format | `int` |
 | Access Type | Add, Delete, Get, Replace |
-| Default Value  | 1 |
+| Default Value  | 0 |
 <!-- SetClonePreferredResolutionSource-DFProperties-End -->
 
 <!-- SetClonePreferredResolutionSource-AllowedValues-Begin -->
@@ -338,8 +348,8 @@ This policy sets the cloned monitor preferred resolution source to an internal o
 
 | Value | Description |
 |:--|:--|
-| 0 | Default. |
-| 1 (Default) | Internal. |
+| 0 (Default) | Default. |
+| 1 | Internal. |
 | 2 | External. |
 <!-- SetClonePreferredResolutionSource-AllowedValues-End -->
 

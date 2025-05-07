@@ -143,6 +143,8 @@ Allows IT Admins the ability to disable the Microsoft Account Sign-In Assistant 
 
 <!-- AllowMicrosoftAccountSignInAssistant-Editable-Begin -->
 <!-- Add any additional information about this policy here. Anything outside this section will get overwritten. -->
+> [!CAUTION]
+> If the Microsoft Account Sign-In Assistant service is disabled, the initial digital license activation with a Multiple Activation Key (MAK) or Digital Product Key (DPK) will fail.
 <!-- AllowMicrosoftAccountSignInAssistant-Editable-End -->
 
 <!-- AllowMicrosoftAccountSignInAssistant-DFProperties-Begin -->

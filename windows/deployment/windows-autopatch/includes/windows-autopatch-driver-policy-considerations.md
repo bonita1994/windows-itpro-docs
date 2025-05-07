@@ -35,7 +35,7 @@ The following policies define the source for driver updates as either Windows Up
   -  **Group Policy**: `\Windows Components\Windows Update\Manage updates offered from Windows Server Update Service\Specify source service for specific classes of Windows Updates` set to `enabled` with the `Driver Updates` option set to `Windows Update`
   - **CSP**: [SetPolicyDrivenUpdateSourceForDriverUpdates](/windows/client-management/mdm/policy-csp-update#setpolicydrivenupdatesourcefordriverupdates) set to `0` for Windows Update as the source
   - **Registry**:  `HKLM\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\SetPolicyDrivenUpdateSourceForDriverUpdates` set to `0`. Under `\AU`, `UseUpdateClassPolicySource` also needs to be set to `1`
-  - **Intune**: Not applicable. Intune deploys updates using Windows Update for Business. [Co-managed clients from Configuration Manager](/mem/configmgr/comanage/overview?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json) with the workload for Windows Update policies set to Intune will also use Windows Update for Business.
+  - **Intune**: Not applicable. Intune deploys updates using Windows Update client policies. [Co-managed clients from Configuration Manager](/mem/configmgr/comanage/overview?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json) with the workload for Windows Update policies set to Intune will also use Windows Update client policies.
 
 **Behavior**: Devices with these update source policies that are enrolled for **drivers** and added to an audience:
   - Will display the applicable driver content

@@ -1,8 +1,8 @@
 ---
-title: Windows Firewall overview
+title: Windows Firewall Overview
 description: Learn overview information about the Windows Firewall security feature.
 ms.topic: overview
-ms.date: 09/06/2024
+ms.date: 04/07/2025
 ---
 
 # Windows Firewall overview
@@ -75,7 +75,7 @@ The *public network* profile is designed with higher security in mind for public
 
 ## Disable Windows Firewall
 
-Microsoft recommends that you don't disable Windows Firewall because you lose other benefits, such as the ability to use Internet Protocol security (IPsec) connection security rules, network protection from attacks that employ network fingerprinting, Windows Service Hardening, and [boot time filters][BTF]. Non-Microsoft firewall software can programmatically disable only the [rule types][FWRC] of Windows Firewall that need to be disabled for compatibility. You shouldn't disable the firewall yourself for this purpose. 
+Microsoft recommends that you don't disable Windows Firewall because you lose other benefits, such as the ability to use Internet Protocol security (IPsec) connection security rules, network protection from attacks that employ network fingerprinting, Windows Service Hardening, and [boot time filters][BTF]. Non-Microsoft firewall software can programmatically disable only the [rule types][FWRC] of Windows Firewall that need to be disabled for compatibility. You shouldn't disable the firewall yourself for this purpose.
 If disabling Windows Firewall is required, don't disable it by stopping the Windows Firewall service (in the Services snap-in, the display name is Windows Defender Firewall and the service name is MpsSvc). Stopping the Windows Firewall service isn't supported by Microsoft and can cause problems, including:
 
 - Start menu can stop working

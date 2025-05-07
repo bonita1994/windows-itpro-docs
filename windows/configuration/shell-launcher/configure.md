@@ -150,7 +150,7 @@ To learn how to configure the Shell Launcher XML file, see [Create a Shell Launc
 
 [!INCLUDE [tab-intro](../../../includes/configure/tab-intro.md)]
 
-#### [:::image type="icon" source="../images/icons/intune.svg"::: **Intune/CSP**](#tab/intune)
+#### [:::image type="icon" source="../images/icons/intune.svg"::: **Intune**](#tab/intune)
 
 You can configure devices using a [custom policy][MEM-1] with the [AssignedAccess CSP][WIN-3].
 
@@ -159,12 +159,19 @@ You can configure devices using a [custom policy][MEM-1] with the [AssignedAcces
 
 Assign the policy to a group that contains as members the devices that you want to configure.
 
+#### [:::image type="icon" source="../images/icons/csp.svg"::: **CSP**](#tab/csp)
+
+You can configure devices using the [AssignedAccess CSP][WIN-3].
+
+- **Setting:** `./Vendor/MSFT/AssignedAccess/ShellLauncher`
+- **Value:** content of the XML configuration file
+
 #### [:::image type="icon" source="../images/icons/provisioning-package.svg"::: **PPKG**](#tab/ppkg)
 
 You can configure Shell Launcher by creating a provisioning package and then applying the provisioning package during image deployment time or at runtime:
 
 - If you're creating an installation media with settings for Shell Launcher included in the image, or you're applying a provisioning package during setup, you must enable Shell Launcher on the installation media with DISM for a provisioning package to successfully apply
-- If exectuing the provisioning package at runtime, ensure to [enable Shell Launcher](#enable-shell-launcher) before applying the provisioning package
+- If executing the provisioning package at runtime, ensure to [enable Shell Launcher](#enable-shell-launcher) before applying the provisioning package
 
 [!INCLUDE [provisioning-package-1](../../../includes/configure/provisioning-package-1.md)]
 
@@ -233,7 +240,11 @@ Depending on your configuration, you can have a user to automatically sign in to
 
 Here are the options to remove Shell Launcher, select the method that best fits your needs:
 
-#### [:::image type="icon" source="../images/icons/intune.svg"::: **Intune/CSP**](#tab/intune)
+#### [:::image type="icon" source="../images/icons/intune.svg"::: **Intune**](#tab/intune)
+
+Unassign or delete the policy that contains the configuration.
+
+#### [:::image type="icon" source="../images/icons/csp.svg"::: **CSP**](#tab/csp)
 
 Unassign or delete the policy that contains the configuration.
 

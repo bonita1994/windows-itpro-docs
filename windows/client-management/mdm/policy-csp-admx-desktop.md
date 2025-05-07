@@ -1,7 +1,7 @@
 ---
 title: ADMX_Desktop Policy CSP
 description: Learn more about the ADMX_Desktop Area in Policy CSP.
-ms.date: 03/12/2025
+ms.date: 03/20/2025
 ms.topic: generated-reference
 ---
 
@@ -224,7 +224,7 @@ This setting prevents users from trying to enable or disable Active Desktop whil
 If you disable this setting or don't configure it, Active Desktop is disabled by default, but users can enable it.
 
 > [!NOTE]
-> If both the "Enable Active Desktop" setting and the "Disable Active Desktop" setting are enabled, the "Disable Active Desktop" setting is ignored. If the "Turn on Classic Shell" setting (in User Configuration\Administrative Templates\Windows Components\Windows Explorer) is enabled, Active Desktop is disabled, and both of these policies are ignored.
+> If both the "Enable Active Desktop" setting and the "Disable Active Desktop" setting are enabled, the "Disable Active Desktop" setting is ignored. If the "Turn on Classic Shell" setting ( in User Configuration\Administrative Templates\Windows Components\Windows Explorer) is enabled, Active Desktop is disabled, and both of these policies are ignored.
 <!-- ForceActiveDesktopOn-Description-End -->
 
 <!-- ForceActiveDesktopOn-Editable-Begin -->

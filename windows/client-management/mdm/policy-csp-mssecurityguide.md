@@ -1,7 +1,7 @@
 ---
 title: MSSecurityGuide Policy CSP
 description: Learn more about the MSSecurityGuide Area in Policy CSP.
-ms.date: 03/12/2025
+ms.date: 04/30/2025
 ms.topic: generated-reference
 ---
 
@@ -222,7 +222,7 @@ ms.topic: generated-reference
 <!-- NetBTNodeTypeConfiguration-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 24H2 [10.0.26100] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 22H2 with [KB5053657](https://support.microsoft.com/help/5053657) [10.0.22621.5126] and later <br> ✅ Windows 11, version 24H2 [10.0.26100] and later |
 <!-- NetBTNodeTypeConfiguration-Applicability-End -->
 
 <!-- NetBTNodeTypeConfiguration-OmaUri-Begin -->

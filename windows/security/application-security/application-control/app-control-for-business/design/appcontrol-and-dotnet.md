@@ -2,7 +2,7 @@
 title: App Control for Business and .NET
 description: Understand how App Control and .NET work together and use Dynamic Code Security to verify code loaded by .NET at runtime.
 ms.localizationpriority: medium
-ms.date: 02/13/2025
+ms.date: 03/19/2025
 ms.topic: article
 ---
 
@@ -15,7 +15,7 @@ ms.topic: article
 
 The EA set on the NI file only applies to the currently active App Control policies. If one of the active App Control policies is updated or a new policy is applied, the EA on the NI file is invalidated. The next time the app runs, App Control will block the NI file. .NET handles the block gracefully and falls back to the original IL code. If the IL still passes the latest App Control policies, then the app runs without any functional issue. Since the IL is now being compiled at runtime, you might notice a slight reduction in performance of the app. When .NET must fall back to IL, .NET will also schedule a process to run at the next maintenance window to regenerate all NI files, thus reestablishing the App Control EA for all code that passes the latest App Control policies.
 
-In some cases, if an NI file is blocked, you might see a "false positive" block event in the *CodeIntegrity - Operational* event log as described in [App Control Admin Tips & Known Issues](../operations/known-issues.md#net-native-images-may-generate-false-positive-block-events).
+In some cases, if an NI file is blocked, you might see a "false positive" block event in the *CodeIntegrity - Operational* event log as described in [App Control Admin Tips & Known Issues](../operations/known-issues.md#net-native-images-might-generate-false-positive-block-events).
 
 To mitigate any performance reduction caused when the App Control EA isn't valid or is missing:
 

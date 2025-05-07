@@ -1,7 +1,7 @@
 ---
 title: Quality update trending report
 description: Provides a visual representation of the update status trend for all devices over the last 90 days.
-ms.date: 09/16/2024
+ms.date: 03/31/2025
 ms.service: windows-client
 ms.subservice: autopatch
 ms.topic: how-to
@@ -16,8 +16,6 @@ ms.collection:
 ---
 
 # Quality update trending report
-
-[!INCLUDE [windows-autopatch-enterprise-e3-f3-licenses](../includes/windows-autopatch-enterprise-e3-f3-licenses.md)]
 
 The Quality update trending report provides a visual representation of the update status trend for all devices over the last 90 days.
 

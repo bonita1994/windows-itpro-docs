@@ -159,6 +159,16 @@
       "source_path": "windows/privacy/Microsoft-DiagnosticDataViewer.md",
       "redirect_url": "/windows/privacy/diagnostic-data-viewer-powershell",
       "redirect_document_id": true
-    }
+    },
+    {
+      "source_path": "windows/privacy/copilot-supplemental-terms.md",
+      "redirect_url": "https://www.microsoft.com/privacy/privacystatement?form=MG0AV3#mainartificialintelligenceandmicrosoftcopilotmodule",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "windows/privacy/required-windows-11-diagnostic-events-and-fields.md",
+      "redirect_url": "/previous-versions/windows/it-pro/privacy/required-windows-11-diagnostic-events-and-fields",
+      "redirect_document_id": false
+    }     
   ]
 }

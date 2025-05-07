@@ -22,6 +22,7 @@ appliesto:
 >
 > - Memory integrity is sometimes referred to as *hypervisor-protected code integrity (HVCI)* or *hypervisor enforced code integrity*, and was originally released as part of *Device Guard*. Device Guard is no longer used except to locate memory integrity and VBS settings in Group Policy or the Windows registry.
 > - Memory integrity works better with Intel Kabylake and higher processors with *Mode-Based Execution Control*, and AMD Zen 2 and higher processors with *Guest Mode Execute Trap* capabilities. Older processors rely on an emulation of these features, called *Restricted User Mode*, and will have a bigger impact on performance. When nested virtualization is enabled, memory integrity works better when the VM is version >= 9.3.
+> - Azure VMs do not support memory integrity where **Secure Boot with DMA** is selected. If this is selected, VBS will show as enabled but not running. For this reason, please make sure to choose **Secure Boot** only using one of the methods below.
 
 ## Memory integrity features
 

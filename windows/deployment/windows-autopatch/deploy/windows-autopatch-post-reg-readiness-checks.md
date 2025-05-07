@@ -1,7 +1,7 @@
 ---
 title: Post-device registration readiness checks
 description: This article details how post-device registration readiness checks are performed in Windows Autopatch
-ms.date: 09/16/2024
+ms.date: 03/31/2025
 ms.service: windows-client
 ms.subservice: autopatch
 ms.topic: concept-article
@@ -16,8 +16,6 @@ ms.collection:
 ---
 
 # Post-device registration readiness checks
-
-[!INCLUDE [windows-autopatch-enterprise-e3-f3-licenses](../includes/windows-autopatch-enterprise-e3-f3-licenses.md)]
 
 One of the most expensive aspects of the software update management process is to make sure devices are always healthy to receive and report software updates for each software update release cycle.
 
@@ -51,7 +49,7 @@ Figuring out device health can be challenging and disruptive to the end user whe
 - Obtain proactive data sent by the device to the service, or
 - Proactively detect and remediate issues
 
-Windows Autopatch has devices readiness states within its [**Devices report**](../deploy/windows-autopatch-register-devices.md#devices-report). Each state provides IT admins monitoring information on which devices might have potential device health issues.
+Windows Autopatch has devices readiness states within its [**Autopatch group membership report**](../deploy/windows-autopatch-register-devices.md#autopatch-groups-membership-report). Each state provides IT admins monitoring information on which devices might have potential device health issues.
 
 | Tab | Description |
 | ----- | ----- |
@@ -67,6 +65,16 @@ A healthy or active device in Windows Autopatch is:
 - Passes all post-device registration readiness checks
 
 The post-device registration readiness checks are powered by the **Microsoft Cloud Managed Desktop Extension**. It's installed right after devices are successfully registered with Windows Autopatch. The **Microsoft Cloud Managed Desktop Extension** and **Windows Autopatch Client Broker** has the Device Readiness Check Plugin. The Device Readiness Check Plugin is responsible for performing the readiness checks and reporting the results back to the service. The **Microsoft Cloud Managed Desktop Extension** and **Windows Autopatch Client Broker** are subcomponents of the overall Windows Autopatch service.
+
+### Install the Windows Autopatch Client Broker
+
+You can install the Windows Autopatch Client Broker on-demand at the tenant level to determine device update readiness and collect logs for issue triaging.
+
+**To install the Windows Autopatch Client Broker**:
+
+1. Go to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Navigate to the **Tenant administration** menu.
+1. In the **Windows Autopatch** section, select **Tenant Management**. Then, select **Manage client broker**.
 
 The following list of post-device registration readiness checks is performed in Windows Autopatch:
 

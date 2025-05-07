@@ -1,7 +1,7 @@
 ---
 title: Windows feature updates overview
 description: This article explains how Windows feature updates are managed
-ms.date: 11/20/2024
+ms.date: 03/31/2025
 ms.service: windows-client
 ms.subservice: autopatch
 ms.topic: overview
@@ -17,16 +17,14 @@ ms.collection:
 
 # Windows feature update
 
-[!INCLUDE [windows-autopatch-enterprise-e3-f3-licenses](../includes/windows-autopatch-enterprise-e3-f3-licenses.md)]
-
 Windows Autopatch provides tools to assist with the controlled roll out of annual Windows feature updates. These policies provide tools to allow version targeting, phased releases, and even Windows 10 to Windows 11 update options. For more information about how to configure feature update profiles, see [Feature updates for Windows 10 and later policy in Intune](/mem/intune/protect/windows-10-feature-updates).
 
 > [!IMPORTANT]
-> Windows Autopatch supports registering [Windows 10 and Windows 11 Long-Term Servicing Channel (LTSC)](/windows/whats-new/ltsc/overview) devices that are being currently serviced by the [Windows 10 LTSC](/windows/release-health/release-information) or [Windows 11 LTSC](/windows/release-health/windows11-release-information). The service only supports managing the [Windows quality updates](../operate/windows-autopatch-windows-quality-update-overview.md) workload for devices currently serviced by the LTSC. Windows Update for Business service and Windows Autopatch don't offer Windows feature updates for devices that are part of the LTSC. You must either use [LTSC media](https://www.microsoft.com/evalcenter/evaluate-windows-10-enterprise) or the [Configuration Manager Operating System Deployment capabilities to perform an in-place upgrade](/windows/deployment/deploy-windows-cm/upgrade-to-windows-10-with-configuration-manager) for Windows devices that are part of the LTSC.
+> Windows Autopatch supports registering [Windows 10 and Windows 11 Long-Term Servicing Channel (LTSC)](/windows/whats-new/ltsc/overview) devices that are being currently serviced by the [Windows 10 LTSC](/windows/release-health/release-information) or [Windows 11 LTSC](/windows/release-health/windows11-release-information). The service only supports managing the [Windows quality updates](../operate/windows-autopatch-windows-quality-update-overview.md) workload for devices currently serviced by the LTSC. Windows Update client policies and Windows Autopatch don't offer Windows feature updates for devices that are part of the LTSC. You must either use [LTSC media](https://www.microsoft.com/evalcenter/evaluate-windows-10-enterprise) or the [Configuration Manager Operating System Deployment capabilities to perform an in-place upgrade](/windows/deployment/deploy-windows-cm/upgrade-to-windows-10-with-configuration-manager) for Windows devices that are part of the LTSC.
 
 ## Multi-phase feature update
 
-Multi-phase feature update allows you to create customizable feature update deployments using multiple phases for your [existing Autopatch groups](../manage/windows-autopatch-manage-autopatch-groups.md). These phased releases can be tailored to meet your organizational unique needs.
+With multi-phase feature updates, you can create customizable feature update deployments using multiple phases for your [existing Autopatch groups](../manage/windows-autopatch-manage-autopatch-groups.md). These phased releases can be tailored to meet your organizational unique needs.
 
 ### Release statuses
 
@@ -47,7 +45,7 @@ The release statuses are described in the following table:
 A phase is made of one or more [Autopatch group deployment rings](../deploy/windows-autopatch-groups-overview.md#autopatch-group-deployment-rings). Each phase reports its status to its release.
 
 > [!IMPORTANT]
-> The determining factor that makes a phase status transition from **Scheduled** to **Active** is when the service automatically creates the Windows feature update policy for each Autopatch group deployment ring. Additionally, the phase status transition from **Active** to **Inactive** occurs when Windows feature update policies are unassigned from the Autopatch groups that belong to a phase. This can happen when an Autopatch group and its deployment rings are re-used as part of a new release.
+> The determining factor that makes a phase status transition from **Scheduled** to **Active** is when the service automatically creates the Windows feature update policy for each Autopatch group deployment ring. Additionally, the phase status transition from **Active** to **Inactive** occurs when Windows feature update policies are unassigned from the Autopatch groups that belong to a phase. This can happen when an Autopatch group and its deployment rings are reused as part of a new release.
 
 | Phase status | Definition |
 | ----- | ----- |
@@ -59,7 +57,21 @@ A phase is made of one or more [Autopatch group deployment rings](../deploy/wind
 
 #### Phase policy configuration
 
-For more information about Windows feature update policies that are created for phases within a release, see [Windows feature update policies](../manage/windows-autopatch-windows-feature-update-policies.md).
+Windows Autopatch creates one Windows feature update policy per phase using the following naming convention:
+
+**`Windows Autopatch - DSS policy - <Release Name> - Phase <Phase Number>`**
+
+These policies can be viewed in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+
+The following table is an example of the Windows feature update policies that were created for phases within a release:
+
+| Policy name | Feature update version | Rollout options| Day between groups | Support end date |
+| ----- | ----- | ----- | ----- | ----- |
+| Windows Autopatch - DSS Policy - My feature update release - Phase 1  | Windows 10 22H2 | Make update available as soon as possible| N/A | October 14, 2025 |
+| Windows Autopatch - DSS Policy - My feature update release - Phase 2  | Windows 10 22H2 | Make update available as soon as possible | 7 | October 14, 2025 |
+| Windows Autopatch - DSS Policy - My feature update release - Phase 3  | Windows 10 22H2 | Make update available as soon as possible | 7 | October 14, 2025 |
+| Windows Autopatch - DSS Policy - My feature update release - Phase 4  | Windows 10 22H2 | Make update available as soon as possible | 7 | October 14, 2025 |
+| Windows Autopatch - DSS Policy - My feature update release - Phase 5  | Windows 10 22H2 | Make update available as soon as possible | 7 | October 14, 2025 |
 
 ## Create a custom release
 
@@ -105,7 +117,7 @@ For more information about Windows feature update policies that are created for 
 ## Cancel a release
 
 > [!IMPORTANT]
-> You can only cancel a release under the **Scheduled** status. You cannot cancel a release under the **Active**, **Inactive, or **Paused** statuses.
+> You can only cancel a release under the **Scheduled** status. You can't cancel a release under the **Active**, **Inactive, or **Paused** statuses.
 
 **To cancel a release:**
 
@@ -121,18 +133,12 @@ For more information about Windows feature update policies that are created for 
 ## Pause and resume a release
 
 > [!IMPORTANT]
-> **Due to a recent change, we have identified an issue that prevents the Paused and Pause status columns from being displayed** in reporting. Until a fix is deployed, **you must keep track of your paused releases so you can resume them at a later date**. The team is actively working on resolving this issue and we'll provide an update when a fix is deployed.
-
-> [!IMPORTANT]
-> **Pausing or resuming an update can take up to eight hours to be applied to devices**. Windows Autopatch uses Microsoft Intune as its device management solution and that's the average frequency Windows devices take to communicate back to Microsoft Intune with new instructions to pause, resume or rollback updates. For more information, see [how long does it take for devices to get a policy, profile, or app after they are assigned from Microsoft Intune](/mem/intune/configuration/device-profile-troubleshoot#how-long-does-it-take-for-devices-to-get-a-policy-profile-or-app-after-they-are-assigned).
+> **Pausing or resuming an update can take up to eight hours to be applied to devices**. Windows Autopatch uses Microsoft Intune as its device management solution and that's the average frequency Windows devices take to communicate back to Microsoft Intune with new instructions to pause, resume, or rollback updates. For more information, see [how long does it take for devices to get a policy, profile, or app after they're assigned from Microsoft Intune](/intune/intune-service/configuration/device-profile-troubleshoot#how-long-does-it-take-for-devices-to-get-a-policy-profile-or-app-after-they-are-assigned).
 
 **To pause and resume a release:**
 
-> [!IMPORTANT]
-> **You can only pause an Autopatch group if you have Windows Enterprise E3+ or F3 licenses (included in Microsoft 365 F3, E3, or E5) licenses and have [activated Windows Autopatch features](../overview/windows-autopatch-overview.md#windows-enterprise-e3-and-f3-licenses).**<p>[Feature activation](../prepare/windows-autopatch-feature-activation.md) is optional and at no additional cost to you if you have Windows 10/11 Enterprise E3 or E5 (included in Microsoft 365 F3, E3, or E5) licenses.</p><p>For more information, see [Licenses and entitlements](../prepare/windows-autopatch-prerequisites.md#licenses-and-entitlements). If you choose not to go through feature activation, you can still use the Windows Autopatch service for the features included in [Business premium and A3+ licenses](../overview/windows-autopatch-overview.md#business-premium-and-a3-licenses).</p>
-
 > [!NOTE]
-> If you pause an update, the specified release has the **Paused** status. The Windows Autopatch service can't overwrite IT admin's pause. You must select **Resume** to resume the update. [The **Paused by Service Pause** status **only** applies to Windows quality updates](../manage/windows-autopatch-windows-quality-update-overview.md#pause-and-resume-a-release). Windows Autopatch doesn't pause Windows feature updates on your behalf.
+> If you pause an update, the specified release has the **Paused** status. You must select **Resume** to resume the update.
 
 1. Go to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 1. Select **Devices** from the left navigation menu.

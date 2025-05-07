@@ -1,7 +1,7 @@
 ---
 title: FileSystem Policy CSP
 description: Learn more about the FileSystem Area in Policy CSP.
-ms.date: 03/12/2025
+ms.date: 05/06/2025
 ms.topic: generated-reference
 ---
 
@@ -17,6 +17,56 @@ ms.topic: generated-reference
 <!-- FileSystem-Editable-Begin -->
 <!-- Add any additional information about this policy here. Anything outside this section will get overwritten. -->
 <!-- FileSystem-Editable-End -->
+
+<!-- ClfsAuthenticationChecking-Begin -->
+## ClfsAuthenticationChecking
+
+<!-- ClfsAuthenticationChecking-Applicability-Begin -->
+| Scope | Editions | Applicable OS |
+|:--|:--|:--|
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows Insider Preview |
+<!-- ClfsAuthenticationChecking-Applicability-End -->
+
+<!-- ClfsAuthenticationChecking-OmaUri-Begin -->
+```Device
+./Device/Vendor/MSFT/Policy/Config/FileSystem/ClfsAuthenticationChecking
+```
+<!-- ClfsAuthenticationChecking-OmaUri-End -->
+
+<!-- ClfsAuthenticationChecking-Description-Begin -->
+<!-- Description-Source-Not-Found -->
+<!-- ClfsAuthenticationChecking-Description-End -->
+
+<!-- ClfsAuthenticationChecking-Editable-Begin -->
+<!-- Add any additional information about this policy here. Anything outside this section will get overwritten. -->
+<!-- ClfsAuthenticationChecking-Editable-End -->
+
+<!-- ClfsAuthenticationChecking-DFProperties-Begin -->
+**Description framework properties**:
+
+| Property name | Property value |
+|:--|:--|
+| Format | `chr` (string) |
+| Access Type | Add, Delete, Get, Replace |
+<!-- ClfsAuthenticationChecking-DFProperties-End -->
+
+<!-- ClfsAuthenticationChecking-AdmxBacked-Begin -->
+<!-- ADMX-Not-Found -->
+[!INCLUDE [ADMX-backed policy note](includes/mdm-admx-policy-note.md)]
+
+**ADMX mapping**:
+
+| Name | Value |
+|:--|:--|
+| Name | ClfsAuthenticationChecking |
+| ADMX File Name | FileSys.admx |
+<!-- ClfsAuthenticationChecking-AdmxBacked-End -->
+
+<!-- ClfsAuthenticationChecking-Examples-Begin -->
+<!-- Add any examples for this policy here. Examples outside this section will get overwritten. -->
+<!-- ClfsAuthenticationChecking-Examples-End -->
+
+<!-- ClfsAuthenticationChecking-End -->
 
 <!-- DevDriveAttachPolicy-Begin -->
 ## DevDriveAttachPolicy
@@ -95,7 +145,7 @@ Dev drive or developer volume is a volume optimized for performance of developer
 
 Disabling this setting will disallow creation of new developer volumes, existing developer volumes will mount as regular volumes.
 
-If this setting isn't configured the default policy is to enable developer volumes while allowing antivirus filter to attach on a deveveloper volume. Further, if not configured, a local administrator can choose to not have antivirus filter attached to a developer volume.
+If this setting isn't configured the default policy is to enable developer volumes while allowing antivirus filter to attach on a developer volume. Further, if not configured, a local administrator can choose to not have antivirus filter attached to a developer volume.
 
 A reboot is required for this setting to take effect.
 <!-- EnableDevDrive-Description-End -->

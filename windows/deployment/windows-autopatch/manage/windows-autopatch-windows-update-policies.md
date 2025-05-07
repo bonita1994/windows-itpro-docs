@@ -1,7 +1,7 @@
 ---
 title: Windows quality update policies
 description: This article explains Windows quality update policies in Windows Autopatch
-ms.date: 09/16/2024
+ms.date: 03/31/2025
 ms.service: windows-client
 ms.subservice: autopatch
 ms.topic: concept-article
@@ -15,8 +15,6 @@ ms.collection:
 ---
 
 # Windows quality update policies
-
-[!INCLUDE [windows-autopatch-enterprise-e3-f3-licenses](../includes/windows-autopatch-enterprise-e3-f3-licenses.md)]
 
 ## Conflicting and unsupported policies
 

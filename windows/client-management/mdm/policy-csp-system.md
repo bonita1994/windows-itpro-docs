@@ -1,7 +1,7 @@
 ---
 title: System Policy CSP
 description: Learn more about the System Area in Policy CSP.
-ms.date: 03/12/2025
+ms.date: 04/04/2025
 ms.topic: generated-reference
 ---
 
@@ -11,6 +11,8 @@ ms.topic: generated-reference
 # Policy CSP - System
 
 [!INCLUDE [ADMX-backed CSP tip](includes/mdm-admx-csp-note.md)]
+
+[!INCLUDE [Windows Insider tip](includes/mdm-insider-csp-note.md)]
 
 <!-- System-Editable-Begin -->
 <!-- Add any additional information about this policy here. Anything outside this section will get overwritten. -->
@@ -1194,6 +1196,59 @@ If you don't configure this policy setting, or you set it to "Enable diagnostic 
 <!-- ConfigureTelemetryOptInSettingsUx-Examples-End -->
 
 <!-- ConfigureTelemetryOptInSettingsUx-End -->
+
+<!-- DisableCHPE-Begin -->
+## DisableCHPE
+
+<!-- DisableCHPE-Applicability-Begin -->
+| Scope | Editions | Applicable OS |
+|:--|:--|:--|
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows Insider Preview |
+<!-- DisableCHPE-Applicability-End -->
+
+<!-- DisableCHPE-OmaUri-Begin -->
+```Device
+./Device/Vendor/MSFT/Policy/Config/System/DisableCHPE
+```
+<!-- DisableCHPE-OmaUri-End -->
+
+<!-- DisableCHPE-Description-Begin -->
+<!-- Description-Source-DDF -->
+This policy setting controls whether loading CHPE binaries is disabled on the ARM64 device. This policy has no effect on x64 devices.
+
+- If you enable this policy setting, ARM64 devices won't load CHPE binaries. This setting is required for hotpatching on ARM64 devices.
+
+- If you disable or don't configure this policy setting, ARM64 devices will load CHPE binaries.
+<!-- DisableCHPE-Description-End -->
+
+<!-- DisableCHPE-Editable-Begin -->
+<!-- Add any additional information about this policy here. Anything outside this section will get overwritten. -->
+<!-- DisableCHPE-Editable-End -->
+
+<!-- DisableCHPE-DFProperties-Begin -->
+**Description framework properties**:
+
+| Property name | Property value |
+|:--|:--|
+| Format | `int` |
+| Access Type | Add, Delete, Get, Replace |
+| Default Value  | 0 |
+<!-- DisableCHPE-DFProperties-End -->
+
+<!-- DisableCHPE-AllowedValues-Begin -->
+**Allowed values**:
+
+| Value | Description |
+|:--|:--|
+| 0 (Default) | CHPE Binaries Enabled (Default). |
+| 1 | CHPE Binaries Disabled. |
+<!-- DisableCHPE-AllowedValues-End -->
+
+<!-- DisableCHPE-Examples-Begin -->
+<!-- Add any examples for this policy here. Examples outside this section will get overwritten. -->
+<!-- DisableCHPE-Examples-End -->
+
+<!-- DisableCHPE-End -->
 
 <!-- DisableDeviceDelete-Begin -->
 ## DisableDeviceDelete

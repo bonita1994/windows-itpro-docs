@@ -1,7 +1,7 @@
 ---
 title: Exclude a device
 description: This article explains how to exclude a device from the Windows Autopatch service
-ms.date: 09/16/2024
+ms.date: 03/31/2025
 ms.service: windows-client
 ms.subservice: autopatch
 ms.topic: how-to
@@ -15,8 +15,6 @@ ms.collection:
 ---
 
 # Exclude a device
-
-[!INCLUDE [windows-autopatch-enterprise-e3-f3-licenses](../includes/windows-autopatch-enterprise-e3-f3-licenses.md)]
 
 To avoid end-user disruption, excluding a device in Windows Autopatch only deletes the Windows Autopatch device record itself. Excluding a device can't delete the Microsoft Intune and/or the Microsoft Entra device records. Microsoft assumes you manage those devices yourself in some capacity.
 
@@ -34,11 +32,11 @@ When you exclude a device from the Windows Autopatch service, the device is flag
 1. Once a device or multiple devices are selected, select **Device actions**. Then, select **Exclude device**.
 
 > [!WARNING]
-> Excluding devices from the Windows Autopatch Device Registration group, or any other Microsoft Entra group, used with Autopatch groups doesn't exclude devices from the Windows Autopatch service.
+> When you exclude devices from the Windows Autopatch Device Registration group, or any other Microsoft Entra group, used with Autopatch groups doesn't exclude devices from the Windows Autopatch service.
 
 ## Only view excluded devices
 
-You can view the excluded devices in the [**Devices report**](../deploy/windows-autopatch-register-devices.md#devices-report) to make it easier for you to bulk restore devices that were previously excluded from the Windows Autopatch service.
+You can view the excluded devices in the [**Autopatch groups membership report**](../deploy/windows-autopatch-register-devices.md#autopatch-groups-membership-report) to make it easier for you to bulk restore devices that were previously excluded from the Windows Autopatch service.
 
 **To view only excluded devices:**
 

@@ -1,7 +1,7 @@
 ---
 title: DeviceLock Policy CSP
 description: Learn more about the DeviceLock Area in Policy CSP.
-ms.date: 03/12/2025
+ms.date: 04/30/2025
 ms.topic: generated-reference
 ---
 
@@ -24,7 +24,7 @@ ms.topic: generated-reference
 <!-- AccountLockoutPolicy-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 24H2 [10.0.26100] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 22H2 with [KB5053657](https://support.microsoft.com/help/5053657) [10.0.22621.5126] and later <br> ✅ Windows 11, version 24H2 [10.0.26100] and later |
 <!-- AccountLockoutPolicy-Applicability-End -->
 
 <!-- AccountLockoutPolicy-OmaUri-Begin -->
@@ -63,7 +63,7 @@ Account lockout threshold - This security setting determines the number of faile
 <!-- AllowAdministratorLockout-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 24H2 [10.0.26100] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 22H2 with [KB5053657](https://support.microsoft.com/help/5053657) [10.0.22621.5126] and later <br> ✅ Windows 11, version 24H2 [10.0.26100] and later |
 <!-- AllowAdministratorLockout-Applicability-End -->
 
 <!-- AllowAdministratorLockout-OmaUri-Begin -->
@@ -328,7 +328,7 @@ Determines the type of PIN or password required. This policy only applies if the
 <!-- ClearTextPassword-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 24H2 [10.0.26100] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 22H2 with [KB5053657](https://support.microsoft.com/help/5053657) [10.0.22621.5126] and later <br> ✅ Windows 11, version 24H2 [10.0.26100] and later |
 <!-- ClearTextPassword-Applicability-End -->
 
 <!-- ClearTextPassword-OmaUri-Begin -->
@@ -684,7 +684,7 @@ The number of authentication failures allowed before the device will be wiped. A
 <!-- MaximumPasswordAge-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 24H2 [10.0.26100] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 22H2 with [KB5053657](https://support.microsoft.com/help/5053657) [10.0.22621.5126] and later <br> ✅ Windows 11, version 24H2 [10.0.26100] and later |
 <!-- MaximumPasswordAge-Applicability-End -->
 
 <!-- MaximumPasswordAge-OmaUri-Begin -->
@@ -1024,7 +1024,7 @@ This security setting determines the period of time (in days) that a password mu
 <!-- MinimumPasswordLength-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 24H2 [10.0.26100] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 22H2 with [KB5053657](https://support.microsoft.com/help/5053657) [10.0.22621.5126] and later <br> ✅ Windows 11, version 24H2 [10.0.26100] and later |
 <!-- MinimumPasswordLength-Applicability-End -->
 
 <!-- MinimumPasswordLength-OmaUri-Begin -->
@@ -1077,7 +1077,7 @@ This security setting determines the least number of characters that a password 
 <!-- MinimumPasswordLengthAudit-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 24H2 [10.0.26100] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 22H2 with [KB5053657](https://support.microsoft.com/help/5053657) [10.0.22621.5126] and later <br> ✅ Windows 11, version 24H2 [10.0.26100] and later |
 <!-- MinimumPasswordLengthAudit-Applicability-End -->
 
 <!-- MinimumPasswordLengthAudit-OmaUri-Begin -->
@@ -1127,7 +1127,7 @@ This security setting determines the minimum password length for which password 
 <!-- PasswordComplexity-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 24H2 [10.0.26100] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 22H2 with [KB5053657](https://support.microsoft.com/help/5053657) [10.0.22621.5126] and later <br> ✅ Windows 11, version 24H2 [10.0.26100] and later |
 <!-- PasswordComplexity-Applicability-End -->
 
 <!-- PasswordComplexity-OmaUri-Begin -->
@@ -1187,7 +1187,7 @@ Complexity requirements are enforced when passwords are changed or created.
 <!-- PasswordHistorySize-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 24H2 [10.0.26100] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 22H2 with [KB5053657](https://support.microsoft.com/help/5053657) [10.0.22621.5126] and later <br> ✅ Windows 11, version 24H2 [10.0.26100] and later |
 <!-- PasswordHistorySize-Applicability-End -->
 
 <!-- PasswordHistorySize-OmaUri-Begin -->
@@ -1359,7 +1359,7 @@ If you enable this setting, users will no longer be able to modify slide show se
 <!-- RelaxMinimumPasswordLengthLimits-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 24H2 [10.0.26100] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 22H2 with [KB5053657](https://support.microsoft.com/help/5053657) [10.0.22621.5126] and later <br> ✅ Windows 11, version 24H2 [10.0.26100] and later |
 <!-- RelaxMinimumPasswordLengthLimits-Applicability-End -->
 
 <!-- RelaxMinimumPasswordLengthLimits-OmaUri-Begin -->

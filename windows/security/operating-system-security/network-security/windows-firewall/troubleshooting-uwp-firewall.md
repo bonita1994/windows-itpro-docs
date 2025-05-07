@@ -2,7 +2,7 @@
 title: Troubleshooting UWP App Connectivity Issues in Windows Firewall
 description: Troubleshooting UWP App Connectivity Issues in Windows Firewall
 ms.topic: troubleshooting
-ms.date: 09/06/2024
+ms.date: 04/07/2025
 ---
 
 # Troubleshooting UWP App Connectivity Issues

@@ -89,8 +89,8 @@ The following diagram displays an overview of how Connected Cache functions:
 1. The Microsoft Connected Cache container is deployed to the device using Azure IoT Edge container management services and the cache server begins reporting status and metrics to Delivery Optimization services.
 1. The DOCacheHost setting is configured using Intune or other MDM, DHCP custom option, or registry key.
 1. Devices request content from the cache server, the cache server forwards the requests to the CDN and fills the cache, the cache server delivers the content requested to the devices, and uses Peer to Peer (depending on DO Download mode settings) for all DO content.
-1. Devices can fall back to CDN if the cache server is unavailable for any reason or use Delivery Optimization delay fallback to http (CDN) settings to prefer the local cache server.
-You can view data about Microsoft Connected Cache downloads on management portal and Windows Update for Business reports.
+1. Devices can fall back to CDN if the cache server is unavailable for any reason or use Delivery Optimization delay fallback to http (CDN) settings to prefer the local cache server. If the cache server fails to respond, the client downloads the content from the CDN. To delay this behavior, set the [DelayCacheServerFallbackForeground/DelayCacheServerFallbackBackground](/windows/deployment/do/waas-delivery-optimization-reference#delay-foreground-download-cache-server-fallback-in-secs) setting to avoid the immediate fallback. You can view data about Microsoft Connected Cache downloads on management portal and Windows Update for Business reports.
+
 
 ## Next steps
 

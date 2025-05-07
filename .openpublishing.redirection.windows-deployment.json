@@ -1689,6 +1689,51 @@
       "source_path": "windows/deployment/windows-autopatch/monitor/windows-autopatch-reliability-report.md",
       "redirect_url": "/windows/deployment/windows-autopatch/monitor/windows-autopatch-windows-quality-and-feature-update-reports-overview",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "windows/deployment/windows-autopatch/prepare/windows-autopatch-feature-activation.md",
+      "redirect_url": "/windows/deployment/windows-autopatch/prepare/windows-autopatch-start-using-autopatch",
+      "redirect_document_id": false    
+    },
+    {
+      "source_path": "windows/deployment/windows-autopatch/deploy/windows-autopatch-admin-contacts.md",
+      "redirect_url": "/windows/deployment/windows-autopatch/manage/windows-autopatch-support-request",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "windows/deployment/windows-autopatch/manage/windows-autopatch-customize-windows-update-settings.md",
+      "redirect_url": "/windows/deployment/windows-autopatch/manage/windows-autopatch-manage-autopatch-groups",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "windows/deployment/windows-autopatch/manage/windows-autopatch-windows-quality-update-communications.md",
+      "redirect_url": "/windows/deployment/windows-autopatch/manage/windows-autopatch-windows-quality-update-overview",
+      "redirect_document_id": false  
+    },
+    {
+      "source_path": "windows/deployment/windows-autopatch/manage/windows-autopatch-windows-feature-update-policies.md",
+      "redirect_url": "/windows/deployment/windows-autopatch/manage/windows-autopatch-windows-feature-update-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "windows/deployment/windows-autopatch/manage/windows-autopatch-feature-deactivation.md",
+      "redirect_url": "/windows/deployment/windows-autopatch/overview/windows-autopatch-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "windows/deployment/windows-autopatch/references/windows-autopatch-changes-made-at-feature-activation.md",
+      "redirect_url": "/windows/deployment/windows-autopatch/overview/windows-autopatch-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "windows/deployment/windows-autopatch/overview/windows-autopatch-deployment-guide.md",
+      "redirect_url": "/windows/deployment/windows-autopatch/overview/windows-autopatch-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "windows/deployment/windows-autopatch/overview/windows-autopatch-roles-responsibilities.md",
+      "redirect_url": "/windows/deployment/windows-autopatch/overview/windows-autopatch-overview",
+      "redirect_document_id": false
     }
   ]
 }

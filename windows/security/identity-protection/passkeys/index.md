@@ -1,10 +1,10 @@
 ---
-title: Support for passkeys in Windows
+title: Support for Passkeys in Windows
 description: Learn about passkeys and how to use them on Windows devices.
 ms.collection:
 - tier1
 ms.topic: overview
-ms.date: 09/06/2024
+ms.date: 04/07/2025
 appliesto:
 - ✅ <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Windows 11</a>
 - ✅ <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Windows 10</a>

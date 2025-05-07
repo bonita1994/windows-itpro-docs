@@ -1,7 +1,7 @@
 ---
 title: Defender Policy CSP
 description: Learn more about the Defender Area in Policy CSP.
-ms.date: 03/12/2025
+ms.date: 04/04/2025
 ms.topic: generated-reference
 ---
 
@@ -728,7 +728,7 @@ This policy setting allows you to configure scheduled scans and on-demand (manua
 |:--|:--|
 | Format | `int` |
 | Access Type | Add, Delete, Get, Replace |
-| Default Value  | 0 |
+| Default Value  | 1 |
 <!-- AllowScanningNetworkFiles-DFProperties-End -->
 
 <!-- AllowScanningNetworkFiles-AllowedValues-Begin -->
@@ -736,8 +736,8 @@ This policy setting allows you to configure scheduled scans and on-demand (manua
 
 | Value | Description |
 |:--|:--|
-| 0 (Default) | Not allowed. Turns off scanning of network files. |
-| 1 | Allowed. Scans network files. |
+| 0 | Not allowed. Turns off scanning of network files. |
+| 1 (Default) | Allowed. Scans network files. |
 <!-- AllowScanningNetworkFiles-AllowedValues-End -->
 
 <!-- AllowScanningNetworkFiles-GpMapping-Begin -->

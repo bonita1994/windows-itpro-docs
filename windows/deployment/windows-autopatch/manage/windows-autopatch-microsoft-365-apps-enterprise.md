@@ -1,7 +1,7 @@
 ---
 title: Microsoft 365 Apps for enterprise
 description: This article explains how Windows Autopatch manages Microsoft 365 Apps for enterprise updates
-ms.date: 09/16/2024
+ms.date: 03/31/2025
 ms.service: windows-client
 ms.subservice: autopatch
 ms.topic: how-to
@@ -17,12 +17,7 @@ ms.collection:
 
 # Microsoft 365 Apps for enterprise
 
-[!INCLUDE [windows-autopatch-enterprise-e3-f3-licenses](../includes/windows-autopatch-enterprise-e3-f3-licenses.md)]
-
 ## Service level objective
-
-> [!IMPORTANT]
-> To update Microsoft 365 Apps for enterprise, you must [create at least one Autopatch group](../manage/windows-autopatch-manage-autopatch-groups.md#create-an-autopatch-group) first and **Microsoft 365 app update setting** must be set to [**Allow**](#allow-or-block-microsoft-365-app-updates). For more information on workloads supported by Windows Autopatch groups, see [Software update workloads](../deploy/windows-autopatch-groups-overview.md#software-update-workloads).
 
 Windows Autopatch aims to keep at least 90% of eligible devices on a [supported version](/deployoffice/overview-update-channels#support-duration-for-monthly-enterprise-channel) of the Monthly Enterprise Channel (MEC) for the:
 
@@ -77,57 +72,76 @@ To ensure that users are receiving automatic updates, Windows Autopatch prevents
 
 ## Microsoft 365 Apps for enterprise update controls
 
-Windows Autopatch doesn't allow you to pause or roll back an update in the Microsoft Intune admin center.
+With the expanded Autopatch group capabilities, you can choose to turn on Microsoft 365 Apps updates on a per Autopatch group level. Depending on your tenant settings, one of the following scenarios occurs:
 
-[Submit a support request](../manage/windows-autopatch-support-request.md) to the Windows Autopatch Service Engineering Team to pause or roll back an update when needed.
+- Tenants that previously turned on Autopatch Microsoft 365 Apps update, has the Microsoft 365 Apps updates Update Type checkbox selected and the updated policies applied to each Autopatch group.  
+- Tenants that previously turned off Autopatch Microsoft 365 Apps updates, or are new to Windows Autopatch, Autopatch Microsoft 365 Apps updates remain turned off.
+
+If you [created an Autopatch group](../manage/windows-autopatch-manage-autopatch-groups.md#create-an-autopatch-group) and selected Microsoft 365 apps updates as a content type, the **Update Type** checkbox is **selected**, with new policies created, and any available old policies are removed. If you didn’t select Microsoft 365 apps updates as a content type upon creating an Autopatch group, the **Update Type** checkbox is **unselected**. Any available customized policies are retained and appear in the **Policies** tab.
+
+### Turn on Microsoft 365 Apps updates
+
+**To turn on Microsoft 365 Apps updates:**
+
+1. Go to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Navigate to **Tenant Administration** > **Windows Autopatch** > **Autopatch groups**.
+1. Select an Autopatch group to modify (repeat these steps for each group).  
+1. Next to **Update types**, select **Edit**.  
+1. Select **Microsoft 365 Apps updates**.  
+1. Select **Next: Deployment settings** > **Next: Release schedules** > **Next: Review + save** > **Save** to save these changes.
+1. We recommend deleting old Autopatch default policies to avoid policy conflict. Navigate to **Devices** > **Manage devices** > **Configuration** > **Policies** tab.  
+1. Manually remove the following profiles related to Microsoft 365 Apps:
+    1. Windows Autopatch - Office Configuration
+    2. Windows Autopatch - Office Update Configuration [Test]
+    3. Windows Autopatch - Office Update Configuration [First]
+    4. Windows Autopatch - Office Update Configuration [Fast]
+    5. Windows Autopatch - Office Update Configuration [Broad]
+
+> [!NOTE]
+> If you previously selected **Microsoft 365 Apps updates** when [creating an Autopatch group](../manage/windows-autopatch-manage-autopatch-groups.md#create-an-autopatch-group), but your tenant isn't showing the new updates, there’s a possibility that you previously modified the policy. To ensure there are no disruptions, the Autopatch Service retains that policy.  
+
+### Turn off Microsoft 365 Apps updates
+
+**To turn off Microsoft 365 Apps updates:**
+
+1. Go to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Navigate to **Tenant Administration** > **Windows Autopatch** > **Autopatch groups**.
+1. Select an Autopatch group to modify (repeat these steps for each group).  
+1. Next to **Update types**, select **Edit**.
+1. Unselect **Microsoft 365 Apps updates**.  
+1. Select **Next: Deployment settings** > **Next: Release schedules** > **Next: Review + save** > **Save** to save these changes.
+
+### Verify Microsoft 365 Apps updates policies
+
+**To verify Microsoft 365 Apps updates policies:**
+
+1. Go to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Navigate to **Tenant Administration** > **Windows Autopatch** > **Autopatch groups**.  
+1. Verify each Autopatch group has the **Microsoft 365 Apps Update Type** checkbox **selected**.
+1. Navigate to **Devices** > **Manage devices** > **Configuration** > **Policies** tab.
+1. The following new policies should be discoverable from the list of profiles:
+    1. `"Windows Autopatch Microsoft 365 Update Policy - <group name> - <ring name>"`
+1. The following profiles should be removed from your list of profiles and no longer visible/active. Use the Search with the keywords "Office Configuration". The result should return *0 profiles filtered*.
+    1. Windows Autopatch - Office Configuration
+    2. Windows Autopatch - Office Update Configuration [Test]
+    3. Windows Autopatch - Office Update Configuration [First]
+    4. Windows Autopatch - Office Update Configuration [Fast]
+    5. Windows Autopatch - Office Update Configuration [Broad]
+
+### Verify Microsoft 365 Apps updates policies are created
+
+**To verify Microsoft 365 Apps updates policies are created:**
+
+1. Go to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Navigate to **Devices** > **Manage devices** > **Configuration** > **Policies**.
+1. Confirm the new policies are named:`"Windows Autopatch Microsoft 365 Update Policy - <group name> - <ring name>"`
+
+### Roll back a Microsoft 365 App update
+
+Windows Autopatch doesn't allow you to pause or roll back an update in the Microsoft Intune admin center.
 
 > [!NOTE]
 > Updates are bundled together into a single release in the [Monthly Enterprise Channel](/deployoffice/overview-update-channels#monthly-enterprise-channel-overview). Therefore, we can't roll back only a portion of the update for Microsoft 365 Apps for enterprise.
-
-## Allow or block Microsoft 365 App updates
-
-> [!IMPORTANT]
-> You must be an Intune Administrator to make changes to the setting.
-
-For organizations seeking greater control, you can allow or block Microsoft 365 App updates for Windows Autopatch-enrolled devices.
-
-| Microsoft 365 App setting | Description |
-| ----- | ----- |
-| **Allow** | When set to **Allow**, Windows Autopatch moves all Autopatch managed devices to the [Monthly Enterprise Channel](/deployoffice/overview-update-channels#monthly-enterprise-channel-overview) and manages updates automatically. To manage updates manually, set the Microsoft 365 App update setting to **Block**. |
-| **Block** | When set to **Block**, Windows Autopatch doesn't provide Microsoft 365 App updates on your behalf, and your organizations have full control over these updates. You can continue to receive updates from [channels](/deployoffice/overview-update-channels) other than the default [Monthly Enterprise Channel](/deployoffice/overview-update-channels#monthly-enterprise-channel-overview). |
-
-**To allow or block Microsoft 365 App updates:**
-
-1. Go to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Navigate to the **Tenant administration** > **Windows Autopatch** > **Autopatch groups** > **Update settings**.
-3. Go to the **Microsoft 365 apps updates** section. By default, the **Allow/Block** toggle is set to **Block**.
-4. Turn off the **Allow** toggle to opt out of Microsoft 365 App update policies. You see the notification: *Update in process. This setting will be unavailable until the update is complete.*
-5. Once the update is complete, you receive the notification: *This setting is updated.*
-
-> [!NOTE]
-> If the notification: *This setting couldn't be updated. Please try again or submit a support request.* appears, use the following steps:<ol><li>Refresh your page.</li><li>Please repeat the same steps in To block Microsoft 365 apps updates.</li><li>If the issue persists, [submit a support request](../manage/windows-autopatch-support-request.md).</li>
-
-**To verify if the Microsoft 365 App update setting is set to Allow:**
-
-1. Go to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Navigate to **Devices** > **Configuration profiles** > **Profiles**.
-3. The following profiles should be discoverable from the list of profiles:
-    1. Windows Autopatch - Office Configuration
-    2. Windows Autopatch - Office Update Configuration [Test]
-    3. Windows Autopatch - Office Update Configuration [First]
-    4. Windows Autopatch - Office Update Configuration [Fast]
-    5. Windows Autopatch - Office Update Configuration [Broad]
-
-**To verify if the Microsoft 365 App update setting is set to Block:**
-
-1. Go to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Navigate to **Devices** > **Configuration profiles** > **Profiles**.
-3. The following profiles should be removed from your list of profiles and no longer visible/active. Use the Search with the keywords "Office Configuration". The result should return *0 profiles filtered*.
-    1. Windows Autopatch - Office Configuration
-    2. Windows Autopatch - Office Update Configuration [Test]
-    3. Windows Autopatch - Office Update Configuration [First]
-    4. Windows Autopatch - Office Update Configuration [Fast]
-    5. Windows Autopatch - Office Update Configuration [Broad]
 
 ## Compatibility with Servicing Profiles
 
@@ -137,4 +151,4 @@ A [service profile](/deployoffice/admincenter/servicing-profile#compatibility-wi
 
 ## Incidents and outages
 
-If you're experiencing issues related to Microsoft 365 Apps for enterprise updates, [submit a support request](../manage/windows-autopatch-support-request.md).
+If you're experiencing issues related to Microsoft 365 Apps for enterprise updates, [submit a support request](../manage/windows-autopatch-support-request.md). You can only submit a support request if you have E3+ or F licenses. For more information, see [Features and capabilities](../overview/windows-autopatch-overview.md#features-and-capabilities).

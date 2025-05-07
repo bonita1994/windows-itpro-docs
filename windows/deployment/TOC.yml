@@ -89,19 +89,19 @@ items:
                   href: update/waas-restart.md
                 - name: Manage additional Windows Update settings
                   href: update/waas-wu-settings.md
-        - name: Use Windows Update for Business
+        - name: Use Windows Update client policies
           items:
-            - name: What is Windows Update for Business?
+            - name: What are Windows Update client policies?
               href: update/waas-manage-updates-wufb.md
-            - name: Configure Windows Update for Business
+            - name: Configure Windows Update client policies
               href: update/waas-configure-wufb.md
-            - name: Use Windows Update for Business and WSUS
+            - name: Use Windows Update client policies and WSUS
               href: update/wufb-wsus.md
             - name: Enforcing compliance deadlines for updates
               href: update/wufb-compliancedeadlines.md
-            - name: Integrate Windows Update for Business with management solutions
+            - name: Integrate Windows Update client policies with management solutions
               href: update/waas-integrate-wufb.md
-            - name: Use group policy to configure Windows Update for Business
+            - name: Use group policy to configure Windows Update client policies
               href: update/waas-wufb-group-policy.md
             - name: Deploy updates using CSPs and MDM
               href: update/waas-wufb-csp-mdm.md

@@ -5,7 +5,7 @@ ms.date: 02/25/2025
 ms.topic: include
 ---
 
-### Turn off abbreviated time and date format
+### Turn off abbreviated date and time format
 
 This policy setting allows you to show the longer time and date format in the system tray:
 
@@ -17,6 +17,4 @@ This policy setting allows you to show the longer time and date format in the sy
 |  | Path |
 |--|--|
 | **CSP** |- `./User/Vendor/MSFT/Policy/Config/Start/`[TurnOffAbbreviatedDateTimeFormat](/windows/client-management/mdm/policy-csp-start#TurnOffAbbreviatedDateTimeFormat) |
-| **GPO** |- **User Configuration** > **Administrative Templates** > **Start Menu and Taskbar** |
-
-<!-- not linked yet as it's in Insider>
+| **GPO** |- **User Configuration** > **Administrative Templates** > **Start Menu and Taskbar** > **Turn off abbreviated time and date format**|

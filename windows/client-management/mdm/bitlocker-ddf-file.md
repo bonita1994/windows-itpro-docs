@@ -1,7 +1,7 @@
 ---
 title: BitLocker DDF file
 description: View the XML file containing the device description framework (DDF) for the BitLocker configuration service provider.
-ms.date: 02/13/2025
+ms.date: 04/04/2025
 ms.topic: generated-reference
 ---
 
@@ -580,7 +580,7 @@ The following XML file contains the device description framework (DDF) for the B
 
                          1 = This is the default, when the policy is not set. Warning prompt and encryption notification is allowed.
                          0 = Disables the warning prompt and encryption notification. Starting in Windows 10, next major update, 
-                             the value 0 only takes affect on Azure Active Directory joined devices. 
+                             the value 0 only takes affect on Entra ID joined devices. 
                              Windows will attempt to silently enable BitLocker for value 0.
 
                          If you want to disable this policy use the following SyncML:
@@ -600,7 +600,7 @@ The following XML file contains the device description framework (DDF) for the B
         <MSFT:AllowedValues ValueType="ENUM">
           <MSFT:Enum>
             <MSFT:Value>0</MSFT:Value>
-            <MSFT:ValueDescription>Disables the warning prompt. Starting in Windows 10, version 1803, the value 0 can only be set for Azure Active Directory joined devices. Windows will attempt to silently enable BitLocker for value 0.</MSFT:ValueDescription>
+            <MSFT:ValueDescription>Disables the warning prompt. Starting in Windows 10, version 1803, the value 0 can only be set for Entra ID joined devices. Windows will attempt to silently enable BitLocker for value 0.</MSFT:ValueDescription>
           </MSFT:Enum>
           <MSFT:Enum>
             <MSFT:Value>1</MSFT:Value>
@@ -680,15 +680,15 @@ The following XML file contains the device description framework (DDF) for the B
           <Replace />
         </AccessType>
         <DefaultValue>0</DefaultValue>
-        <Description> Allows Admin to configure Numeric Recovery Password Rotation upon use for OS and fixed drives on AAD and Hybrid domain joined devices.
-                          When not configured, Rotation is turned on by default for AAD only and off on Hybrid. The Policy will be effective only when 
+        <Description> Allows Admin to configure Numeric Recovery Password Rotation upon use for OS and fixed drives on Entra ID and Hybrid domain joined devices.
+                          When not configured, Rotation is turned on by default for Entra ID only and off on Hybrid. The Policy will be effective only when 
                           Active Directory back up for recovery password is configured to required.
                           For OS drive: Turn on "Do not enable Bitlocker until recovery information is stored to AD DS for operating system drives"
                           For Fixed drives: Turn on "Do not enable Bitlocker until recovery information is stored to AD DS for fixed data drives"
                        
                           Supported Values: 0 - Numeric Recovery Passwords rotation OFF.
-                                            1 - Numeric Recovery Passwords Rotation upon use ON for AAD joined devices. Default value
-                                            2 - Numeric Recovery Passwords Rotation upon use ON for both AAD and Hybrid devices
+                                            1 - Numeric Recovery Passwords Rotation upon use ON for Entra ID joined devices. Default value
+                                            2 - Numeric Recovery Passwords Rotation upon use ON for both Entra ID and Hybrid devices
                          
                          If you want to disable this policy use the following SyncML:
  
@@ -716,11 +716,11 @@ The following XML file contains the device description framework (DDF) for the B
           </MSFT:Enum>
           <MSFT:Enum>
             <MSFT:Value>1</MSFT:Value>
-            <MSFT:ValueDescription>Refresh on for Azure AD-joined devices</MSFT:ValueDescription>
+            <MSFT:ValueDescription>Refresh on for Entra ID-joined devices</MSFT:ValueDescription>
           </MSFT:Enum>
           <MSFT:Enum>
             <MSFT:Value>2</MSFT:Value>
-            <MSFT:ValueDescription>Refresh on for both Azure AD-joined and hybrid-joined devices</MSFT:ValueDescription>
+            <MSFT:ValueDescription>Refresh on for both Entra ID-joined and hybrid-joined devices</MSFT:ValueDescription>
           </MSFT:Enum>
         </MSFT:AllowedValues>
       </DFProperties>
@@ -731,7 +731,7 @@ The following XML file contains the device description framework (DDF) for the B
         <AccessType>
           <Exec />
         </AccessType>
-        <Description> Allows admin to push one-time rotation of all numeric recovery passwords for OS and Fixed Data drives on an Azure Active Directory or hybrid-joined device.
+        <Description> Allows admin to push one-time rotation of all numeric recovery passwords for OS and Fixed Data drives on an Entra ID or hybrid-joined device.
                           This policy is Execute type and rotates all numeric passwords when issued from MDM tools.
                           
 The policy only comes into effect when Active Directory backup for a recovery password is configured to "required."

@@ -1,8 +1,8 @@
 ---
-title: Configure firewall rules with group policy
+title: Configure Firewall Rules With Group Policy
 description: Learn how to configure firewall rules using group policy with the Windows Firewall with Advanced Security console.
 ms.topic: how-to
-ms.date: 09/06/2024
+ms.date: 04/07/2025
 ---
 
 # Configure rules with group policy

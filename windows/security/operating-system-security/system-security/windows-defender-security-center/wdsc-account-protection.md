@@ -1,7 +1,7 @@
 ---
 title: Account protection in Windows Security
 description: Use the Account protection section to manage security for your account and sign in to Microsoft.
-ms.date: 06/27/2024
+ms.date: 04/15/2025
 ms.topic: how-to
 ---
 
@@ -19,10 +19,8 @@ You can also choose to hide the section from users of the device, if you don't w
 
 You can choose to hide the entire section by using Group Policy. When hidden, this section doesn't appear on the home page of **Windows Security**, and its icon isn't shown on the navigation bar on the side.
 
-You can only configure these settings by using Group Policy.
-
 > [!IMPORTANT]
-> You must have Windows 10, version 1803 or later. The ADMX/ADML template files for earlier versions of Windows do not include these Group Policy settings.
+> You must have Windows 10, version 1803 or later. The ADMX/ADML template files for earlier versions of Windows don't include these Group Policy settings.
 
 1. On your Group Policy management machine, open the [Group Policy Management Console](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731212(v=ws.11)). Right-click the Group Policy Object (GPO) you want to configure and select  **Edit**.
 1. In the **Group Policy Management Editor**, go to **Computer configuration** and select **Administrative templates**.
@@ -31,6 +29,6 @@ You can only configure these settings by using Group Policy.
 1. [Deploy the updated GPO as you normally do](/windows/win32/srvnodes/group-policy).
 
 > [!NOTE]
-> If you hide all sections then **Windows Security** will show a restricted interface, as in the following screenshot:
+> If you hide all sections, then **Windows Security** shows a restricted interface, as in the following screenshot:
 >
 > ![Screenshot of the Windows Security with all sections hidden by Group Policy.](images/wdsc-all-hide.png)

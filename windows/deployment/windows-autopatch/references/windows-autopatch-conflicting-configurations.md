@@ -1,7 +1,7 @@
 ---
 title: Conflicting configurations
 description: This article explains how to remediate conflicting configurations affecting the Windows Autopatch service.
-ms.date: 09/16/2024
+ms.date: 03/31/2025
 ms.service: windows-client
 ms.subservice: autopatch
 ms.topic: concept-article
@@ -16,8 +16,6 @@ ms.collection:
 ---
 
 # Conflicting configurations
-
-[!INCLUDE [windows-autopatch-enterprise-e3-f3-licenses](../includes/windows-autopatch-enterprise-e3-f3-licenses.md)]
 
 During Readiness checks, if there are devices with conflicting registry configurations, notifications are listed in the **Not ready** tab. The notifications include a list of alerts that explain why the device isn't ready for updates. Instructions are provided on how to resolve the issues. You can review any device marked as **Not ready** and remediate them to a **Ready** state.
 

@@ -24,7 +24,7 @@ The examples can be modified to fit your specific requirements. For example, you
 
 [!INCLUDE [tab-intro](../../../includes/configure/tab-intro.md)]
 
-#### [:::image type="icon" source="../images/icons/intune.svg"::: **Intune/CSP**](#tab/intune)
+#### [:::image type="icon" source="../images/icons/intune.svg"::: **Intune**](#tab/intune)
 
 > [!TIP]
 > Use the following Graph call to automatically create a custom policy in your Microsoft Intune tenant without assignments nor scope tags.
@@ -35,12 +35,17 @@ The examples can be modified to fit your specific requirements. For example, you
 
 Assign the policy to a group that contains as members the devices that you want to configure.
 
-Alternatively, you can configure devices using a [custom policy][MEM-1] with the [AssignedAccess CSP][WIN-3].
-
-- **Setting:** `./Vendor/MSFT/AssignedAccess/ShellLauncher`
-- **Value:**
-
 [!INCLUDE [quickstart-xml](includes/quickstart-xml.md)]
+
+#### [:::image type="icon" source="../images/icons/csp.svg"::: **CSP**](#tab/csp)
+
+You can configure devices using the [AssignedAccess CSP][WIN-3].
+
+| Setting |
+|--|
+|- **OMA-URI:** `./Vendor/MSFT/AssignedAccess/ShellLauncher` <br>- **Data type:** string<br>- **Value:** content of the following XML |
+
+ [!INCLUDE [quickstart-xml](includes/quickstart-xml.md)]
 
 #### [:::image type="icon" source="../images/icons/powershell.svg"::: **PowerShell**](#tab/ps)
 

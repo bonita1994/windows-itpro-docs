@@ -1,7 +1,7 @@
 ---
 title: Quality update status report
 description: Provides a per device view of the current update status for all Intune devices.
-ms.date: 11/20/2024
+ms.date: 03/31/2025
 ms.service: windows-client
 ms.subservice: autopatch
 ms.topic: how-to
@@ -16,8 +16,6 @@ ms.collection:
 ---
 
 # Quality update status report
-
-[!INCLUDE [windows-autopatch-enterprise-e3-f3-licenses](../includes/windows-autopatch-enterprise-e3-f3-licenses.md)]
 
 The Quality update status report provides a per device view of the current update status for all Intune devices.
 
@@ -35,9 +33,6 @@ The Quality update status report provides a per device view of the current updat
 
 ### Default columns
 
-> [!IMPORTANT]
-> **Due to a recent change, we have identified an issue that prevents the Pause status column from being displayed**. Until a fix is deployed, **you must keep track of your paused releases so you can resume them at a later date**. The team is actively working on resolving this issue and we'll provide an update when a fix is deployed.
-
 The following information is available as default columns in the Quality update status report:
 
 | Column name | Description |
@@ -45,7 +40,7 @@ The following information is available as default columns in the Quality update 
 | Device name | The name of the device. |
 | Deployment ring | The currently assigned Windows Autopatch deployment ring for the device. |
 | Update status | The current update status for the device. For more information, see [Windows quality update statuses](../operate/windows-autopatch-groups-windows-quality-and-feature-update-reports-overview.md#windows-quality-and-feature-update-statuses). |
-| Pause status | The current pause status whether Customer or Service initiated. For more information, see [Pause and resume a release](../operate/windows-autopatch-groups-windows-quality-update-overview.md#pause-and-resume-a-release). |
+| Pause status | The current pause status. For more information, see [Pause and resume a release](../operate/windows-autopatch-groups-windows-quality-update-overview.md#pause-and-resume-a-release). |
 | Current version | The current version or build number of the device. For more information, see [Windows Versions](/windows/release-health/release-information?msclkid=ee885719baa511ecb838e1a689da96d2). |
 | Readiness | The device readiness evaluation status. For more information, see [Post registration device readiness checks](../deploy/windows-autopatch-post-reg-readiness-checks.md). |
 | Alerts | The summary of any alerts affecting the device. For more information, see [Device alerts](../operate/windows-autopatch-device-alerts.md). |

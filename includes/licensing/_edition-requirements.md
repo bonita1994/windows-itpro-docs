@@ -41,7 +41,7 @@ ms.topic: include
 |**[Microsoft Defender Application Guard (MDAG) configure via MDM](/windows/client-management/mdm/windowsdefenderapplicationguard-csp)**|❌|Yes|❌|Yes|
 |**[Microsoft Defender Application Guard (MDAG) for Edge enterprise mode and enterprise management](/windows/security/application-security/application-isolation/microsoft-defender-application-guard/configure-md-app-guard)**|❌|Yes|❌|Yes|
 |**[Microsoft Defender Application Guard (MDAG) for Edge standalone mode](/windows/security/application-security/application-isolation/microsoft-defender-application-guard/md-app-guard-overview)**|Yes|Yes|Yes|Yes|
-|**[Microsoft Defender Application Guard (MDAG) for Microsoft Office](https://support.microsoft.com/office/application-guard-for-office-9e0fb9c2-ffad-43bf-8ba3-78f785fdba46)**|❌|Yes|❌|Yes|
+|**[Microsoft Defender Application Guard (MDAG) for Microsoft Office](/defender-office-365/app-guard-for-office-install)**|❌|Yes|❌|Yes|
 |**Microsoft Defender Application Guard (MDAG) public APIs**|❌|Yes|❌|Yes|
 |**[Microsoft Defender for Endpoint](/microsoft-365/security/defender-endpoint)**|Yes|Yes|Yes|Yes|
 |**[Microsoft Defender SmartScreen](/windows/security/operating-system-security/virus-and-threat-protection/microsoft-defender-smartscreen/)**|Yes|Yes|Yes|Yes|

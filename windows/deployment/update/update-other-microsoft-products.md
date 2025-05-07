@@ -1,7 +1,6 @@
 ---
 title: Update other Microsoft products
-titleSuffix: Windows Update for Business
-description: List of other Microsoft products that are updated when install updates for other Microsoft products (allowmuupdateservice) is used.
+description: List of other Microsoft products that are updated when install updates for other Microsoft products (AllowMUUpdateService) is used.
 ms.service: windows-client
 ms.subservice: itpro-updates
 ms.topic: reference

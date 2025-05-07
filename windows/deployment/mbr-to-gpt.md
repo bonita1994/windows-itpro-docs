@@ -4,7 +4,7 @@ description: Use MBR2GPT.EXE to convert a disk from the Master Boot Record (MBR)
 ms.service: windows-client
 author: frankroj
 ms.author: frankroj
-ms.date: 11/26/2024
+ms.date: 04/08/2024
 manager: aaroncz
 ms.localizationpriority: high
 ms.topic: how-to
@@ -19,9 +19,11 @@ appliesto:
 
 # MBR2GPT.EXE
 
-**MBR2GPT.EXE** converts a disk from the Master Boot Record (MBR) to the GUID Partition Table (GPT) partition style without modifying or deleting data on the disk. The tool runs from a Windows Preinstallation Environment (Windows PE) command prompt, but can also be run from the full Windows operating system (OS) by using the **`/allowFullOS`** option.
+> [!IMPORTANT]
+>
+> **MBR2GPT.EXE** is located in the **`Windows\System32`** directory on any device running a [currently supported version of Windows](/windows/release-health/supported-versions-windows-client).
 
-**MBR2GPT.EXE** is located in the **`Windows\System32`** directory on a computer running Windows.
+**MBR2GPT.EXE** converts a disk from the Master Boot Record (MBR) to the GUID Partition Table (GPT) partition style without modifying or deleting data on the disk. The tool runs from a Windows Preinstallation Environment (Windows PE) command prompt, but can also be run from the full Windows operating system (OS) by using the **`/allowFullOS`** option.
 
 The tool is available in both the full OS environment and Windows PE.
 
@@ -451,22 +453,22 @@ The partition type can be determined with the DiskPart tool. The DiskPart tool i
 
 1. The partition type is displayed in the **Gpt** column. If the partition is GPT, an asterisk (**\***) is displayed in the column. If the partition is MBR, the column is blank.
 
-The following shows an example output of the DiskPart tool showing the partition type for two disks:
+  The following shows an example output of the DiskPart tool showing the partition type for two disks:
 
-```cmd
-X:\>DiskPart.exe
+  ```cmd
+  X:\>DiskPart.exe
 
-Microsoft DiskPart version 10.0.15048.0
+  Microsoft DiskPart version 10.0.15048.0
 
-Copyright (C) Microsoft Corporation.
-On computer: MININT-K71F13N
+  Copyright (C) Microsoft Corporation.
+  On computer: MININT-K71F13N
 
-DISKPART> list disk
+  DISKPART> list disk
 
-  Disk ###  Status         Size     Free     Dyn  Gpt
-  --------  -------------  -------  -------  ---  ---
-  Disk 0    Online          238 GB      0 B
-  Disk 1    Online          931 GB      0 B        *
-```
+    Disk ###  Status         Size     Free     Dyn  Gpt
+    --------  -------------  -------  -------  ---  ---
+    Disk 0    Online          238 GB      0 B
+    Disk 1    Online          931 GB      0 B        *
+  ```
 
 In this example, Disk 0 is formatted with the MBR partition style, and Disk 1 is formatted using GPT.

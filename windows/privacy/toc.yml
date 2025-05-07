@@ -17,8 +17,6 @@
           href: required-diagnostic-events-fields-windows-11-24H2.md
         - name: Windows 11, versions 23H2 and 22H2
           href: required-diagnostic-events-fields-windows-11-22H2.md
-        - name: Windows 11, version 21H2
-          href: required-windows-11-diagnostic-events-and-fields.md
         - name: Windows 10, versions 22H2 and 21H2
           href: required-windows-diagnostic-data-events-and-fields-2004.md
         - name: Windows 10, version 1809

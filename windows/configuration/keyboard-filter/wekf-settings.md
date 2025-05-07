@@ -1,7 +1,7 @@
 ---
 title: WEKF_Settings
 description: WEKF_Settings
-ms.date: 01/13/2025
+ms.date: 03/20/2025
 ms.topic: reference
 ---
 
@@ -43,7 +43,7 @@ The following table lists all settings available for Keyboard Filter.
 |--------------|-------------|
 | **DisableKeyboardFilterForAdministrators** | This setting specifies whether Keyboard Filter is enabled or disabled for administrator accounts. Set to **true** to disable Keyboard Filter for administrator accounts; otherwise, set to **false**. Set to **true** by default. |
 | **ForceOffAccessibility** | This setting specifies whether Keyboard Filter blocks users from enabling Ease of Access features. Set to **true** to force disabling the Ease of Access features. Set to **false** to allow enabling the Ease of Access features. Set to **false** by default.</br>Changing this setting to **false** doesn't automatically enable Ease of Access features; you must manually enable them. |
-| **BreakoutKeyScanCode** | This setting specifies the scan code of the key that enables a user to break out of an account that is locked down with Keyboard Filter. A user can press this key consecutively five times to switch to the Welcome screen.</br>By default, the BreakoutKeyScanCode is set to the scan code for the left Windows logo key. |
+| **BreakoutKeyScanCode** | This setting specifies the scan code of the key that enables a user to break out of an account that is locked down with Keyboard Filter. A user can press this key consecutively five times to switch to the Welcome screen.</br>By default, the BreakoutKeyScanCode is set to the scan code for the left Windows key. |
 
 One instance of the **WEKF_Settings** class exists for each valid setting.
 
@@ -51,7 +51,7 @@ Changes to the **DisableKeyboardFilterForAdministrator** setting are applied whe
 
 Changes to the **BreakoutKeyScanCode** setting don't take effect until you restart the device.
 
-If the **BreakoutKeyScanCode** is set to the scan code for either the left Windows logo key or the right Windows logo key, both Windows Logo keys will work as the breakout key.
+If the **BreakoutKeyScanCode** is set to the scan code for either the left Windows key or the right Windows key, both Windows keys will work as the breakout key.
 
 The **BreakoutKeyScanCode** setting only applies to accounts where Keyboard Filter is active. If the scan code is set to a value that doesn't map to any key, such as 0 (zero), then you must use another method to access the Welcome screen if you need to service the device, such as remotely connecting, or restarting the device if automatic sign-in isn't enabled.
 

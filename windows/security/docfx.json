@@ -82,8 +82,8 @@
       "author": {
         "application-security//**/*.md": "vinaypamnani-msft",
         "application-security//**/*.yml": "vinaypamnani-msft",
-        "application-security/application-control/windows-defender-application-control/**/*.md": "jsuther1974",
-        "application-security/application-control/windows-defender-application-control/**/*.yml": "jsuther1974",
+        "application-security/application-control/app-control-for-business/**/*.md": "jsuther1974",
+        "application-security/application-control/app-control-for-business/**/*.yml": "jsuther1974",
         "book//**/*.md": "paolomatarazzo",
         "book//**/*.yml": "paolomatarazzo",
         "hardware-security/**/*.md": "vinaypamnani-msft",
@@ -110,8 +110,8 @@
       "ms.author": {
         "application-security//**/*.md": "vinpa",
         "application-security//**/*.yml": "vinpa",
-        "application-security/application-control/windows-defender-application-control/**/*.md": "jsuther",
-        "application-security/application-control/windows-defender-application-control/**/*.yml": "jsuther",
+        "application-security/application-control/app-control-for-business/**/*.md": "jsuther",
+        "application-security/application-control/app-control-for-business/**/*.yml": "jsuther",
         "book//**/*.md": "paoloma",
         "book//**/*.yml": "paoloma",
         "hardware-security//**/*.md": "vinpa",
@@ -238,7 +238,7 @@
         ]
       },
       "ms.reviewer": {
-        "application-security/application-control/windows-defender-application-control/**/*.md": "vinpa",
+        "application-security/application-control/app-control-for-business/**/*.md": "vinpa",
         "application-security/application-isolation/microsoft-defender-application-guard/*.md": "sazankha",
         "book/*.md": "paoloma",
         "identity-protection/access-control/*.md": "sulahiri",

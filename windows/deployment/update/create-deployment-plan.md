@@ -73,7 +73,7 @@ During your plan and preparation phases, you should focus on the following activ
 Remember, you're working with pre-release software in the Preview ring and you'll be evaluating features and testing the update for a targeted release.
 
 > [!IMPORTANT]
-> If you are using Windows Insider (pre-release) releases for your preview ring and you are using WSUS or Windows Update for Business, be sure to set the following policies to allow for Preview builds:
+> If you are using Windows Insider (pre-release) releases for your preview ring and you are using WSUS or Windows Update client policies, be sure to set the following policies to allow for Preview builds:
 > - **Manage Preview Builds: 2 - Enable preview builds**
 > • Under **Branch Readiness Level**, select **When Preview Builds and Feature Updates are Received: 4--Windows Insider Program Slow**
 

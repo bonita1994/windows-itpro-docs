@@ -219,6 +219,8 @@ Specifies how your client(s) can discover Microsoft Connected Cache servers dyna
 <!-- Add any additional information about this policy here. Anything outside this section will get overwritten. -->
 > [!NOTE]
 > If the DHCP Option ID is formatted incorrectly, the client will fall back to the [Cache Server Hostname](#docachehost) policy value if that value has been set.
+> 
+> If [LocalPolicyMerge](/windows/security/operating-system-security/network-security/windows-firewall/rules#local-policy-merge-and-application-rules) setting is configured (e.g. as part of security baselines) it can impact DHCP client and prevent it from retrieving this DHCP option, especially in Autopilot scenarios.
 <!-- DOCacheHostSource-Editable-End -->
 
 <!-- DOCacheHostSource-DFProperties-Begin -->

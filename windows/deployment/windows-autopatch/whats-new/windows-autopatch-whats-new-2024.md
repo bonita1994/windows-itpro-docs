@@ -35,7 +35,7 @@ Minor corrections such as typos, style, or formatting issues aren't listed.
 
 | Article | Description |
 | ----- | ----- |
-| All articles | Windows Update for Business deployment service unified under Windows Autopatch. Unification is going through a gradual rollout over the next several weeks. If your experience looks different from the documentation, you didn't receive the unified experience yet. Review [Prerequisites](../prepare/windows-autopatch-prerequisites.md) and [Features and capabilities](../overview/windows-autopatch-overview.md#features-and-capabilities) to understand licensing and feature entitlement.|
+| All articles | Windows Update for Business deployment service (WUfB-DS) unified under Windows Autopatch. Unification is going through a gradual rollout over the next several weeks. If your experience looks different from the documentation, you didn't receive the unified experience yet. Review [Prerequisites](../prepare/windows-autopatch-prerequisites.md) and [Features and capabilities](../overview/windows-autopatch-overview.md#features-and-capabilities) to understand licensing and feature entitlement.|
 
 ## February 2024
 
@@ -53,7 +53,7 @@ Minor corrections such as typos, style, or formatting issues aren't listed.
 | ----- | ----- |
 | [Windows quality updates overview](../operate/windows-autopatch-groups-windows-quality-update-overview.md) | Added [Import Update rings for Windows 10 and later](../operate/windows-autopatch-groups-windows-quality-update-overview.md#import-update-rings-for-windows-10-and-later) |
 | [Windows quality updates overview](../operate/windows-autopatch-groups-windows-quality-update-overview.md#service-level-objective) | Updated the Service level objective, added the Service level objective calculation. |
-| [Prerequisites](../prepare/windows-autopatch-prerequisites.md#more-about-licenses) | Added more E3 and E5 licenses to the [More about licenses](../prepare/windows-autopatch-prerequisites.md#more-about-licenses) section. |
+| [Prerequisites](../prepare/windows-autopatch-prerequisites.md) | Added more E3 and E5 licenses to the [More about licenses](../prepare/windows-autopatch-prerequisites.md) section. |
 
 ## January service releases
 

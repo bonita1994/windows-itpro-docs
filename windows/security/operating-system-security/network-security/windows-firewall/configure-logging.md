@@ -2,7 +2,7 @@
 title: Configure Windows Firewall logging
 description: Learn how to configure Windows Firewall to log dropped packets or successful connections with CSP and group policy.
 ms.topic: how-to
-ms.date: 09/06/2024
+ms.date: 04/07/2025
 ---
 
 # Configure Windows Firewall logging

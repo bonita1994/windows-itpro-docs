@@ -1,7 +1,7 @@
 ---
 title: Device alerts
 description: Provide notifications and information about the necessary steps to keep your devices up to date.
-ms.date: 09/16/2024
+ms.date: 03/31/2025
 ms.service: windows-client
 ms.subservice: autopatch
 ms.topic: how-to
@@ -17,8 +17,6 @@ ms.collection:
 
 # Device alerts
 
-[!INCLUDE [windows-autopatch-enterprise-e3-f3-licenses](../includes/windows-autopatch-enterprise-e3-f3-licenses.md)]
-
 Windows Autopatch and Windows Updates use Device alerts to provide notifications and information about the necessary steps to keep your devices up to date. In Windows Autopatch reporting, every device is provided with a section for alerts. If no alerts are listed, no action is needed. Navigate to **Reports** > **Quality update status** or **Feature update status** > **Device** > select the **Device alerts** column. The provided information helps you understand:
 
 - Microsoft and/or Windows Autopatch performs the actions to keep the device properly updated.
@@ -32,7 +30,6 @@ Windows Autopatch and Windows Updates use Device alerts to provide notifications
 Windows Autopatch alerts are alerts specific to the Windows Autopatch service. These alerts include:
 
 - [Post-device registration readiness checks](../deploy/windows-autopatch-post-reg-readiness-checks.md)
-- [Policy health and remediation](../operate/windows-autopatch-policy-health-and-remediation.md)
 
 ## Windows quality and feature update alerts
 
@@ -55,7 +52,7 @@ Alert resolutions are provided through the Windows Update service and provide th
 | ----- | ----- | ----- |
 | `CancelledByUser` | User canceled the update | The Windows Update service reported the update was canceled by the user.<p>It's recommended to work with the end user to allow updates to execute as scheduled.</p> |
 | `DamagedMedia` | The update file or hard drive is damaged | The Windows Update service indicated the update payload might be damaged or corrupt. <p>It's recommended to run `Chkdsk /F` on the device with administrator privileges, then retry the update. For more information, see [chkdsk](/windows-server/administration/windows-commands/chkdsk?tabs=event-viewer).</p> |
-| `DeploymentConflict` | Device is in more than one deployment of the same update type. Only the first deployment assigned is effective. | The Windows Update service reported a policy conflict.<p>For more information, see the [Windows Autopatch Policy Health dashboard](../operate/windows-autopatch-policy-health-and-remediation.md).</p><p>If the alert persists, [submit a support request](../operate/windows-autopatch-support-request.md).</p> |
+| `DeploymentConflict` | Device is in more than one deployment of the same update type. Only the first deployment assigned is effective. | The Windows Update service reported a policy conflict.<p>If the alert persists, [submit a support request](../operate/windows-autopatch-support-request.md).</p> |
 | `DeviceRegistrationInvalidAzureADDeviceId` | The device isn't able to register or authenticate properly with Windows Update because of an invalid Microsoft Entra Device ID. | The Windows Update service reported a device registration issue.<p>For more information, see [Windows Autopatch post-device registration readiness checks](../deploy/windows-autopatch-post-reg-readiness-checks.md).</p><p>If the alert persists, [submit a support request](../operate/windows-autopatch-support-request.md).</p> |
 | `DeviceRegistrationInvalidGlobalDeviceId` | The device isn't able to register or authenticate properly with Windows Update because of an invalid Global Device ID. |The Windows Update service reported that the MSA Service might be disabled preventing Global Device ID assignment.<p>Check that the MSA Service is running or able to run on device.</p><p>If the alert persists, [submit a support request](../operate/windows-autopatch-support-request.md).</p> |
 | `DeviceRegistrationIssue` | The device isn't able to register or authenticate properly with Windows Update. | The Windows Update service reported a device registration issue.<p>For more information, see [Windows Autopatch post-device registration readiness checks](../deploy/windows-autopatch-post-reg-readiness-checks.md).</p><p>If the alert persists, [submit a support request](../operate/windows-autopatch-support-request.md).</p> |
@@ -83,9 +80,9 @@ Alert resolutions are provided through the Windows Update service and provide th
 | `InstallOutOfMemory` | The installation couldn't be completed because Windows ran out of memory. | The Windows Update service reported the system doesn't have sufficient system memory to perform the update.<p>Restart Windows, then try the installation again.</p><p>If it still fails, allocate more memory to the device, or increase the size of the virtual memory pagefiles. For more information, see [How to determine the appropriate page file size for 64-bit versions of Windows](/troubleshoot/windows-client/performance/how-to-determine-the-appropriate-page-file-size-for-64-bit-versions-of-windows).</p> |
 | `InstallSetupBlock` | There's an application or driver blocking the upgrade. | The Windows Update service detected that an application or driver is hindering the upgrade process. Utilize the SetupDiag utility to identify and diagnose any compatibility problems.<p>For more information, see [SetupDiag - Windows Deployment](/windows/deployment/upgrade/setupdiag).</p> |
 | `InstallSetupError` | Windows Setup encountered an error while installing. | The Windows Update service reported an error during installation. Review the last reported HEX error code in [Quality update status report](../operate/windows-autopatch-groups-windows-quality-update-status-report.md) to further investigate.<p>If the alert persists, [submit a support request](../operate/windows-autopatch-support-request.md).</p> |
-| `PolicyConflict` | There are client policies (MDM, GP) that conflict with Windows Update settings. | The Windows Update service reported a policy conflict. Review  the [Windows Autopatch Policy Health dashboard](../operate/windows-autopatch-policy-health-and-remediation.md).<p>If the alert persists, [submit a support request](../operate/windows-autopatch-support-request.md).</p> |
-| `PolicyConflictDeferral` | The Deferral Policy configured on the device is preventing the update from installing. | The Windows Update service reported a policy conflict. Review  the [Windows Autopatch Policy Health dashboard](../operate/windows-autopatch-policy-health-and-remediation.md).<p>If the alert persists, [submit a support request](../operate/windows-autopatch-support-request.md).</p> |
-| `PolicyConflictPause` | Updates are paused on the device, preventing the update from installing. | The Windows Update service reported a policy conflict. Review  the [Windows Autopatch Policy Health dashboard](../operate/windows-autopatch-policy-health-and-remediation.md).<p>If the alert persists, [submit a support request](../operate/windows-autopatch-support-request.md).</p> |
+| `PolicyConflict` | There are client policies (MDM, GP) that conflict with Windows Update settings. | The Windows Update service reported a policy conflict.<p>If the alert persists, [submit a support request](../operate/windows-autopatch-support-request.md).</p> |
+| `PolicyConflictDeferral` | The Deferral Policy configured on the device is preventing the update from installing. | The Windows Update service reported a policy conflict.<p>If the alert persists, [submit a support request](../operate/windows-autopatch-support-request.md).</p> |
+| `PolicyConflictPause` | Updates are paused on the device, preventing the update from installing. | The Windows Update service reported a policy conflict.<p>If the alert persists, [submit a support request](../operate/windows-autopatch-support-request.md).</p> |
 | `PostRestartIssue` | Windows Update couldn't determine the results of installing the update. The error is false, and the update probably succeeded. | The Windows Update Service reported the update you're trying to install isn't available.<p>No action is required.</p><p>If the update is still available, retry the installation.</p> |
 | `RollbackInitiated` | A rollback was started on this device, indicating a catastrophic issue occurred during the Windows Setup install process. | The Windows Update service reported a failure with the update. Run the Setup Diagnostics Tool on the Device or review the HEX error in [Quality update status report](../operate/windows-autopatch-groups-windows-quality-update-status-report.md). **Don't** retry the installation until the impact is understood.<p>For more information, see [SetupDiag - Windows Deployment](/windows/deployment/upgrade/setupdiag).</p> |
 | `SafeguardHold` | Update can't install because of a known Safeguard Hold. | The Windows Update Service reported a [Safeguard Hold](/windows/deployment/update/update-compliance-feature-update-status#safeguard-holds) which applies to this device.<p>For more information about safeguards, see [Windows 10/11 release information for the affected versions](/windows/release-health/release-information).</p> |

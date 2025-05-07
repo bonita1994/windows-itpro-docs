@@ -29,7 +29,6 @@ You can learn more about Windows functional and diagnostic data through these ar
 
 - [Required diagnostic events and fields for Windows 11, version 24H2](required-diagnostic-events-fields-windows-11-24H2.md)
 - [Required diagnostic events and fields for Windows 11, versions 23H2 and 22H2](required-diagnostic-events-fields-windows-11-22H2.md)
-- [Required diagnostic events and fields for Windows 11, version 21H2](required-windows-11-diagnostic-events-and-fields.md)
 - [Required diagnostic events and fields for Windows 10, versions 22H2 and 21H2](required-windows-diagnostic-data-events-and-fields-2004.md)
 - [Manage connections from Windows operating system components to Microsoft services](manage-connections-from-windows-operating-system-components-to-microsoft-services.md)
 - [Configure Windows diagnostic data in your organization](configure-windows-diagnostic-data-in-your-organization.md)
@@ -6793,9 +6792,9 @@ The following fields are available:
 - **HomeMobileOperator**  The mobile operator that the device was originally intended to work with.
 - **IntentPFNs**  Intended application-set metadata for atomic update scenarios.
 - **IPVersion**  Indicates whether the download took place over IPv4 or IPv6
-- **IsWUfBDualScanEnabled**  Indicates if Windows Update for Business dual scan is enabled on the device.
-- **IsWUfBEnabled**  Indicates if Windows Update for Business is enabled on the device.
-- **IsWUfBFederatedScanDisabled**  Indicates if Windows Update for Business federated scan is disabled on the device.
+- **IsWUfBDualScanEnabled**  Indicates if Windows Update client policies dual scan is enabled on the device.
+- **IsWUfBEnabled**  Indicates if Windows Update client policies are enabled on the device.
+- **IsWUfBFederatedScanDisabled**  Indicates if Windows Update client policies federated scan is disabled on the device.
 - **MetadataIntegrityMode**  The mode of the update transport metadata integrity check. 0-Unknown, 1-Ignoe, 2-Audit, 3-Enforce
 - **MSIError**  The last error that was encountered during a scan for updates.
 - **NetworkConnectivityDetected**  Indicates the type of network connectivity that was detected. 0 - IPv4, 1 - IPv6
@@ -6917,8 +6916,8 @@ The following fields are available:
 - **HostName**  The hostname URL the content is downloading from.
 - **IPVersion**  Indicates whether the download took place over IPv4 or IPv6.
 - **IsDependentSet**  Indicates whether a driver is a part of a larger System Hardware/Firmware Update
-- **IsWUfBDualScanEnabled**  Indicates if Windows Update for Business dual scan is enabled on the device.
-- **IsWUfBEnabled**  Indicates if Windows Update for Business is enabled on the device.
+- **IsWUfBDualScanEnabled**  Indicates if Windows Update client policies dual scan is enabled on the device.
+- **IsWUfBEnabled**  Indicates if Windows Update client policies are enabled on the device.
 - **NetworkCost**  A flag indicating the cost of the network (congested, fixed, variable, over data limit, roaming, etc.) used for downloading the update content.
 - **NetworkCostBitMask**  Indicates what kind of network the device is connected to (roaming, metered, over data cap, etc.)
 - **NetworkRestrictionStatus**  More general version of NetworkCostBitMask, specifying whether Windows considered the current network to be "metered."
@@ -7052,9 +7051,9 @@ The following fields are available:
 - **IsFinalOutcomeEvent**  Indicates whether this event signals the end of the update/upgrade process.
 - **IsFirmware**  Indicates whether this update is a firmware update.
 - **IsSuccessFailurePostReboot**  Indicates whether the update succeeded and then failed after a restart.
-- **IsWUfBDualScanEnabled**  Indicates whether Windows Update for Business dual scan is enabled on the device.
-- **IsWUfBEnabled**  Indicates whether Windows Update for Business is enabled on the device.
-- **IsWUfBTargetVersionEnabled**  Flag that indicates if the Windows Update for Business target version policy is enabled on the device.
+- **IsWUfBDualScanEnabled**  Indicates whether Windows Update client policies dual scan is enabled on the device.
+- **IsWUfBEnabled**  Indicates whether Windows Update client policies are enabled on the device.
+- **IsWUfBTargetVersionEnabled**  Flag that indicates if the target version policy is enabled on the device.
 - **MergedUpdate**  Indicates whether the OS update and a BSP update merged for installation.
 - **MsiAction**  The stage of MSI installation where it failed.
 - **MsiProductCode**  The unique identifier of the MSI installer.
@@ -7109,9 +7108,9 @@ The following fields are available:
 - **IsFinalOutcomeEvent**  Indicates whether this event signals the end of the update/upgrade process.
 - **IsFirmware**  Indicates whether an update was a firmware update.
 - **IsSuccessFailurePostReboot**  Indicates whether an initial success was a failure after a reboot.
-- **IsWUfBDualScanEnabled**  Flag indicating whether Windows Update for Business dual scan is enabled on the device.
-- **IsWUfBEnabled**  Flag indicating whether Windows Update for Business is enabled on the device.
-- **IsWUfBTargetVersionEnabled**  Flag that indicates if the Windows Update for Business target version policy is enabled on the device.
+- **IsWUfBDualScanEnabled**  Flag indicating whether Windows Update client policies dual scan is enabled on the device.
+- **IsWUfBEnabled**  Flag indicating whether Windows Update client policies are enabled on the device.
+- **IsWUfBTargetVersionEnabled**  Flag that indicates if the target version policy is enabled on the device.
 - **MergedUpdate**  Indicates whether an OS update and a BSP update were merged for install.
 - **ProcessName**  Process name of the caller who initiated API calls into the software distribution client.
 - **QualityUpdatePause**  Indicates whether quality OS updates are paused on the device.
@@ -7170,8 +7169,8 @@ The following fields are available:
 - **IsFinalOutcomeEvent**  Indicates whether this event signals the end of the update/upgrade process.
 - **IsFirmware**  Indicates whether an update was a firmware update.
 - **IsSuccessFailurePostReboot**  Indicates whether an initial success was then a failure after a reboot.
-- **IsWUfBDualScanEnabled**  Flag indicating whether Windows Update for Business dual scan is enabled on the device.
-- **IsWUfBEnabled**  Flag indicating whether Windows Update for Business is enabled on the device.
+- **IsWUfBDualScanEnabled**  Flag indicating whether Windows Update client policies dual scan is enabled on the device.
+- **IsWUfBEnabled**  Flag indicating whether Windows Update client policies are enabled on the device.
 - **MergedUpdate**  Indicates whether an OS update and a BSP update were merged for install.
 - **ProcessName**  Process name of the caller who initiated API calls into the software distribution client.
 - **QualityUpdatePause**  Indicates whether quality OS updates are paused on the device.
@@ -8571,7 +8570,7 @@ The following fields are available:
 - **oSVersion**  Build number of the device.
 - **paused**  Indicates whether the device is paused.
 - **rebootRequestSucceeded**  Reboot Configuration Service Provider (CSP) call success status.
-- **wUfBConnected**  Result of Windows Update for Business connection check.
+- **wUfBConnected**  Result of Windows Update client policies connection check.
 
 
 ### Microsoft.Windows.UpdateCsp.ExecuteRollBackQualityNotApplicable

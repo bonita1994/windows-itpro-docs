@@ -232,7 +232,7 @@ There are three different registry combinations for controlling restart behavior
 
 - [Overview of Windows as a service](waas-overview.md)
 - [Configure Delivery Optimization for Windows updates](../do/waas-delivery-optimization.md)
-- [Configure Windows Update for Business](waas-configure-wufb.md)
-- [Walkthrough: use group policy to configure Windows Update for Business](waas-wufb-group-policy.md)
+- [Configure Windows Update client policies](waas-configure-wufb.md)
+- [Walkthrough: use group policy to configure Windows Update client policies](waas-wufb-group-policy.md)
 - [Manage Windows software updates in Microsoft Intune](/mem/intune/protect/windows-update-for-business-configure)
 

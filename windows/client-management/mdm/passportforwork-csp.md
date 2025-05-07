@@ -1,7 +1,7 @@
 ---
 title: PassportForWork CSP
 description: Learn more about the PassportForWork CSP.
-ms.date: 03/12/2025
+ms.date: 04/30/2025
 ms.topic: generated-reference
 ---
 
@@ -1284,8 +1284,8 @@ Enhanced Sign-in Security (ESS) isolates both biometric template data and matchi
 
 | Value | Description |
 |:--|:--|
-| 0 | ESS will be enabled on systems with capable software and hardware, following the existing default behavior in Windows. Authentication operations of peripheral Windows Hello capable devices will be allowed, subject to current feature limitations. In addition, with this setting, ESS will be enabled on devices with a mixture of biometric devices, such as an ESS capable FPR and a non-ESS capable camera. (not recommended). |
-| 1 (Default) | ESS will be enabled on systems with capable software and hardware, following the existing default behavior in Windows. Authentication operations of any peripheral biometric device will be blocked and not available for Windows Hello. (default and recommended for highest security). |
+| 0 | ESS will be disabled on systems with capable software and hardware. Authentication operations of peripheral Windows Hello capable devices will be allowed, subject to current feature limitations. |
+| 1 (Default) | ESS will be enabled on systems with capable software and hardware, following the existing default behavior in Windows. Authentication operations of any peripheral biometric device will be blocked and not available for Windows Hello. |
 <!-- Device-Biometrics-EnableESSwithSupportedPeripherals-AllowedValues-End -->
 
 <!-- Device-Biometrics-EnableESSwithSupportedPeripherals-GpMapping-Begin -->

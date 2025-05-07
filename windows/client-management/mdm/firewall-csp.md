@@ -1,7 +1,7 @@
 ---
 title: Firewall CSP
 description: Learn more about the Firewall CSP.
-ms.date: 03/12/2025
+ms.date: 04/04/2025
 ms.topic: generated-reference
 ---
 
@@ -1896,9 +1896,7 @@ New rules have the EdgeTraversal property disabled by default.
 
 <!-- Device-MdmStore-FirewallRules-{FirewallRuleName}-Enabled-Description-Begin -->
 <!-- Description-Source-DDF -->
-Indicates whether the rule is enabled or disabled. If the rule must be enabled, this value must be set to true.
-
-If not specified - a new rule is disabled by default.
+Indicates whether the rule is enabled or disabled. If not specified - a new rule is enabled by default.
 <!-- Device-MdmStore-FirewallRules-{FirewallRuleName}-Enabled-Description-End -->
 
 <!-- Device-MdmStore-FirewallRules-{FirewallRuleName}-Enabled-Editable-Begin -->
@@ -3254,9 +3252,7 @@ If not specified the default is OUT.
 
 <!-- Device-MdmStore-HyperVFirewallRules-{FirewallRuleName}-Enabled-Description-Begin -->
 <!-- Description-Source-DDF -->
-Indicates whether the rule is enabled or disabled. If the rule must be enabled, this value must be set to true.
-
-If not specified - a new rule is disabled by default.
+Indicates whether the rule is enabled or disabled. If not specified - a new rule is enabled by default.
 <!-- Device-MdmStore-HyperVFirewallRules-{FirewallRuleName}-Enabled-Description-End -->
 
 <!-- Device-MdmStore-HyperVFirewallRules-{FirewallRuleName}-Enabled-Editable-Begin -->

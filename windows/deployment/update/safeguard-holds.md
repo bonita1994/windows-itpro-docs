@@ -35,7 +35,7 @@ IT admins can use [Windows Update for Business reports](wufb-reports-overview.md
 
 Windows Update for Business reports identifies safeguard holds by their 8-digit identifiers. For safeguard holds associated with publicly discussed known issues, you can find more details about the issue on the [Windows release health](/windows/release-health/) dashboard by searching for the safeguard hold ID on the **Known issues** page for the relevant release.
 
-On devices that use Windows Update (but not Windows Update for Business), the **Windows Update** page in the Settings app displays a message stating that an update is on its way, but not ready for the device. Instead of the option to download and install the update, users see a message.
+On devices that use Windows Update (but not Windows Update client policies), the **Windows Update** page in the Settings app displays a message stating that an update is on its way, but not ready for the device. Instead of the option to download and install the update, users see a message.
 
 ![Feature update message reading "The Windows 10 May 2020 Update is on its way. Once it's ready for your device, you'll see the update available on this page.](images/safeguard-hold-notification.png)
 

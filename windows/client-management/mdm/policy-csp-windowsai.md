@@ -1,7 +1,7 @@
 ---
 title: WindowsAI Policy CSP
 description: Learn more about the WindowsAI Area in Policy CSP.
-ms.date: 03/12/2025
+ms.date: 05/02/2025
 ms.topic: generated-reference
 ---
 
@@ -22,7 +22,7 @@ ms.topic: generated-reference
 <!-- AllowRecallEnablement-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows Insider Preview |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 24H2 with [KB5055627](https://support.microsoft.com/help/5055627) [10.0.26100.3915] and later <br> ✅ Windows Insider Preview |
 <!-- AllowRecallEnablement-Applicability-End -->
 
 <!-- AllowRecallEnablement-OmaUri-Begin -->
@@ -91,7 +91,7 @@ This policy setting allows you to determine whether the Recall optional componen
 <!-- DisableAIDataAnalysis-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ✅ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 24H2 [10.0.26100] and later |
+| ✅ Device <br> ✅ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 24H2 with [KB5055627](https://support.microsoft.com/help/5055627) [10.0.26100.3915] and later <br> ✅ Windows Insider Preview |
 <!-- DisableAIDataAnalysis-Applicability-End -->
 
 <!-- DisableAIDataAnalysis-OmaUri-Begin -->
@@ -158,13 +158,75 @@ If you set this policy to disabled, end users will have a choice to save snapsho
 
 <!-- DisableAIDataAnalysis-End -->
 
+<!-- DisableClickToDo-Begin -->
+## DisableClickToDo
+
+<!-- DisableClickToDo-Applicability-Begin -->
+| Scope | Editions | Applicable OS |
+|:--|:--|:--|
+| ✅ Device <br> ✅ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows Insider Preview |
+<!-- DisableClickToDo-Applicability-End -->
+
+<!-- DisableClickToDo-OmaUri-Begin -->
+```User
+./User/Vendor/MSFT/Policy/Config/WindowsAI/DisableClickToDo
+```
+
+```Device
+./Device/Vendor/MSFT/Policy/Config/WindowsAI/DisableClickToDo
+```
+<!-- DisableClickToDo-OmaUri-End -->
+
+<!-- DisableClickToDo-Description-Begin -->
+<!-- Description-Source-DDF -->
+Click to Do lets people take action on content on their screens. When activated, it takes a screenshot of their screen and analyzes it to present actions. Click to Do ends when they exit it, and it can't take screenshots while closed. Screenshot analysis is always performed locally on their device. By default, Click to Do is enabled for users. This policy setting allows you to determine whether Click to Do is available for users on their device. When the policy is enabled, the Click to Do component and entry points won't be available to users. When the policy is disabled, users will have Click to Do available on their device.
+<!-- DisableClickToDo-Description-End -->
+
+<!-- DisableClickToDo-Editable-Begin -->
+<!-- Add any additional information about this policy here. Anything outside this section will get overwritten. -->
+<!-- DisableClickToDo-Editable-End -->
+
+<!-- DisableClickToDo-DFProperties-Begin -->
+**Description framework properties**:
+
+| Property name | Property value |
+|:--|:--|
+| Format | `int` |
+| Access Type | Add, Delete, Get, Replace |
+| Default Value  | 0 |
+<!-- DisableClickToDo-DFProperties-End -->
+
+<!-- DisableClickToDo-AllowedValues-Begin -->
+**Allowed values**:
+
+| Value | Description |
+|:--|:--|
+| 0 (Default) | Click to Do is enabled. |
+| 1 | Click to Do is disabled. |
+<!-- DisableClickToDo-AllowedValues-End -->
+
+<!-- DisableClickToDo-GpMapping-Begin -->
+**Group policy mapping**:
+
+| Name | Value |
+|:--|:--|
+| Name | DisableClickToDo |
+| Path | WindowsAI > AT > WindowsComponents > WindowsAI |
+<!-- DisableClickToDo-GpMapping-End -->
+
+<!-- DisableClickToDo-Examples-Begin -->
+<!-- Add any examples for this policy here. Examples outside this section will get overwritten. -->
+<!-- DisableClickToDo-Examples-End -->
+
+<!-- DisableClickToDo-End -->
+
 <!-- DisableCocreator-Begin -->
 ## DisableCocreator
 
 <!-- DisableCocreator-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows Insider Preview |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 22H2 [10.0.22621.4870] and later <br> ✅ Windows 11, version 24H2 [10.0.26100.3360] and later <br> ✅ Windows Insider Preview |
 <!-- DisableCocreator-Applicability-End -->
 
 <!-- DisableCocreator-OmaUri-Begin -->
@@ -226,7 +288,7 @@ This policy setting allows you to control whether Cocreator functionality is dis
 <!-- DisableGenerativeFill-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows Insider Preview |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 22H2 [10.0.22621.4870] and later <br> ✅ Windows 11, version 24H2 [10.0.26100.3360] and later <br> ✅ Windows Insider Preview |
 <!-- DisableGenerativeFill-Applicability-End -->
 
 <!-- DisableGenerativeFill-OmaUri-Begin -->
@@ -288,7 +350,7 @@ This policy setting allows you to control whether generative fill functionality 
 <!-- DisableImageCreator-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows Insider Preview |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 22H2 [10.0.22621.4870] and later <br> ✅ Windows 11, version 24H2 [10.0.26100.3360] and later <br> ✅ Windows Insider Preview |
 <!-- DisableImageCreator-Applicability-End -->
 
 <!-- DisableImageCreator-OmaUri-Begin -->
@@ -370,6 +432,7 @@ This policy setting determines which app opens when the user presses the Copilot
 
 <!-- SetCopilotHardwareKey-Editable-Begin -->
 <!-- Add any additional information about this policy here. Anything outside this section will get overwritten. -->
+The property value is the Application User Model ID (AUMID) for the target application. For example: the Microsoft 365 Copilot app is `Microsoft.MicrosoftOfficeHub_8wekyb3d8bbwe!Microsoft.MicrosoftOfficeHub`. For more information, see [Find the application user model ID of an installed app](/windows/configuration/store/find-aumid?tabs=ps%2Cexplorer&pivots=windows-11).
 <!-- SetCopilotHardwareKey-Editable-End -->
 
 <!-- SetCopilotHardwareKey-DFProperties-Begin -->
@@ -406,7 +469,7 @@ This policy setting determines which app opens when the user presses the Copilot
 <!-- SetDenyAppListForRecall-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ✅ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows Insider Preview |
+| ✅ Device <br> ✅ User | ❌ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 24H2 with [KB5055627](https://support.microsoft.com/help/5055627) [10.0.26100.3915] and later <br> ✅ Windows Insider Preview |
 <!-- SetDenyAppListForRecall-Applicability-End -->
 
 <!-- SetDenyAppListForRecall-OmaUri-Begin -->
@@ -475,7 +538,7 @@ For example: `code.exe;Microsoft.WindowsNotepad_8wekyb3d8bbwe!App;ms-teams.exe`
 <!-- SetDenyUriListForRecall-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ✅ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows Insider Preview |
+| ✅ Device <br> ✅ User | ❌ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 24H2 with [KB5055627](https://support.microsoft.com/help/5055627) [10.0.26100.3915] and later <br> ✅ Windows Insider Preview |
 <!-- SetDenyUriListForRecall-Applicability-End -->
 
 <!-- SetDenyUriListForRecall-OmaUri-Begin -->
@@ -540,7 +603,7 @@ Adding `https://www.WoodgroveBank.com` to the list would also filter `https://Ac
 <!-- SetMaximumStorageDurationForRecallSnapshots-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ✅ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows Insider Preview |
+| ✅ Device <br> ✅ User | ❌ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 24H2 with [KB5055627](https://support.microsoft.com/help/5055627) [10.0.26100.3915] and later <br> ✅ Windows Insider Preview |
 <!-- SetMaximumStorageDurationForRecallSnapshots-Applicability-End -->
 
 <!-- SetMaximumStorageDurationForRecallSnapshots-OmaUri-Begin -->
@@ -616,7 +679,7 @@ Snapshots aren't deleted until the maximum storage allocation for Recall is reac
 <!-- SetMaximumStorageSpaceForRecallSnapshots-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ✅ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows Insider Preview |
+| ✅ Device <br> ✅ User | ❌ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 24H2 with [KB5055627](https://support.microsoft.com/help/5055627) [10.0.26100.3915] and later <br> ✅ Windows Insider Preview |
 <!-- SetMaximumStorageSpaceForRecallSnapshots-Applicability-End -->
 
 <!-- SetMaximumStorageSpaceForRecallSnapshots-OmaUri-Begin -->

@@ -1,8 +1,8 @@
 ---
-title: Manage Windows Firewall with the command line
+title: Manage Windows Firewall With the Command Line
 description: Learn how to manage Windows Firewall from the command line. This guide provides examples how to manage Windows Firewall with PowerShell and Netsh.
 ms.topic: how-to
-ms.date: 09/06/2024
+ms.date: 04/07/2025
 ---
 
 # Manage Windows Firewall with the command line
@@ -53,7 +53,7 @@ netsh advfirewall set allprofiles logging filename %SystemRoot%\System32\LogFile
 
 ### Disable Windows Firewall
 
-Microsoft recommends that you don't disable Windows Firewall because you lose other benefits, such as the ability to use Internet Protocol security (IPsec) connection security rules, network protection from attacks that employ network fingerprinting, Windows Service Hardening, and [boot time filters][BTF]. Non-Microsoft firewall software can programmatically disable only the [rule types][FWRC] of Windows Firewall that need to be disabled for compatibility. You shouldn't disable the firewall yourself for this purpose. 
+Microsoft recommends that you don't disable Windows Firewall because you lose other benefits, such as the ability to use Internet Protocol security (IPsec) connection security rules, network protection from attacks that employ network fingerprinting, Windows Service Hardening, and [boot time filters][BTF]. Non-Microsoft firewall software can programmatically disable only the [rule types][FWRC] of Windows Firewall that need to be disabled for compatibility. You shouldn't disable the firewall yourself for this purpose.
 If disabling Windows Firewall is required, don't disable it by stopping the Windows Firewall service (in the Services snap-in, the display name is Windows Defender Firewall and the service name is MpsSvc). Stopping the Windows Firewall service isn't supported by Microsoft and can cause problems, including:
 
 - Start menu can stop working

@@ -3,7 +3,7 @@ title: System requirements for Microsoft Defender Application Guard
 description: Learn about the system requirements for installing and running Microsoft Defender Application Guard.
 ms.topic: overview
 ms.localizationpriority: medium
-ms.date: 07/11/2024
+ms.date: 04/15/2025
 ---
 
 # System requirements for Microsoft Defender Application Guard

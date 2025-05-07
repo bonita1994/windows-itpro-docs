@@ -15,17 +15,17 @@ ms.topic: reference
 # Optional diagnostic data for Windows 11 and Windows 10
 
 Applies to:
+- Windows 11, version 24H2
 - Windows 11, version 23H2
 - Windows 11, version 22H2
-- Windows 11, version 21H2
 - Windows 10, version 22H2
 - Windows 10, version 21H2
 - Windows 10, version 1809
 
 > [!NOTE]
-> The information in this article also applies to these versions of Windows 10: 21H1, 20H2, 2004, 1909, 1903, 1803, and 1709. But those versions have reached their end of servicing date. For more information, see [Microsoft Product Lifecycle](/lifecycle/products).
+> The information in this article also applies to Windows 11 (version 21H2) and these versions of Windows 10: 21H1, 20H2, 2004, 1909, 1903, 1803, and 1709. But those versions have reached their end of servicing date. For more information, see [Microsoft Product Lifecycle](/lifecycle/products).
 
-Microsoft uses Windows diagnostic data to keep Windows secure and up-to-date, troubleshoot problems, and make product improvements. For users who have turned on "Tailored experiences", it can also be used to offer you personalized tips, ads, and recommendations to enhance Microsoft products and services for your needs. This article describes all types of optional diagnostic data collected by Windows, with comprehensive examples of data we collect per each type. For additional, detailed technical descriptions of Basic data items, see [Windows 11 required diagnostic events and fields](/windows/privacy/required-windows-11-diagnostic-events-and-fields).
+Microsoft uses Windows diagnostic data to keep Windows secure and up-to-date, troubleshoot problems, and make product improvements. For users who have turned on "Tailored experiences", it can also be used to offer you personalized tips, ads, and recommendations to enhance Microsoft products and services for your needs. This article describes all types of optional diagnostic data collected by Windows, with comprehensive examples of data we collect per each type.
 
 In addition, this article provides references to equivalent definitions for the data types and examples from [ISO/IEC 19944-1:2020 Information technology - Cloud computing - Cloud services and devices: Data flow, data categories, and data use](https://www.iso.org/standard/79573.html). Each data type also has a Data Use statement, for diagnostics and for Tailored experiences on the device, using the terms as defined by the standard. These Data Use statements define the purposes for which Microsoft processes each type of Windows diagnostic data, using a uniform set of definitions referenced at the end of this document and based on the ISO standard. Reference to the ISO standard provides additional clarity about the information collected, and allows easy comparison with other services or guidance that also references the standard.
 
@@ -54,9 +54,9 @@ Information that is added to most diagnostic events, if relevant and available:
 - Diagnostic level - Required or Optional, Sample level - for sampled data, what sample level is this device opted into (8.2.3.2.4 Observed Usage of the Service Capability)
 - Operating system name, version, build, and locale (8.2.3.2.2 Telemetry data)
 - Event collection time (8.2.3.2.2 Telemetry data)
-- User ID - a unique identifier associated with the user's Microsoft Account (if one is used) or local account. The user's Microsoft Account identifier is not collected from devices configured to send Basic - diagnostic data (8.2.5 Account data)
+- User ID - a unique identifier associated with the user's Microsoft Account (if one is used) or local account. The user's Microsoft Account identifier isn't collected from devices configured to send Basic - diagnostic data (8.2.5 Account data)
 - Xbox UserID (8.2.5 Account data)
-- Device ID - This ID is not the user provided device name, but an ID that is unique for that device. (8.2.3.2.3 Connectivity data)
+- Device ID - This ID isn't the user provided device name, but an ID that is unique for that device. (8.2.3.2.3 Connectivity data)
 - Device class - Desktop, Server, or Mobile (8.2.3.2.3 Connectivity data)
 - Environment from which the event was logged - Application ID of app or component that logged the event, Session GUID. Used to track events over a given period of time, such as the amount of time an app is running or between boots of the operating system (8.2.4 Cloud service provider data)
 - Diagnostic event name, Event ID, ETW opcode, version, schema signature, keywords, and flags (8.2.4 Cloud service provider data)
@@ -194,7 +194,7 @@ This type of data includes details about the usage of the device, operating syst
 **With (optional) Tailored experiences:**<br>
 If a user has enabled Tailored experiences on the device, [pseudonymized](#pseudo) Product and Service Usage data from Windows 10 and Windows 11 is used by Microsoft to [personalize](#personalize), [recommend](#recommend), and [offer](#offer) Microsoft products and services to Windows 10 and Windows 11 users. Also, if a user has enabled Tailored experiences on the device, [pseudonymized](#pseudo) Product and Service Usage data from Windows 10 and Windows 11 is used by Microsoft to [promote](#promote) third-party Windows apps, services, hardware, and peripherals to Windows 10 and Windows 11 users. For example:
 
-- If data shows that a user has not used a particular feature of Windows, we might recommend that the user try that feature.
+- If data shows that a user hasn't used a particular feature of Windows, we might recommend that the user try that feature.
 - Data about which apps are most-used on a device is used to provide recommendations for similar or complementary (Microsoft or third-party) apps. These apps might be free or paid.
 
 
@@ -303,7 +303,7 @@ If a user has enabled Tailored experiences on the device, [pseudonymized](#pseud
  
 - Video Width, height, color palette, encoding (compression) type, and encryption type
 - Instructions about how to stream content for the user - the smooth streaming manifest of content file chunks that must be pieced together to stream the content based on screen resolution and bandwidth
-- URL for a specific two-second chunk of content if there is an error
+- URL for a specific two-second chunk of content if there's an error
 - Full-screen viewing mode details
 
 **Music & TV subtype:** Information about music and TV consumption on the device

@@ -20,7 +20,7 @@ Safeguard holds prevent a device with a known compatibility issue from being off
 
 ## How can I opt out of safeguard holds?
 
-IT admins can, if necessary, opt devices out of safeguard protections by using the disable safeguards policy. In a Mobile Device Management (MDM) tool, use the **Update/DisableWUfBSafeguards** CSP. In Group Policy, use the **Disable safeguards for Feature Updates** Group Policy. This policy is available to Windows Update for Business devices running the following operating systems:
+IT admins can, if necessary, opt devices out of safeguard protections by using the disable safeguards policy. In a Mobile Device Management (MDM) tool, use the **Update/DisableWUfBSafeguards** CSP. In Group Policy, use the **Disable safeguards for Feature Updates** Group Policy. This policy is available to Windows Update client policies devices running the following operating systems:
 - Windows 11 
 - Windows 10, version 1809, or later, with the October 2020 security update.
 

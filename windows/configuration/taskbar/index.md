@@ -2,7 +2,7 @@
 title: Configure the Windows Taskbar Using Policy Settings
 description: Learn how to configure the Windows taskbar to provide quick access to the tools and applications that users need most.
 ms.topic: how-to
-ms.date: 11/07/2024
+ms.date: 04/03/2025
 ms.collection:
 - essentials-manage
 appliesto:

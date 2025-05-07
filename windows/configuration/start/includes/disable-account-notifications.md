@@ -21,5 +21,5 @@ Notifications include getting users to:
 
 |  | Path |
 |--|--|
-| **CSP** | `./User/Vendor/MSFT/Policy/Config/Notifications/`[DisableAccountNotifications](/windows/client-management/mdm/policy-csp-notifications#disableaccountnotifications) |
-| **GPO** | **User Configuration** > **Administrative Templates** > **Windows Components** > **Account Notifications** > **Turn off account notifications in Start** |
+| **CSP** | - `./User/Vendor/MSFT/Policy/Config/Notifications/`[DisableAccountNotifications](/windows/client-management/mdm/policy-csp-notifications#disableaccountnotifications) |
+| **GPO** | - **User Configuration** > **Administrative Templates** > **Windows Components** > **Account Notifications** > **Turn off account notifications in Start** |

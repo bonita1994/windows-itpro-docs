@@ -5,7 +5,7 @@ manager: aaroncz
 author: mestew
 ms.author: mstewart
 ms.service: windows-client
-ms.date: 01/31/2024
+ms.date: 03/27/2025
 ms.subservice: itpro-fundamentals
 ms.localizationpriority: medium
 ms.topic: overview
@@ -26,6 +26,8 @@ Windows 11 offers innovations focused on enhancing end-user productivity, and is
 Your investments in updates and device management are carried forward. For example, many of the same apps and tools can be used in Windows 11. Many of the same security settings and policies can be applied to Windows 11 devices, including PCs. You can use Windows Autopilot with a zero touch deployment to enroll your Windows devices in Microsoft Intune. You can also use newer features, such as Azure Virtual Desktop and Windows 365 on your Windows 11 devices.
 
 This article lists what's new, and some of the features & improvements. For more information on what's new for OEMs, see [What's new in manufacturing, customization, and design](/windows-hardware/get-started/what-s-new-in-windows).
+
+[!INCLUDE [Windows roadmap](./includes/windows-roadmap.md)]
 
 ## Security and scanning
 

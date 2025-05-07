@@ -23,7 +23,7 @@ ms.date: 04/22/2024
 > **Looking for consumer information?** See [Windows Update: FAQ](https://support.microsoft.com/help/12373/windows-update-faq) 
 
 
-WSUS is a Windows Server role available in the Windows Server operating systems. It provides a single hub for Windows updates within an organization. WSUS allows companies not only to defer updates but also to selectively approve them, choose when they're delivered, and determine which individual devices or groups of devices receive them. WSUS provides additional control over Windows Update for Business but doesn't provide all the scheduling options and deployment flexibility that Microsoft Configuration Manager provides.
+WSUS is a Windows Server role available in the Windows Server operating systems. It provides a single hub for Windows updates within an organization. WSUS allows companies not only to defer updates but also to selectively approve them, choose when they're delivered, and determine which individual devices or groups of devices receive them. WSUS provides additional control over Windows Update client policies but doesn't provide all the scheduling options and deployment flexibility that Microsoft Configuration Manager provides.
 
 When you choose WSUS as your source for Windows updates, you use Group Policy to point Windows client devices to the WSUS server for their updates. From there, updates are periodically downloaded to the WSUS server and managed, approved, and deployed through the WSUS administration console or Group Policy, streamlining enterprise update management. If you're currently using WSUS to manage Windows updates in your environment, you can continue to do so in Windows 11. 
 
@@ -240,7 +240,7 @@ The next time the clients in the **Ring 4 Broad Business Users** security group 
 For clients that should have their feature updates approved as soon as they're available, you can configure Automatic Approval rules in WSUS.
 
 >[!NOTE]
->WSUS respects the client device's servicing branch. If you approve a feature update while it is still in one branch, such as Insider Preview, WSUS will install the update only on devices that are in that servicing branch. When Microsoft releases the build for the [General Availability Channel](waas-overview.md#general-availability-channel), the devices in that will install it. Windows Update for Business branch settings do not apply to feature updates through WSUS.
+>WSUS respects the client device's servicing branch. If you approve a feature update while it is still in one branch, such as Insider Preview, WSUS will install the update only on devices that are in that servicing branch. When Microsoft releases the build for the [General Availability Channel](waas-overview.md#general-availability-channel), the devices in that will install it. Windows Update client policies branch settings do not apply to feature updates through WSUS.
 
 
 **To configure an Automatic Approval rule for Windows client feature updates and approve them for the Ring 3 Broad IT deployment ring**
@@ -271,7 +271,7 @@ This example uses Windows 10, but the process is the same for Windows 11.
 9. In the **Automatic Approvals** dialog box, select **OK**.
 
     >[!NOTE]
-    >WSUS does not honor any existing month/week/day [deferral settings](waas-configure-wufb.md#configure-when-devices-receive-feature-updates). That said, if you're using Windows Update for Business for a computer for which WSUS is also managing updates, when WSUS approves the update, it will be installed on the computer regardless of whether you configured Group Policy to wait.
+    >WSUS does not honor any existing month/week/day [deferral settings](waas-configure-wufb.md#configure-when-devices-receive-feature-updates). That said, if you're using Windows Update client policies for a computer for which WSUS is also managing updates, when WSUS approves the update, it will be installed on the computer regardless of whether you configured Group Policy to wait.
 
 Now, whenever Windows client feature updates are published to WSUS, they'll automatically be approved for the **Ring 3 Broad IT** deployment ring with an installation deadline of 1 week.
 

@@ -15,7 +15,7 @@ ms.localizationpriority: medium
 appliesto:
 - ✅ <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Windows 11</a>
 - ✅ <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Windows 10</a>
-ms.date: 05/23/2024
+ms.date: 04/03/2025
 ---
 
 # What is Delivery Optimization?
@@ -26,7 +26,7 @@ Windows updates, upgrades, and applications can contain packages with large file
 
 To use either the peer-to-peer functionality or the Microsoft Connected Cache features, devices must have access to the Internet and Delivery Optimization cloud services. When Delivery Optimization is configured to use peers and Microsoft Connected Cache, to achieve the best possible content delivery experience, the client connects to Connected Cache and peers in parallel. If the desired content can't be obtained from Connected Cache or peers, Delivery Optimization seamlessly falls back to the HTTP source to get the requested content.
 
-You can use Delivery Optimization with Windows Update, Windows Server Update Services (WSUS), Microsoft Intune/Windows Update for Business, or Microsoft Configuration Manager (when installation of Express Updates is enabled).
+You can use Delivery Optimization with Windows Update, Windows Server Update Services (WSUS), Microsoft Intune/Windows Update client policies, or Microsoft Configuration Manager (when installation of Express Updates is enabled).
 
 For information about setting up Delivery Optimization, including tips for the best settings in different scenarios, see [Set up Delivery Optimization](delivery-optimization-configure.md). For a comprehensive list of all Delivery Optimization settings, see [Delivery Optimization reference](waas-delivery-optimization-reference.md).
 
@@ -47,9 +47,6 @@ The following table lists the minimum Windows 10 version that supports Delivery 
 
 #### Windows Client
 
-> [!NOTE]
-> Starting March 4, 2025, Edge Browser updates will temporarily not utilize Delivery Optimization for downloads. We are actively working to resolve this issue.
-
 | Windows Client | Minimum Windows version | HTTP Downloader | Peer to Peer | Microsoft Connected Cache |
 |------------------|---------------|----------------|----------|----------------|
 | Windows Update ([feature updates quality updates, language packs, drivers](../update/get-started-updates-channels-tools.md#types-of-updates)) | Windows 10 1511, Windows 11 | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
@@ -58,7 +55,7 @@ The following table lists the minimum Windows 10 version that supports Delivery 
 | Windows Defender definition updates | Windows 10 1511, Windows 11 | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
 | Intune Win32 apps| Windows 10 1709, Windows 11 | :heavy_check_mark: | :heavy_check_mark:  | :heavy_check_mark: |
 | Microsoft 365 Apps and updates | Windows 10 1709, Windows 11 | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
-| Edge Browser Updates | Windows 10 1809, Windows 11 |  |  |  |
+| Edge Browser Updates | Windows 10 1809, Windows 11 | :heavy_check_mark:  | :heavy_check_mark: | :heavy_check_mark: |
 | Configuration Manager Express updates| Windows 10 1709 + Configuration Manager version 1711, Windows 11 | :heavy_check_mark: | :heavy_check_mark:  | :heavy_check_mark: |
 | Dynamic updates| Windows 10 1903, Windows 11 | :heavy_check_mark: | :heavy_check_mark:  | :heavy_check_mark: |
 | MDM Agent | Windows 11 | :heavy_check_mark: | | |
@@ -87,8 +84,6 @@ In Windows client Enterprise, Professional, and Education editions, Delivery Opt
 ## How Microsoft uses Delivery Optimization
 
 At Microsoft, to help ensure that ongoing deployments weren't affecting our network and taking away bandwidth for other services, Microsoft IT used a couple of different bandwidth management strategies. Delivery Optimization, peer-to-peer caching enabled through Group Policy, was piloted and then deployed to all managed devices using Group Policy. Based on recommendations from the Delivery Optimization team, we used the "group" configuration to limit sharing of content to only the devices that are members of the same Active Directory domain. The content is cached for 24 hours. More than 76 percent of content came from peer devices versus the Internet.
-
-For more information, check out the [Adopting Windows as a Service at Microsoft](https://www.microsoft.com/itshowcase/Article/Content/851/Adopting-Windows-as-a-service-at-Microsoft) technical case study.
 
 ## Using a proxy with Delivery Optimization
 

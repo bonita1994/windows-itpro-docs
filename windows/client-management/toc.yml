@@ -50,6 +50,8 @@ items:
                 href: device-update-management.md
               - name: Updated Windows and Microsoft 365 Copilot Chat experience
                 href: manage-windows-copilot.md
+              - name: Manage Click to Do
+                href: manage-click-to-do.md                
               - name: Manage Recall
                 href: manage-recall.md
               - name: Reference for sensitive information filtering in Recall

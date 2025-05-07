@@ -9,6 +9,8 @@ items:
   items:
   - name: Overview
     href: user-account-control/index.md
+  - name: UAC Architecture
+    href: user-account-control/architecture.md
   - name: How UAC works
     href: user-account-control/how-it-works.md
   - name: UAC settings and configuration

@@ -63,7 +63,7 @@ The following tables list the completed Common Criteria certifications for Windo
 [security-target-april-2014]: https://www.commoncriteriaportal.org/files/epfiles/st_vid10540-st.pdf
 [security-target-january-2014]: https://www.commoncriteriaportal.org/files/epfiles/st_vid10529-st.pdf
 [security-target-march-2011]: https://www.commoncriteriaportal.org/files/epfiles/st_vid10390-st.pdf
-[security-target-july-2009]: https://www.microsoft.com/download/en/details.aspx?id=29305
+[security-target-july-2009]: https://www.microsoft.com/download/details.aspx?id=29305
 [security-target-july-2009-hyperv]: https://www.commoncriteriaportal.org/files/epfiles/0570b_pdf.pdf
 [security-target-august-2009]: https://www.commoncriteriaportal.org/files/epfiles/st_vid10291-st.pdf
 [security-target-september-2008]: https://www.commoncriteriaportal.org/files/epfiles/efs-t005_msvista_msserver2008_eal1_st_v1.0.pdf
@@ -77,7 +77,7 @@ The following tables list the completed Common Criteria certifications for Windo
 [admin-guide-january-2015-pro]: https://download.microsoft.com/download/6/0/b/60b27ded-705a-4751-8e9f-642e635c3cf3/microsoft%20windows%208%20windows%20server%202012%20common%20criteria%20supplemental%20admin%20guidance.docx
 [admin-guide-april-2014]: https://download.microsoft.com/download/0/8/4/08468080-540b-4326-91bf-f2a33b7e1764/administrative%20guidance%20for%20software%20full%20disk%20encryption%20clients.pdf
 [admin-guide-january-2014]: https://download.microsoft.com/download/a/9/f/a9fd7e2d-023b-4925-a62f-58a7f1a6bd47/microsoft%20windows%208%20windows%20server%202012%20supplemental%20admin%20guidance%20ipsec%20vpn%20client.docx
-[admin-guide-july-2009]: https://www.microsoft.com/download/en/details.aspx?id=29308
+[admin-guide-july-2009]: https://www.microsoft.com/download/details.aspx?id=29308
 [admin-guide-july-2009-hyperv]: https://www.microsoft.com/en-us/download/details.aspx?id=14252
 
 <!-- Assurance Activity Reports -->

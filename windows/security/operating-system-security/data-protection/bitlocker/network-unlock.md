@@ -139,7 +139,7 @@ To enroll a certificate from an existing certificate authority:
 1. Select **All Tasks** > **Request New Certificate**
 1. When the Certificate Enrollment wizard opens, select **Next**
 1. Select **Active Directory Enrollment Policy**
-1. Choose the certificate template that was created for Network Unlock on the domain controller. Then select **Enroll**
+1. Choose the certificate template that was created for Network Unlock on the domain controller. In case the message "More information is required to enroll for this certificate. Click here to configure settings." is shown, click on it. On the new window, in **Subject** tab, under **Alternative names**, select **DNS** and set the FQDN of the WDS server. Save the changes by clicking **OK** and then select **Enroll**
 1. When prompted for more information, select **Subject Name** and provide a friendly name value. The friendly name should include information for the domain or organizational unit for the certificate For example: *BitLocker Network Unlock Certificate for Contoso domain*
 1. Create the certificate. Ensure the certificate appears in the **Personal** folder
 1. Export the public key certificate for Network Unlock:

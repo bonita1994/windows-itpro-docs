@@ -2,7 +2,7 @@
 title: App Control Admin Tips & Known Issues
 description: App Control Known Issues
 ms.manager: jsuther
-ms.date: 02/13/2025
+ms.date: 03/19/2025
 ms.topic: troubleshooting
 ms.localizationpriority: medium
 ---
@@ -13,7 +13,9 @@ ms.localizationpriority: medium
 
 This article covers tips and tricks for admins and known issues with App Control for Business. Test this configuration in your lab before enabling it in production.
 
-## App Control policy file locations
+## Admin tips and hints
+
+### App Control policy file locations
 
 **Multiple policy format App Control policies** are found in the following locations depending on whether the policy is signed or not, and the method of policy deployment that was used.
 
@@ -30,7 +32,7 @@ For **single policy format App Control policies**, in addition to the two preced
 > [!NOTE]
 > A multiple policy format App Control policy using the single policy format GUID `{A244370E-44C9-4C06-B551-F6016E563076}` might exist under any of the policy file locations.
 
-## File Rule Precedence Order
+### File Rule Precedence Order
 
 When the App Control engine evaluates files against the active set of policies on the device, rules are applied in the following order. Once a file encounters a match, App Control stops further processing.
 
@@ -46,6 +48,16 @@ When the App Control engine evaluates files against the active set of policies o
 
 ## Known issues
 
+### App Control policies in Audit mode might affect performance on a device
+
+When a file is assessed against the current set of App Control policies, the App Control engine sets kernel Extended Attributes (EAs) on the file when it passes the active policies. Later, if the same file runs, App Control checks the EAs and reuses the cached result as long as the policies in effect remain unchanged. This caching mechanism ensures App Control scales even when many policies are active containing large numbers of rules. However, this performance optimization isn't used for policies in audit mode. You might observe a performance difference in some cases between systems with only enforced policies compared to systems with audit policies.
+
+### The Intelligent Security Graph (ISG) option can affect performance when the cloud is checked for many files
+
+The ISG option is an incredibly important capability of App Control that eases the complexity of managing rules for individual files and apps. But, since it relies on Cloud-based artificial intelligence (AI) models, you should avoid relying on the ISG to make decisions about the important apps and files you need to run. Reliance on the ISG isn't recommended for critical workloads, Windows OS code, especially code that runs during boot, or situations where performance is most critical. Whenever possible, you should ensure explicit rules exist in the policy or use managed installers instead of the ISG as a way to reduce your policy management overhead.
+
+When considering your tolerance for performance impacts from ISG, consider also the added performance effects of the [preceding issue affecting performance of audit mode policies](#app-control-policies-in-audit-mode-might-affect-performance-on-a-device). Try to avoid running policies in audit mode that heavily rely on ISG authorization for large numbers of files.
+
 ### Boot stop failure (blue screen) occurs if more than 32 policies are active
 
 Until you apply the Windows security update released on or after April 9, 2024, your device is limited to 32 active policies. If the maximum number of policies is exceeded, the device bluescreens referencing ci.dll with a bug check value of 0x0000003b. Consider this maximum policy count limit when planning your App Control policies. Any [Windows inbox policies](inbox-appcontrol-policies.md) that are active on the device also count towards this limit. To remove the maximum policy limit, install the Windows security update released on, or after, April 9, 2024 and then restart the device. Otherwise, reduce the number of policies on the device to remain below 32 policies.
@@ -60,9 +72,9 @@ Although App Control audit mode is designed to avoid any effect on apps, some fe
 - Some script hosts might block code or run code with fewer privileges even in audit mode. See [Script enforcement with App Control](../design/script-enforcement.md) for information about individual script host behaviors.
 - Option **19 Enabled:Dynamic Code Security** is always enforced if any UMCI policy includes that option on some versions of Windows and Windows Server. See [App Control and .NET](../design/appcontrol-and-dotnet.md#app-control-and-net-dynamic-code-security-hardening).
 
-### .NET native images may generate false positive block events
+### .NET native images might generate false positive block events
 
-In some cases, the code integrity logs where App Control for Business errors and warnings are written include error events for native images generated for .NET assemblies. Typically, native image blocks are functionally benign as a blocked native image falls back to its corresponding assembly and .NET regenerates the native image at its next scheduled maintenance window. To prevent that, consider compiling your .NET application ahead of time using the [Native AOT](/dotnet/core/deploying/native-aot) feature.
+In some cases, the code integrity logs where App Control for Business errors and warnings are written include error events for native images generated for .NET assemblies. Typically, native image blocks are functionally benign as a blocked native image falls back to its corresponding assembly and .NET regenerates the native image at its next scheduled maintenance window. To prevent that, compile your .NET application into [native code ahead of time](/dotnet/core/deploying/native-aot) feature.
 
 ### .NET doesn't load Component Object Model (COM) objects with mismatched GUIDs
 
@@ -82,7 +94,7 @@ App Control signer-based rules only work with RSA cryptography. ECC algorithms, 
 
 MSI installer files are always detected as user writeable on Windows 10, and on Windows Server 2022 and earlier. If you need to allow MSI files using FilePath rules, you must set option **18 Disabled:Runtime FilePath Rule Protection** in your App Control policy.
 
-### MSI Installations launched directly from the internet are blocked by App Control
+### MSI installers launched directly from the internet are blocked
 
 Installing .msi files directly from the internet to a computer protected by App Control fails.
 For example, this command fails:
@@ -101,14 +113,10 @@ msiexec -i c:\temp\Windows10_Version_1511_ADMX.msi
 
 App Control evaluates all processes that run, including inbox Windows processes. You can cause slower boot times, degraded performance, and possibly boot issues if your policies don't build upon the App Control templates or don't trust the Windows signers. For these reasons, you should use the [App Control base templates](../design/example-appcontrol-base-policies.md) whenever possible to create your policies.
 
-#### AppId Tagging policy considerations
+### AppId Tagging policy evaluates DLL files that aren't in scope for tagging
 
-AppId Tagging policies that aren't built upon the App Control base templates or don't allow the Windows in-box signers might cause a significant increase in boot times (~2 minutes).
-
-If you can't allowlist the Windows signers or build off the App Control base templates, add the following rule to your policies to improve the performance:
+When you use AppId Tagging policies, the result is metadata, the "tags", added to the process token of any executable file that passes the policy. You can then use the tags to change the behavior of an app or component that understands AppId tag and looks for a matching tag on a process. For example, you can set a Windows Firewall rule that uses a custom tag to identify processes that should be allowed to connect through the Firewall. AppId Tags only apply to executable files (EXEs) and never apply to other types of code such as Dynamic Link Libraries (DLLs). But when a DLL runs, App Control evaluates the file against your policy unless a rule exists to allow all files of that type. To short circuit policy evaluation for DLLs and further reduce App Control's affect on performance, add the following rule to your AppId Tagging policies:
 
 :::image type="content" source="../images/known-issue-appid-dll-rule.png" alt-text="Allow all dlls in the policy.":::
 
 :::image type="content" source="../images/known-issue-appid-dll-rule-xml.png" alt-text="Allow all dll files in the xml policy.":::
-
-Since AppId Tagging policies evaluate but can't tag dll files, this rule short circuits dll evaluation and improve evaluation performance.

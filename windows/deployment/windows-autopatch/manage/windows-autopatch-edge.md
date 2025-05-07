@@ -1,7 +1,7 @@
 ---
 title: Microsoft Edge
 description: This article explains how Microsoft Edge updates are managed in Windows Autopatch
-ms.date: 09/16/2024
+ms.date: 03/31/2025
 ms.service: windows-client
 ms.subservice: autopatch
 ms.topic: how-to
@@ -17,12 +17,7 @@ ms.collection:
 
 # Microsoft Edge
 
-[!INCLUDE [windows-autopatch-enterprise-e3-f3-licenses](../includes/windows-autopatch-enterprise-e3-f3-licenses.md)]
-
 Windows Autopatch uses the [Stable Channel](/deployedge/microsoft-edge-channels#stable-channel) of Microsoft Edge.
-
-> [!IMPORTANT]
-> To update Microsoft 365 Apps for enterprise, you must [create at least one Autopatch group](../manage/windows-autopatch-manage-autopatch-groups.md#create-an-autopatch-group) first and **Microsoft Edge update setting** must be set to [**Allow**](#allow-or-block-microsoft-edge-updates). For more information on workloads supported by Windows Autopatch groups, see [Software update workloads](../deploy/windows-autopatch-groups-overview.md#software-update-workloads).
 
 ## Device eligibility
 
@@ -33,44 +28,65 @@ For a device to be eligible for Microsoft Edge updates as a part of Windows Auto
 - The device must be able to access the required network endpoints to reach the Microsoft Edge update service.
 - If Microsoft Edge is open, it must restart for the update process to complete.
 
-## Allow or block Microsoft Edge updates
+## Microsoft Edge update controls
 
-> [!IMPORTANT]
-> You must be an Intune Administrator to make changes to the setting.
+With the expanded Autopatch group capabilities, you can choose to enable Microsoft Edge updates on a per Autopatch group level. Depending on your tenant settings, one of the following scenarios occurs:
 
-For organizations seeking greater control, you can allow or block Microsoft Edge updates for Windows Autopatch-enrolled devices.
+- Tenants that previously turned on Autopatch Microsoft Edge updates, has the Microsoft Edge updates Update Type checkbox selected, and the updated policies applied to each Autopatch group.  
+- Tenants that previously turned off Autopatch Microsoft Edge updates, or are new to Windows Autopatch, Autopatch Microsoft Edge updates remain turned off.
 
-| Microsoft Edge setting | Description |
-| ----- | ----- |
-| **Allow** | When set to **Allow**, Windows Autopatch assigns devices to Microsoft Edge's [Stable Channel](/deployedge/microsoft-edge-channels#stable-channel). To manage updates manually, set the Microsoft Edge setting to **Block**. |
-| **Block** | When set to **Block**, Windows Autopatch doesn't assign devices to Microsoft Edge's [Stable Channel](/deployedge/microsoft-edge-channels#stable-channel) updates on your behalf, and your organizations have full control over these updates. You can continue to receive updates from [channels](/deployoffice/overview-update-channels) other than the default [Monthly Enterprise Channel](/deployoffice/overview-update-channels#monthly-enterprise-channel-overview). |
+If you [created an Autopatch group](../manage/windows-autopatch-manage-autopatch-groups.md#create-an-autopatch-group) and selected Microsoft Edge updates as a content type, the **Update Type** checkbox is **selected**, with new policies created and any available old policies are removed. If you didn’t select Microsoft Edge updates as a content type upon creating an Autopatch group, the **Update Type** checkbox is **unselected**. Any available customized policies are retained and appear in the **Policies** tab.
 
-**To allow or block Edge updates:**
+### Turn on Microsoft Edge updates
+
+**To turn on Microsoft Edge updates:**
 
 1. Go to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-1. Navigate to **Tenant administration** > **Windows Autopatch** > **Autopatch groups** > **Update settings**.
-1. Go to the **Edge updates** section. By default, the Allow/Block toggle is set to **Block**.
-1. Turn off the **Allow** toggle (set to Block) to opt out of Microsoft Edge update policies. You see the notification: *Update in process. This setting will be unavailable until the update is complete.*
-1. Once the update is complete, you receive the notification: *This setting is updated*.
+1. Navigate to **Tenant Administration** > **Windows Autopatch** > **Autopatch groups**.
+1. Select an Autopatch group to modify (repeat these steps for each group).  
+1. Next to **Update types**, select **Edit**.  
+1. Select **Microsoft Edge updates**.  
+1. Select **Next: Deployment settings** > **Next: Release schedules** > **Next: Review + save** > **Save** to save these changes.
+1. We recommend deleting old Autopatch default policies to avoid policy conflict. Navigate to **Devices** > **Manage devices** > **Configuration** > **Policies** tab.  
+1. Manually remove the following profiles related to Microsoft Edge
+    1. Windows Autopatch - Microsoft Edge Update Channel Beta
+    1. Windows Autopatch - Microsoft Edge Update Channel Stable
 
 > [!NOTE]
-> If the notification: *This setting couldn't be updated. Please try again or submit a support request.* appears, use the following steps:<ol><li>Refresh your page.</li><li>Please repeat the same steps in To allow or block Edge updates.</li><li>If the issue persists, [submit a support request](../manage/windows-autopatch-support-request.md).</li>
+> If you previously selected **Microsoft Edge updates** when [creating an Autopatch group](../manage/windows-autopatch-manage-autopatch-groups.md#create-an-autopatch-group), but your tenant isn't showing the new updates, there’s a possibility that you previously modified the policy. To ensure there are no disruptions, the Autopatch Service retains that policy.
 
-**To verify if the Edge update setting is set to Allow:**
+### Turn off Microsoft Edge updates
 
-1. Go to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Navigate to **Devices** > **Configuration profiles** > **Profiles**.
-3. The following profiles should be discoverable from the list of profiles:
-    1. Windows Autopatch - Microsoft Edge Update Channel Stable
-    2. Windows Autopatch - Microsoft Edge Update Channel Beta
-
-**To verify if the Edge update setting is set to Block:**
+**To turn off Microsoft Edge updates:**
 
 1. Go to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Navigate to **Devices** > **Configuration profiles** > **Profiles**.
-3. The following **five** profiles should be removed from your list of profiles and no longer visible/active. Use the Search with the keywords "Microsoft Edge Configuration". The result should return *0 profiles filtered*.
+1. Navigate to **Tenant Administration** > **Windows Autopatch** > **Autopatch groups**.
+1. Select an Autopatch group to modify (repeat these steps for each group).  
+1. Next to **Update types**, select **Edit**.
+1. Unselect **Microsoft Edge updates**.  
+1. Select **Next: Deployment settings** > **Next: Release schedules** > **Next: Review + save** > **Save** to save these changes.
+
+### Verify Microsoft Edge updates policies
+
+**To verify Microsoft Edge updates policies:**
+
+1. Go to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Navigate to **Tenant Administration** > **Windows Autopatch** > **Autopatch groups**.  
+1. Verify each Autopatch group has the **Microsoft Edge Update Type** checkbox **selected**.
+1. Navigate to **Devices** > **Manage devices** > **Configuration** > **Policies** tab.
+1. The following new policies should be discoverable from the list of profiles:
+    1. `"Windows Autopatch Microsoft Edge Update Policy - <group name> - <ring name>"`
+1. The following profiles should be removed from your list of profiles and no longer visible/active. Use the Search with the keywords "Microsoft Edge Update Channel". The result should return *0 profiles filtered*.
+    1. Windows Autopatch - Microsoft Edge Update Channel Beta
     1. Windows Autopatch - Microsoft Edge Update Channel Stable
-    2. Windows Autopatch - Microsoft Edge Update Channel Beta
+
+### Verify Microsoft Edge updates policies are created
+
+**To verify Microsoft Edge updates policies are created:**
+
+1. Go to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Navigate to **Devices** > **Manage devices** > **Configuration** > **Policies**.
+1. Confirm the new policies are named:`"Windows Autopatch Microsoft Edge Update Policy - <group name> - <ring name>"`
 
 ## Update release schedule
 
@@ -86,4 +102,4 @@ Currently, Windows Autopatch can't pause or resume Microsoft Edge updates.
 
 ## Incidents and outages
 
-If you're experiencing issues related to Microsoft Edge updates, [submit a support request](../operate/windows-autopatch-support-request.md).
+If you're experiencing issues related to Microsoft Edge updates, [submit a support request](../operate/windows-autopatch-support-request.md). You can only submit a support request if you have E3+ or F licenses. For more information, see [Features and capabilities](../overview/windows-autopatch-overview.md#features-and-capabilities).

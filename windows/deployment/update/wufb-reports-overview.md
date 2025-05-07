@@ -8,9 +8,9 @@ ms.topic: overview
 author: mestew
 ms.author: mstewart
 manager: aaroncz
-appliesto: 
+appliesto:
 - ✅ <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Windows 11</a>
-- ✅ <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Windows 10</a>	
+- ✅ <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Windows 10</a>
 ms.date: 11/15/2022
 ---
 
@@ -59,7 +59,7 @@ You'll set up Windows Update for Business reports by enrolling into the service 
 
 - Update deployment progress
 - Delivery Optimization usage data
-- Windows Update for Business configuration data
+- Windows Update client policy configuration data
 
 The Azure Log Analytics ingestion and retention charges aren't incurred on your Azure subscription for Windows Update for Business reports data. You also choose an [Azure Log Analytics workspaces](/azure/azure-monitor/logs/log-analytics-overview) that you own for your client diagnostic data. The collected diagnostic data populates the Windows Update for Business reports tables so you can easily query your data.
 

@@ -1,7 +1,7 @@
 ---
 title: UserRights Policy CSP
 description: Learn more about the UserRights Area in Policy CSP.
-ms.date: 03/12/2025
+ms.date: 04/30/2025
 ms.topic: generated-reference
 ---
 
@@ -257,7 +257,7 @@ This user right allows a process to impersonate any user without authentication.
 <!-- AdjustMemoryQuotasForProcess-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 24H2 [10.0.26100] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 22H2 with [KB5053657](https://support.microsoft.com/help/5053657) [10.0.22621.5126] and later <br> ✅ Windows 11, version 24H2 [10.0.26100] and later |
 <!-- AdjustMemoryQuotasForProcess-Applicability-End -->
 
 <!-- AdjustMemoryQuotasForProcess-OmaUri-Begin -->
@@ -273,6 +273,14 @@ Adjust memory quotas for a process - This privilege determines who can change th
 
 <!-- AdjustMemoryQuotasForProcess-Editable-Begin -->
 <!-- Add any additional information about this policy here. Anything outside this section will get overwritten. -->
+> [!CAUTION]
+> When you configure user rights, it replaces existing users or groups that were previously assigned to those user rights. The system requires that the **Local Service** account (SID `S-1-5-19`) and **Network Service** account (SID `S-1-5-20`) always has the AdjustMemoryQuotasForProcess right. Always specify **Local Service** and **Network Service**, in addition to any other accounts that you need to configure in this policy.
+>
+> If you don't include the **Local Service** account and **Network Service** account, the request fails with the following error:
+>
+> | Error code         | Symbolic name       | Error description            | Header     |
+> |--------------------|---------------------|------------------------------|------------|
+> | `0x80070032` (Hex) | ERROR_NOT_SUPPORTED | The request isn't supported. | winerror.h |
 <!-- AdjustMemoryQuotasForProcess-Editable-End -->
 
 <!-- AdjustMemoryQuotasForProcess-DFProperties-Begin -->
@@ -358,7 +366,7 @@ This user right determines which users can log on to the computer.
 <!-- AllowLogOnThroughRemoteDesktop-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 24H2 [10.0.26100] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 22H2 with [KB5053657](https://support.microsoft.com/help/5053657) [10.0.22621.5126] and later <br> ✅ Windows 11, version 24H2 [10.0.26100] and later |
 <!-- AllowLogOnThroughRemoteDesktop-Applicability-End -->
 
 <!-- AllowLogOnThroughRemoteDesktop-OmaUri-Begin -->
@@ -459,7 +467,7 @@ This user right determines which users can bypass file, directory, registry, and
 <!-- BypassTraverseChecking-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 24H2 [10.0.26100] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 22H2 with [KB5053657](https://support.microsoft.com/help/5053657) [10.0.22621.5126] and later <br> ✅ Windows 11, version 24H2 [10.0.26100] and later |
 <!-- BypassTraverseChecking-Applicability-End -->
 
 <!-- BypassTraverseChecking-OmaUri-Begin -->
@@ -475,6 +483,14 @@ This user right determines which users can traverse directory trees even though 
 
 <!-- BypassTraverseChecking-Editable-Begin -->
 <!-- Add any additional information about this policy here. Anything outside this section will get overwritten. -->
+> [!CAUTION]
+> When you configure user rights, it replaces existing users or groups that were previously assigned to those user rights. The system requires that the **Local Service** account (SID `S-1-5-19`) and **Network Service** account (SID `S-1-5-20`) always has the BypassTraverseChecking right. Always specify **Local Service** and **Network Service**, in addition to any other accounts that you need to configure in this policy.
+>
+> If you don't include the **Local Service** account and **Network Service** account, the request fails with the following error:
+>
+> | Error code         | Symbolic name       | Error description            | Header     |
+> |--------------------|---------------------|------------------------------|------------|
+> | `0x80070032` (Hex) | ERROR_NOT_SUPPORTED | The request isn't supported. | winerror.h |
 <!-- BypassTraverseChecking-Editable-End -->
 
 <!-- BypassTraverseChecking-DFProperties-Begin -->
@@ -566,7 +582,7 @@ This user right determines which users and groups can change the time and date o
 <!-- ChangeTimeZone-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 24H2 [10.0.26100] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 22H2 with [KB5053657](https://support.microsoft.com/help/5053657) [10.0.22621.5126] and later <br> ✅ Windows 11, version 24H2 [10.0.26100] and later |
 <!-- ChangeTimeZone-Applicability-End -->
 
 <!-- ChangeTimeZone-OmaUri-Begin -->
@@ -582,6 +598,14 @@ This user right determines which users and groups can change the time zone used 
 
 <!-- ChangeTimeZone-Editable-Begin -->
 <!-- Add any additional information about this policy here. Anything outside this section will get overwritten. -->
+> [!CAUTION]
+> When you configure user rights, it replaces existing users or groups that were previously assigned to those user rights. The system requires that the **Local Service** account (SID `S-1-5-19`) always has the ChangeTimeZone right. Always specify **Local Service**, in addition to any other accounts that you need to configure in this policy.
+>
+> If you don't include the **Local Service** account, the request fails with the following error:
+>
+> | Error code         | Symbolic name       | Error description            | Header     |
+> |--------------------|---------------------|------------------------------|------------|
+> | `0x80070032` (Hex) | ERROR_NOT_SUPPORTED | The request isn't supported. | winerror.h |
 <!-- ChangeTimeZone-Editable-End -->
 
 <!-- ChangeTimeZone-DFProperties-Begin -->
@@ -634,6 +658,14 @@ This security setting determines whether users can create global objects that ar
 
 <!-- CreateGlobalObjects-Editable-Begin -->
 <!-- Add any additional information about this policy here. Anything outside this section will get overwritten. -->
+> [!CAUTION]
+> When you configure user rights, it replaces existing users or groups that were previously assigned to those user rights. The system requires that the **Local Service** account (SID `S-1-5-19`) and **Network Service** account (SID `S-1-5-20`) always has the CreateGlobalObjects right. Always specify **Local Service** and **Network Service**, in addition to any other accounts that you need to configure in this policy.
+>
+> If you don't include the **Local Service** account and **Network Service** account, the request fails with the following error:
+>
+> | Error code         | Symbolic name       | Error description            | Header     |
+> |--------------------|---------------------|------------------------------|------------|
+> | `0x80070032` (Hex) | ERROR_NOT_SUPPORTED | The request isn't supported. | winerror.h |
 <!-- CreateGlobalObjects-Editable-End -->
 
 <!-- CreateGlobalObjects-DFProperties-Begin -->
@@ -1026,7 +1058,7 @@ This security setting determines which service accounts are prevented from regis
 <!-- DenyLogOnAsBatchJob-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 24H2 [10.0.26100] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 22H2 with [KB5053657](https://support.microsoft.com/help/5053657) [10.0.22621.5126] and later <br> ✅ Windows 11, version 24H2 [10.0.26100] and later |
 <!-- DenyLogOnAsBatchJob-Applicability-End -->
 
 <!-- DenyLogOnAsBatchJob-OmaUri-Begin -->
@@ -1244,6 +1276,14 @@ This user right determines which accounts can be used by a process to add entrie
 
 <!-- GenerateSecurityAudits-Editable-Begin -->
 <!-- Add any additional information about this policy here. Anything outside this section will get overwritten. -->
+> [!CAUTION]
+> When you configure user rights, it replaces existing users or groups that were previously assigned to those user rights. The system requires that the **Local Service** account (SID `S-1-5-19`) and **Network Service** account (SID `S-1-5-20`) always has the GenerateSecurityAudits right. Always specify **Local Service** and **Network Service**, in addition to any other accounts that you need to configure in this policy.
+>
+> If you don't include the **Local Service** account and **Network Service** account, the request fails with the following error:
+>
+> | Error code         | Symbolic name       | Error description            | Header     |
+> |--------------------|---------------------|------------------------------|------------|
+> | `0x80070032` (Hex) | ERROR_NOT_SUPPORTED | The request isn't supported. | winerror.h |
 <!-- GenerateSecurityAudits-Editable-End -->
 
 <!-- GenerateSecurityAudits-DFProperties-Begin -->
@@ -1302,6 +1342,14 @@ Assigning this user right to a user allows programs running on behalf of that us
 
 <!-- ImpersonateClient-Editable-Begin -->
 <!-- Add any additional information about this policy here. Anything outside this section will get overwritten. -->
+> [!CAUTION]
+> When you configure user rights, it replaces existing users or groups that were previously assigned to those user rights. The system requires that the **Local Service** account (SID `S-1-5-19`) and **Network Service** account (SID `S-1-5-20`) always has the ImpersonateClient right. Always specify **Local Service** and **Network Service**, in addition to any other accounts that you need to configure in this policy.
+>
+> If you don't include the **Local Service** account and **Network Service** account, the request fails with the following error:
+>
+> | Error code         | Symbolic name       | Error description            | Header     |
+> |--------------------|---------------------|------------------------------|------------|
+> | `0x80070032` (Hex) | ERROR_NOT_SUPPORTED | The request isn't supported. | winerror.h |
 <!-- ImpersonateClient-Editable-End -->
 
 <!-- ImpersonateClient-DFProperties-Begin -->
@@ -1542,7 +1590,7 @@ This user right determines which accounts can use a process to keep data in phys
 <!-- LogOnAsBatchJob-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 24H2 [10.0.26100] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 22H2 with [KB5053657](https://support.microsoft.com/help/5053657) [10.0.22621.5126] and later <br> ✅ Windows 11, version 24H2 [10.0.26100] and later |
 <!-- LogOnAsBatchJob-Applicability-End -->
 
 <!-- LogOnAsBatchJob-OmaUri-Begin -->
@@ -1591,7 +1639,7 @@ This security setting allows a user to be logged-on by means of a batch-queue fa
 <!-- LogOnAsService-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 24H2 [10.0.26100] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 22H2 with [KB5053657](https://support.microsoft.com/help/5053657) [10.0.22621.5126] and later <br> ✅ Windows 11, version 24H2 [10.0.26100] and later |
 <!-- LogOnAsService-Applicability-End -->
 
 <!-- LogOnAsService-OmaUri-Begin -->
@@ -1888,7 +1936,7 @@ This user right determines which users can use performance monitoring tools to m
 <!-- ProfileSystemPerformance-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 24H2 [10.0.26100] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 22H2 with [KB5053657](https://support.microsoft.com/help/5053657) [10.0.22621.5126] and later <br> ✅ Windows 11, version 24H2 [10.0.26100] and later |
 <!-- ProfileSystemPerformance-Applicability-End -->
 
 <!-- ProfileSystemPerformance-OmaUri-Begin -->
@@ -1986,7 +2034,7 @@ This user right determines which users are allowed to shut down a computer from 
 <!-- ReplaceProcessLevelToken-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 24H2 [10.0.26100] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 22H2 with [KB5053657](https://support.microsoft.com/help/5053657) [10.0.22621.5126] and later <br> ✅ Windows 11, version 24H2 [10.0.26100] and later |
 <!-- ReplaceProcessLevelToken-Applicability-End -->
 
 <!-- ReplaceProcessLevelToken-OmaUri-Begin -->
@@ -2002,6 +2050,14 @@ This security setting determines which user accounts can call the CreateProcessA
 
 <!-- ReplaceProcessLevelToken-Editable-Begin -->
 <!-- Add any additional information about this policy here. Anything outside this section will get overwritten. -->
+> [!CAUTION]
+> When you configure user rights, it replaces existing users or groups that were previously assigned to those user rights. The system requires that the **Local Service** account (SID `S-1-5-19`) and **Network Service** account (SID `S-1-5-20`) always has the ReplaceProcessLevelToken right. Always specify **Local Service** and **Network Service**, in addition to any other accounts that you need to configure in this policy.
+>
+> If you don't include the **Local Service** account and **Network Service** account, the request fails with the following error:
+>
+> | Error code         | Symbolic name       | Error description            | Header     |
+> |--------------------|---------------------|------------------------------|------------|
+> | `0x80070032` (Hex) | ERROR_NOT_SUPPORTED | The request isn't supported. | winerror.h |
 <!-- ReplaceProcessLevelToken-Editable-End -->
 
 <!-- ReplaceProcessLevelToken-DFProperties-Begin -->
@@ -2087,7 +2143,7 @@ This user right determines which users can bypass file, directory, registry, and
 <!-- ShutDownTheSystem-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 24H2 [10.0.26100] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 22H2 with [KB5053657](https://support.microsoft.com/help/5053657) [10.0.22621.5126] and later <br> ✅ Windows 11, version 24H2 [10.0.26100] and later |
 <!-- ShutDownTheSystem-Applicability-End -->
 
 <!-- ShutDownTheSystem-OmaUri-Begin -->

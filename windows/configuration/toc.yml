@@ -11,10 +11,14 @@ items:
   href: background/index.md
 - name: Windows spotlight
   href: windows-spotlight/index.md
-- name: Settings page visibility
-  href: settings/page-visibility.md
+- name: Settings
+  items:
+  - name: Page visibility
+    href: settings/page-visibility.md
 - name: Microsoft Store
   href: store/toc.yml
+- name: Quick machine recovery
+  href: quick-machine-recovery/index.md
 - name: Cellular settings
   href: cellular/provisioning-apn.md
 - name: Windows kiosk options
@@ -37,4 +41,3 @@ items:
       href: custom-logon/index.md
     - name: Troubleshoot
       href: custom-logon/troubleshoot.md
-

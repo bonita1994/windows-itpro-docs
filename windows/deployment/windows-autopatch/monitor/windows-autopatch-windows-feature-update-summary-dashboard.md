@@ -1,7 +1,7 @@
 ---
 title: Windows feature update summary dashboard
 description: Provides a broader view of the current Windows OS upgrade status for all Intune devices.
-ms.date: 11/20/2024
+ms.date: 03/31/2025
 ms.service: windows-client
 ms.subservice: autopatch
 ms.topic: how-to
@@ -17,8 +17,6 @@ ms.collection:
 
 # Windows feature update summary dashboard
 
-[!INCLUDE [windows-autopatch-enterprise-e3-f3-licenses](../includes/windows-autopatch-enterprise-e3-f3-licenses.md)]
-
 The Summary dashboard provides a broader view of the current Windows OS update status for all Intune devices.
 
 The first part of the Summary dashboard provides you with an all-devices trend report where you can follow the deployment trends within your organization. You can view if updates were successfully installed, failing, in progress, not ready or have their Windows feature update paused.
@@ -31,9 +29,6 @@ The first part of the Summary dashboard provides you with an all-devices trend r
 
 ## Report information
 
-> [!IMPORTANT]
-> **Due to a recent change, we have identified an issue that prevents the Paused column from being displayed**. Until a fix is deployed, **you must keep track of your paused releases so you can resume them at a later date**. The team is actively working on resolving this issue and we'll provide an update when a fix is deployed.
-
 The following information is available in the Summary dashboard:
 
 | Column name | Description |
@@ -44,7 +39,7 @@ The following information is available in the Summary dashboard:
 | Up to date | Total device count reporting a status of Up to date. For more information, see [Up to Date](../operate/windows-autopatch-groups-windows-quality-and-feature-update-reports-overview.md#up-to-date-devices). |
 | Not up to Date | Total device count reporting a status of Not Up to date. For more information, see [Not Up to Date](../operate/windows-autopatch-groups-windows-quality-and-feature-update-reports-overview.md#not-up-to-date-devices). |
 | In progress | Total device counts reporting the In progress status. For more information, see [In progress](../operate/windows-autopatch-groups-windows-quality-and-feature-update-reports-overview.md#up-to-date-sub-statuses). |
-| Paused | Total device count reporting the status of the pause whether it's Service or Customer initiated. For more information, see [Up to Date](../operate/windows-autopatch-groups-windows-quality-and-feature-update-reports-overview.md#up-to-date-devices). |
+| Paused | Total device count reporting the Paused status. For more information, see [Up to Date](../operate/windows-autopatch-groups-windows-quality-and-feature-update-reports-overview.md#up-to-date-devices). |
 | Not ready | Total device count reporting the Not ready status. For more information, see [Not ready](../operate/windows-autopatch-groups-windows-quality-and-feature-update-reports-overview.md#not-up-to-date-devices). |
 | % with the target feature update | Percent of [Up to Date](../operate/windows-autopatch-groups-windows-quality-and-feature-update-reports-overview.md#up-to-date-devices) devices on the targeted feature update. |
 

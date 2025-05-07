@@ -1,7 +1,7 @@
 ---
 title: Power Policy CSP
 description: Learn more about the Power Area in Policy CSP.
-ms.date: 03/12/2025
+ms.date: 04/04/2025
 ms.topic: generated-reference
 ---
 
@@ -11,6 +11,8 @@ ms.topic: generated-reference
 # Policy CSP - Power
 
 [!INCLUDE [ADMX-backed CSP tip](includes/mdm-admx-csp-note.md)]
+
+[!INCLUDE [Windows Insider tip](includes/mdm-insider-csp-note.md)]
 
 <!-- Power-Editable-Begin -->
 <!-- Add any additional information about this policy here. Anything outside this section will get overwritten. -->
@@ -307,6 +309,64 @@ If the user has configured a slide show to run on the lock screen when the machi
 
 <!-- DisplayOffTimeoutPluggedIn-End -->
 
+<!-- EnableEnergySaver-Begin -->
+## EnableEnergySaver
+
+<!-- EnableEnergySaver-Applicability-Begin -->
+| Scope | Editions | Applicable OS |
+|:--|:--|:--|
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows Insider Preview |
+<!-- EnableEnergySaver-Applicability-End -->
+
+<!-- EnableEnergySaver-OmaUri-Begin -->
+```Device
+./Device/Vendor/MSFT/Policy/Config/Power/EnableEnergySaver
+```
+<!-- EnableEnergySaver-OmaUri-End -->
+
+<!-- EnableEnergySaver-Description-Begin -->
+<!-- Description-Source-DDF -->
+This policy will extend battery life and reduce energy consumption by enabling Energy Saver to always be on. Energy Saver will always be on for desktops as well as laptops regardless of battery level for both AC and DC. If you disable or don't configure this policy setting, then Energy Saver will turn on based on the EnergySaverBatteryThreshold group policy.
+<!-- EnableEnergySaver-Description-End -->
+
+<!-- EnableEnergySaver-Editable-Begin -->
+<!-- Add any additional information about this policy here. Anything outside this section will get overwritten. -->
+<!-- EnableEnergySaver-Editable-End -->
+
+<!-- EnableEnergySaver-DFProperties-Begin -->
+**Description framework properties**:
+
+| Property name | Property value |
+|:--|:--|
+| Format | `int` |
+| Access Type | Add, Delete, Get, Replace |
+| Default Value  | 1 |
+<!-- EnableEnergySaver-DFProperties-End -->
+
+<!-- EnableEnergySaver-AllowedValues-Begin -->
+**Allowed values**:
+
+| Value | Description |
+|:--|:--|
+| 0 | Disable energy saver policy. |
+| 1 (Default) | Enable energy saver always-on mode. |
+<!-- EnableEnergySaver-AllowedValues-End -->
+
+<!-- EnableEnergySaver-GpMapping-Begin -->
+**Group policy mapping**:
+
+| Name | Value |
+|:--|:--|
+| Name | EnableEnergySaver |
+| Path | Power > AT > System > PowerManagementCat > EnergySaverSettingsCat |
+<!-- EnableEnergySaver-GpMapping-End -->
+
+<!-- EnableEnergySaver-Examples-Begin -->
+<!-- Add any examples for this policy here. Examples outside this section will get overwritten. -->
+<!-- EnableEnergySaver-Examples-End -->
+
+<!-- EnableEnergySaver-End -->
+
 <!-- EnergySaverBatteryThresholdOnBattery-Begin -->
 ## EnergySaverBatteryThresholdOnBattery
 
@@ -344,6 +404,7 @@ This policy setting allows you to specify battery charge level at which Energy S
 | Access Type | Add, Delete, Get, Replace |
 | Allowed Values | Range: `[0-100]` |
 | Default Value  | 0 |
+| Dependency [Power_EnergySaverBatteryThresholdOnBattery_DependencyGroup] | Dependency Type: `DependsOn` <br> Dependency URI: `./Device/Vendor/MSFT/Policy/Config/Power/EnableEnergySaver` <br> Dependency Allowed Value: `[1]` <br> Dependency Allowed Value Type: `Range` <br>  |
 <!-- EnergySaverBatteryThresholdOnBattery-DFProperties-End -->
 
 <!-- EnergySaverBatteryThresholdOnBattery-GpMapping-Begin -->
@@ -403,6 +464,7 @@ This policy setting allows you to specify battery charge level at which Energy S
 | Access Type | Add, Delete, Get, Replace |
 | Allowed Values | Range: `[0-100]` |
 | Default Value  | 0 |
+| Dependency [Power_EnergySaverBatteryThresholdPluggedIn_DependencyGroup] | Dependency Type: `DependsOn` <br> Dependency URI: `./Device/Vendor/MSFT/Policy/Config/Power/EnableEnergySaver` <br> Dependency Allowed Value: `[1]` <br> Dependency Allowed Value Type: `Range` <br>  |
 <!-- EnergySaverBatteryThresholdPluggedIn-DFProperties-End -->
 
 <!-- EnergySaverBatteryThresholdPluggedIn-GpMapping-Begin -->

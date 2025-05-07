@@ -8,7 +8,7 @@ author: mestew
 manager: aaroncz
 ms.localizationpriority: medium
 ms.topic: article
-ms.date: 02/19/2025
+ms.date: 04/14/2025
 ms.collection:
   - highpri
   - tier2
@@ -23,6 +23,8 @@ The Windows 10 Extended Security Updates (ESU) program gives customers the optio
 
 Individuals or organizations who elect to continue using Windows 10 after support ends on October 14, 2025, will have the option of enrolling their PCs into a paid ESU subscription. The ESU program enables PCs to continue to receive critical and important security updates through an annual subscription service after support ends. The [Microsoft Security Response Center](https://msrc.microsoft.com/) defines the [severity rating for security updates](https://www.microsoft.com/msrc/security-update-severity-rating-system).
 
+> [!Note]
+> Looking for consumer information? For individuals or Windows 10 Home customers, more information about Extended Security Updates for Windows 10 is available in the frequently asked questions section of the [End of support for Windows 10](https://www.microsoft.com/windows/end-of-support) page. <!--10013381-->
 
 ## Device prerequisites
 
@@ -35,7 +37,9 @@ ESUs doesn't include the following items:
 - New features
 - Customer-requested nonsecurity updates
 - Design change requests
-- General support won't be provided for Windows versions past the end of support date. Support will be available only to those organizations that purchase ESU for specific situations concerning the security updates. To get technical support, organizations must have an active [support plan](https://www.microsoft.com/enterprise/services/unified-support-solutions) in place.
+- General support won't be provided for Windows versions past the end of support date. The Windows 10 ESU only includes support for the license activation, installation, and possible regressions of the ESU itself. To get technical support for the ESU, organizations must have an active [support plan](https://www.microsoft.com/microsoft-unified) in place. <!--9913216-->
+
+
 
 ## Frequently asked questions
 
@@ -43,7 +47,19 @@ The following are frequently asked questions about the ESU program for Windows 1
 
 ### How much does ESU cost?
 
-Extended Security Updates for organizations and businesses on Windows 10 can be purchased today through the Microsoft Volume Licensing Program, at $61 USD per device for Year One. For more information, see [When to use Windows 10 Extended Security Updates](https://techcommunity.microsoft.com/blog/windows-itpro-blog/when-to-use-windows-10-extended-security-updates/4102628). The price doubles every consecutive year, for a maximum of three years. ESU is available at no additional cost for Windows 10 virtual machines running in Windows 365 or Azure Virtual Desktop. Additionally, Windows 10 endpoints connecting to Windows 365 Cloud PCs will be entitled to the ESU for up to three years, with an active Windows 365 subscription license. For more information about Windows 365, see [What is Windows 365?](/windows-365/overview).
+Extended Security Updates for organizations and businesses on Windows 10 can be purchased today through the Microsoft Volume Licensing Program, at $61 USD per device for Year One. For more information, see [When to use Windows 10 Extended Security Updates](https://techcommunity.microsoft.com/blog/windows-itpro-blog/when-to-use-windows-10-extended-security-updates/4102628). The price doubles every consecutive year, for a maximum of three years. ESU is available at no additional cost for Windows 10 virtual machines in the following services:
+
+- [Windows 365](/windows-365/overview) 
+- [Azure Virtual Desktop](/azure/virtual-desktop/overview)
+- [Azure virtual machines](/azure/virtual-machines/overview)
+- [Azure Dedicated Host](/azure/virtual-machines/dedicated-hosts)
+- [Azure VMware Solution](/azure/azure-vmware/introduction)
+- [Nutanix Cloud Clusters on Azure](/azure/baremetal-infrastructure/workloads/nc2-on-azure/about-nc2-on-azure)
+- [Azure Local](/azure/azure-local/overview) (Azure Local is the new name for Azure Stack HCI)
+- [Azure Stack Hub](/azure-stack/operator/azure-stack-overview)
+- [Azure Stack Edge](/azure/databox-online/)
+
+Additionally, Windows 10 endpoints connecting to Windows 365 Cloud PCs will be entitled to the ESU for up to three years, with an active Windows 365 subscription license. For more information about Windows 365, see [What is Windows 365?](/windows-365/overview).
 
 For individuals or Windows 10 Home customers, Extended Security Updates for Windows 10 will be available for purchase at $30 for one year. 
 

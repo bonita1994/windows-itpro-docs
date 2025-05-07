@@ -471,6 +471,8 @@ items:
           href: policy-csp-kerberos.md
         - name: KioskBrowser
           href: policy-csp-kioskbrowser.md
+        - name: LanmanServer
+          href: policy-csp-lanmanserver.md
         - name: LanmanWorkstation
           href: policy-csp-lanmanworkstation.md
         - name: Licensing
@@ -866,6 +868,11 @@ items:
       items:
       - name: RemoteFind DDF file
         href: remotefind-ddf-file.md
+    - name: RemoteRemediation
+      href: remoteremediation-csp.md
+      items:
+      - name: RemoteRemediation DDF file
+        href: remoteremediation-ddf-file.md
     - name: RemoteWipe
       href: remotewipe-csp.md
       items:
@@ -979,6 +986,11 @@ items:
       items:
       - name: WindowsAutopilot DDF file
         href: windowsautopilot-ddf-file.md
+    - name: WindowsBackupAndRestore
+      href: windowsbackupandrestore-csp.md
+      items:
+      - name: WindowsBackupAndRestore DDF file
+        href: windowsbackupandrestore-ddf-file.md
     - name: WindowsDefenderApplicationGuard
       href: windowsdefenderapplicationguard-csp.md
       items:
@@ -994,3 +1006,8 @@ items:
       items:
       - name: WiredNetwork DDF file
         href: wirednetwork-ddf-file.md
+    - name: WirelessNetworkPreference
+      href: wirelessnetworkpreference-csp.md
+      items:
+      - name: WirelessNetworkPreference DDF file
+        href: wirelessnetworkpreference-ddf-file.md

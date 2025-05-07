@@ -45,7 +45,7 @@ Hide only the Bluetooth page, which has the URI `ms-settings:bluetooth`:
 
 [!INCLUDE [tab-intro](../../../includes/configure/tab-intro.md)]
 
-#### [:::image type="icon" source="../images/icons/intune.svg" border="false"::: **Intune/CSP**](#tab/intune)
+#### [:::image type="icon" source="../images/icons/intune.svg" border="false"::: **Intune**](#tab/intune)
 
 [!INCLUDE [intune-settings-catalog-1](../../../includes/configure/intune-settings-catalog-1.md)]
 
@@ -55,7 +55,9 @@ Hide only the Bluetooth page, which has the URI `ms-settings:bluetooth`:
 
 [!INCLUDE [intune-settings-catalog-2](../../../includes/configure/intune-settings-catalog-2.md)]
 
-Alternatively, you can configure devices using a [custom policy][INT-1] with the [Policy CSP][CSP-1].
+#### [:::image type="icon" source="../images/icons/csp.svg"::: **CSP**](#tab/csp)
+
+You can configure devices using the [Policy CSP][CSP-1].
 
 | Setting |
 |--|

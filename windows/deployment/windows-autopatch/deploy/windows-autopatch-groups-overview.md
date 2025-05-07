@@ -1,7 +1,7 @@
 ---
 title: Windows Autopatch groups overview
 description: This article explains what Autopatch groups are
-ms.date: 09/16/2024
+ms.date: 03/31/2025
 ms.service: windows-client
 ms.subservice: autopatch
 ms.topic: concept-article
@@ -17,13 +17,11 @@ ms.collection:
 
 # Windows Autopatch groups
 
-[!INCLUDE [windows-autopatch-enterprise-e3-f3-licenses](../includes/windows-autopatch-enterprise-e3-f3-licenses.md)]
-
 As organizations move to a managed-service model where Microsoft manages update processes on their behalf, they’re challenged with having the right representation of their organizational structures followed by their own deployment cadence. Windows Autopatch groups help organizations manage updates in a way that makes sense for their businesses with no extra cost or unplanned disruptions.
 
 ## What are Windows Autopatch groups?
 
-An Autopatch group is a logical container or unit that groups several [Microsoft Entra groups](/entra/fundamentals/groups-view-azure-portal), and software update policies, such as [Update rings policy for Windows 10 and later](/mem/intune/protect/windows-10-update-rings) and [feature updates for Windows 10 and later policies](/mem/intune/protect/windows-10-feature-updates).
+An Autopatch group is a logical container or unit that groups several [Microsoft Entra groups](/entra/fundamentals/groups-view-azure-portal), and software update policies, such as [Update rings policy for Windows 10 and later](/mem/intune/protect/windows-10-update-rings), [feature updates for Windows 10 and later policies](/mem/intune/protect/windows-10-feature-updates), [driver update policies](../manage/windows-autopatch-manage-driver-and-firmware-updates.md), [Microsoft 365 App update policies](../manage/windows-autopatch-microsoft-365-policies.md), and [Microsoft Edge update policies](../manage/windows-autopatch-edge.md).
 
 Autopatch groups are intended to help organizations that require a more precise representation of their organization's structures along with their own update deployment cadence in the service.
 
@@ -49,14 +47,11 @@ Before you start managing Autopatch groups, ensure you meet the following prereq
 | Review [Windows Autopatch groups overview documentation](../deploy/windows-autopatch-groups-overview.md) | Understand [key benefits](../deploy/windows-autopatch-groups-overview.md#key-benefits) and [common ways to use Autopatch groups](../deploy/windows-autopatch-groups-overview.md#common-ways-to-use-autopatch-groups) within your organization. |
 | Make sure you have [app-only auth turned on in your Windows Autopatch tenant](../monitor/windows-autopatch-maintain-environment.md#windows-autopatch-tenant-actions). Otherwise, the Autopatch groups functionality doesn't work properly. Autopatch uses app-only auth to: |<ul><li>Read device attributes to successfully register devices.</li><li>Manage all configurations related to the operation of the service.</li></ul> |
 | Make sure that all device-based Microsoft Entra groups you intend to use with Autopatch groups are created before using the feature. | Review your existing Microsoft Entra group dynamic queries and direct device memberships to:<ul><li>Avoid having device membership overlaps in between device-based Microsoft Entra groups that are going to be used with Autopatch groups.</li><li>Prevent device conflicts within an Autopatch group or across several Autopatch groups. **Autopatch groups doesn't support user-based Microsoft Entra groups**.</li></ul> |
-| Ensure devices used with your existing Microsoft Entra groups meet [device registration prerequisite checks](../deploy/windows-autopatch-device-registration-overview.md#prerequisites-for-device-registration) when being registered with the service | Autopatch groups register devices on your behalf, and device readiness states are determined based on the registration state and if any applicable alerts are targeting the device. For more information, see the [Devices report](../deploy/windows-autopatch-register-devices.md#devices-report). |
-
-> [!TIP]
-> [Update rings](/mem/intune/protect/windows-10-update-rings) and [feature updates](/mem/intune/protect/windows-10-feature-updates) for Windows 10 and later policies that are created and managed by Windows Autopatch can be restored using the [Policy health](../monitor/windows-autopatch-policy-health-and-remediation.md) feature. For more information on remediation actions, see [restore Windows update policies](../monitor/windows-autopatch-policy-health-and-remediation.md#restore-missing-windows-update-policies).
+| Ensure devices used with your existing Microsoft Entra groups meet [device registration prerequisite checks](../deploy/windows-autopatch-device-registration-overview.md#prerequisites-for-device-registration) when being registered with the service | Autopatch groups register devices on your behalf, and device readiness states are determined based on the registration state and if any applicable alerts are targeting the device. For more information, see the [Autopatch groups membership report](../deploy/windows-autopatch-register-devices.md#autopatch-groups-membership-report). |
 
 ## Register devices into Autopatch groups
 
-Autopatch groups register devices with the Windows Autopatch service when you either [create](../manage/windows-autopatch-manage-autopatch-groups.md#create-an-autopatch-group) or [edit an Autopatch group](../manage/windows-autopatch-manage-autopatch-groups.md#edit-an-autopatch-group). For more information, see [Register devices into Autopatch groups](../deploy/windows-autopatch-register-devices.md#register-devices-into-autopatch-groups).
+Autopatch groups register devices with the Windows Autopatch service when you either [create](../manage/windows-autopatch-manage-autopatch-groups.md#create-an-autopatch-group) or [edit an Autopatch group](../manage/windows-autopatch-manage-autopatch-groups.md#edit-an-autopatch-group). For more information, see [Register devices into Autopatch groups](../deploy/windows-autopatch-register-devices.md#register-devices-with-autopatch-groups).
 
 ## High-level architecture diagram overview
 
@@ -67,9 +62,9 @@ An Autopatch group is a function app that is part of the device registration mic
 | Step | Description |
 | ----- | ----- |
 | Step 1: Create an Autopatch group | Create an Autopatch group. Autopatch groups register devices with the Windows Autopatch service when you either [create](../manage/windows-autopatch-manage-autopatch-groups.md#create-an-autopatch-group) or [edit an Autopatch group](../manage/windows-autopatch-manage-autopatch-groups.md#edit-an-autopatch-group). |
-| Step 2: Windows Autopatch uses Microsoft Graph to create Microsoft Entra ID and policy assignments | Windows Autopatch service uses Microsoft Graph to coordinate the creation of:<ul><li>Microsoft Entra groups</li><li>Software update policy assignments with other Microsoft services, such as Microsoft Entra ID, Intune, and Windows Update for Business (WUfB) based on IT admin choices when you [create](../manage/windows-autopatch-manage-autopatch-groups.md#create-an-autopatch-group) or [edit an Autopatch group](../manage/windows-autopatch-manage-autopatch-groups.md#edit-an-autopatch-group).</li></ul> |
-| Step 3: Intune assigns software update policies | Once Microsoft Entra groups are created in the Microsoft Entra service, Intune is used to assign the software update policies to these groups and provide the number of devices that need the software update policies to the Windows Update for Business (WUfB) service. |
-| Step 4: Windows Update for Business responsibilities | Windows Update for Business (WUfB) is the service responsible for:<ul><li>Delivering those update policies</li><li>Retrieving update deployment statuses back from devices</li><li>Sending back the status information to Microsoft Intune, and then to the Windows Autopatch service</li></ul> |
+| Step 2: Windows Autopatch uses Microsoft Graph to create Microsoft Entra ID and policy assignments | Windows Autopatch service uses Microsoft Graph to coordinate the creation of:<ul><li>Microsoft Entra groups</li><li>Software update policy assignments with other Microsoft services, such as Microsoft Entra ID, Intune, or Windows Update client policies based on IT admin choices when you [create](../manage/windows-autopatch-manage-autopatch-groups.md#create-an-autopatch-group) or [edit an Autopatch group](../manage/windows-autopatch-manage-autopatch-groups.md#edit-an-autopatch-group).</li></ul> |
+| Step 3: Intune assigns software update policies | Once Microsoft Entra groups are created in the Microsoft Entra service, Intune is used to assign the software update policies to these groups and provide the number of devices that need the software update policies. |
+| Step 4: Windows Autopatch responsibilities | Windows Autopatch service is responsible for:<ul><li>Delivering those update policies</li><li>Retrieving update deployment statuses back from devices</li></ul> |
 
 ## Autopatch group deployment rings
 
@@ -108,7 +103,7 @@ The following are three common uses for using Autopatch groups.
 :::image type="content" source="../media/autopatch-groups-finance-department-example.png" alt-text="Finance department example" lightbox="../media/autopatch-groups-finance-department-example.png":::
 
 > [!IMPORTANT]
-> Once Autopatch groups are setup, the release of either Windows quality or feature updates will be deployed sequentially through its deployment rings.
+> Once Autopatch groups are set up, the releases of either Windows quality or feature updates are deployed sequentially through its deployment rings.
 
 ### Use case #2
 
@@ -119,7 +114,7 @@ The following are three common uses for using Autopatch groups.
 :::image type="content" source="../media/autopatch-groups-contoso-chicago-example.png" alt-text="Contoso Chicago example" lightbox="../media/autopatch-groups-contoso-chicago-example.png":::
 
 > [!IMPORTANT]
-> Once Autopatch groups are setup, the release of either Windows quality or feature updates will be deployed sequentially through its deployment rings.
+> Once Autopatch groups are set up, the releases of either Windows quality or feature updates are deployed sequentially through its deployment rings.
 
 ## Supported configurations
 
@@ -137,9 +132,9 @@ Autopatch groups work with the following software update workloads:
 
 ### Maximum number of Autopatch groups
 
-Windows Autopatch supports up to 50 Autopatch groups in your tenant. Each Autopatch group supports up to 15 deployment rings.
+Windows Autopatch supports up to 300 Autopatch groups in your tenant. Each Autopatch group supports up to 15 deployment rings.
 
 > [!NOTE]
-> If you reach the maximum number of Autopatch groups supported (50), and try to create more Autopatch groups, the "Create" option in the Autopatch groups blade will be greyed out.
+> If you reach the maximum number of Autopatch groups supported (300), and try to create more Autopatch groups, the "Create" option in the Autopatch groups blade is greyed out.
 
 To manage your Autopatch groups, see [Manage Windows Autopatch groups](../manage/windows-autopatch-manage-autopatch-groups.md).

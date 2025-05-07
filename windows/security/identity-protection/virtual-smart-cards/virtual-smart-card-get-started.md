@@ -2,7 +2,7 @@
 title: Get Started with Virtual Smart Cards - Walkthrough Guide
 description: This topic for the IT professional describes how to set up a basic test environment for using TPM virtual smart cards.
 ms.topic: get-started
-ms.date: 09/06/2024
+ms.date: 04/07/2025
 ---
 
 # Get Started with Virtual Smart Cards: Walkthrough Guide

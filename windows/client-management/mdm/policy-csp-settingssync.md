@@ -1,7 +1,7 @@
 ---
 title: SettingsSync Policy CSP
 description: Learn more about the SettingsSync Area in Policy CSP.
-ms.date: 03/12/2025
+ms.date: 04/30/2025
 ms.topic: generated-reference
 ---
 
@@ -140,39 +140,39 @@ If you don't set or disable this setting, syncing of the "language preferences" 
 
 <!-- DisableLanguageSettingSync-End -->
 
-<!-- EnableWindowsbackup-Begin -->
-## EnableWindowsbackup
+<!-- EnableWindowsBackup-Begin -->
+## EnableWindowsBackup
 
-<!-- EnableWindowsbackup-Applicability-Begin -->
+<!-- EnableWindowsBackup-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
 | ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows Insider Preview |
-<!-- EnableWindowsbackup-Applicability-End -->
+<!-- EnableWindowsBackup-Applicability-End -->
 
-<!-- EnableWindowsbackup-OmaUri-Begin -->
+<!-- EnableWindowsBackup-OmaUri-Begin -->
 ```Device
-./Device/Vendor/MSFT/Policy/Config/SettingsSync/EnableWindowsbackup
+./Device/Vendor/MSFT/Policy/Config/SettingsSync/EnableWindowsBackup
 ```
-<!-- EnableWindowsbackup-OmaUri-End -->
+<!-- EnableWindowsBackup-OmaUri-End -->
 
-<!-- EnableWindowsbackup-Description-Begin -->
+<!-- EnableWindowsBackup-Description-Begin -->
 <!-- Description-Source-Not-Found -->
-<!-- EnableWindowsbackup-Description-End -->
+<!-- EnableWindowsBackup-Description-End -->
 
-<!-- EnableWindowsbackup-Editable-Begin -->
+<!-- EnableWindowsBackup-Editable-Begin -->
 <!-- Add any additional information about this policy here. Anything outside this section will get overwritten. -->
-<!-- EnableWindowsbackup-Editable-End -->
+<!-- EnableWindowsBackup-Editable-End -->
 
-<!-- EnableWindowsbackup-DFProperties-Begin -->
+<!-- EnableWindowsBackup-DFProperties-Begin -->
 **Description framework properties**:
 
 | Property name | Property value |
 |:--|:--|
 | Format | `chr` (string) |
 | Access Type | Add, Delete, Get, Replace |
-<!-- EnableWindowsbackup-DFProperties-End -->
+<!-- EnableWindowsBackup-DFProperties-End -->
 
-<!-- EnableWindowsbackup-AdmxBacked-Begin -->
+<!-- EnableWindowsBackup-AdmxBacked-Begin -->
 <!-- ADMX-Not-Found -->
 [!INCLUDE [ADMX-backed policy note](includes/mdm-admx-policy-note.md)]
 
@@ -180,15 +180,15 @@ If you don't set or disable this setting, syncing of the "language preferences" 
 
 | Name | Value |
 |:--|:--|
-| Name | EnableWindowsbackup |
+| Name | EnableWindowsBackup |
 | ADMX File Name | SettingSync.admx |
-<!-- EnableWindowsbackup-AdmxBacked-End -->
+<!-- EnableWindowsBackup-AdmxBacked-End -->
 
-<!-- EnableWindowsbackup-Examples-Begin -->
+<!-- EnableWindowsBackup-Examples-Begin -->
 <!-- Add any examples for this policy here. Examples outside this section will get overwritten. -->
-<!-- EnableWindowsbackup-Examples-End -->
+<!-- EnableWindowsBackup-Examples-End -->
 
-<!-- EnableWindowsbackup-End -->
+<!-- EnableWindowsBackup-End -->
 
 <!-- SettingsSync-CspMoreInfo-Begin -->
 <!-- Add any additional information about this CSP here. Anything outside this section will get overwritten. -->

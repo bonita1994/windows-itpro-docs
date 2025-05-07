@@ -11,7 +11,7 @@ appliesto:
 - ✅ <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Windows 11</a>
 - ✅ Supported Linux distributions
 - ✅ <a href=https://learn.microsoft.com/windows/deployment/do/waas-microsoft-connected-cache target=_blank>Microsoft Connected Cache for Enterprise</a>	
-ms.date: 10/30/2024
+ms.date: 03/19/2025
 ---
 
 # Monitor cache node usage
@@ -30,7 +30,7 @@ Using the two monitoring sections, you can gather essential insights into the he
 
 Below are the metrics found in the **Cache Node Summary** dashboard, along with their descriptions. This dashboard only reflects data received from cache nodes in the last 24 hours.
 
-![Screenshot of cache node summary in the Azure portal interface.](../images/mcc-ent-cache-node-summary.png)
+![Screenshot of cache node summary in the Azure portal interface.](images/mcc-ent-cache-node-summary.png)
 
 | Metric | Description |
 | --- | --- |
@@ -46,7 +46,7 @@ Below are the metrics found in the **Cache Node Summary** dashboard, along with 
 
 The two predefined charts on the Overview page visually represent the egress and types of content served by your Connected Cache node. The filters that are displayed below the cache node summary dashboard only affect the data shown in the key metric charts.
 
-![Screenshot of key metric charts in the Azure portal interface.](../images/mcc-ent-key-metric-charts.png)
+![Screenshot of key metric charts in the Azure portal interface.](images/mcc-ent-key-metric-charts.png)
 
 #### Filters
 
@@ -67,9 +67,9 @@ The content types displayed in the chart each have a distinct color and are sort
 
 ### Cache node details
 
-The **Cache Nodes** section under the **Cache Node Management** tab displays cache node information such as Status, Host machine OS, Software Version, and Cache Node ID.
+The **Cache Nodes** section under the **Cache Node Management** tab displays cache node information such as status, host machine OS, software version, and cache node ID.
 
-![Screenshot of cache node details in the Azure portal interface.](../images/mcc-ent-cache-node-details.png)
+![Screenshot of cache node details in the Azure portal interface.](images/mcc-ent-cache-node-details.png)
 
 | Metric | Description |
 | --- | --- |

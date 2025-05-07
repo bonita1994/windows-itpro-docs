@@ -1,7 +1,7 @@
 ---
 title: Policy CSP
 description: Learn more about the Policy CSP.
-ms.date: 03/12/2025
+ms.date: 04/21/2025
 ms.topic: generated-reference
 ---
 
@@ -1120,6 +1120,7 @@ Specifies the name/value pair used in the policy. See the individual Area DDFs f
 - [InternetExplorer](policy-csp-internetexplorer.md)
 - [Kerberos](policy-csp-kerberos.md)
 - [KioskBrowser](policy-csp-kioskbrowser.md)
+- [LanmanServer](policy-csp-lanmanserver.md)
 - [LanmanWorkstation](policy-csp-lanmanworkstation.md)
 - [Licensing](policy-csp-licensing.md)
 - [LocalPoliciesSecurityOptions](policy-csp-localpoliciessecurityoptions.md)

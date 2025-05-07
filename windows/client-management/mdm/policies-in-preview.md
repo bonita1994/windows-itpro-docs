@@ -1,7 +1,7 @@
 ---
 title: Configuration service provider preview policies
 description: Learn more about configuration service provider (CSP) policies that are available for Windows Insider Preview.
-ms.date: 02/13/2025
+ms.date: 05/02/2025
 ms.topic: generated-reference
 ---
 
@@ -23,6 +23,7 @@ This article lists the policies that are applicable for Windows Insider Preview 
 ## ApplicationManagement
 
 - [AllowedNonAdminPackageFamilyNameRules](policy-csp-applicationmanagement.md#allowednonadminpackagefamilynamerules)
+- [ConfigureMSIXAuthenticationAuthorizedDomains](policy-csp-applicationmanagement.md#configuremsixauthenticationauthorizeddomains)
 
 ## ClientCertificateInstall CSP
 
@@ -85,6 +86,7 @@ This article lists the policies that are applicable for Windows Insider Preview 
 
 - [EnableDevDrive](policy-csp-filesystem.md#enabledevdrive)
 - [DevDriveAttachPolicy](policy-csp-filesystem.md#devdriveattachpolicy)
+- [ClfsAuthenticationChecking](policy-csp-filesystem.md#clfsauthenticationchecking)
 
 ## HealthAttestation CSP
 
@@ -92,9 +94,8 @@ This article lists the policies that are applicable for Windows Insider Preview 
 
 ## HumanPresence
 
-- [ForcePrivacyScreen](policy-csp-humanpresence.md#forceprivacyscreen)
-- [ForcePrivacyScreenDim](policy-csp-humanpresence.md#forceprivacyscreendim)
-- [ForcePrivacyScreenNotification](policy-csp-humanpresence.md#forceprivacyscreennotification)
+- [ForceOnlookerDetection](policy-csp-humanpresence.md#forceonlookerdetection)
+- [ForceOnlookerDetectionAction](policy-csp-humanpresence.md#forceonlookerdetectionaction)
 
 ## InternetExplorer
 
@@ -111,9 +112,32 @@ This article lists the policies that are applicable for Windows Insider Preview 
 - [StartInstallation](language-pack-management-csp.md#installlanguage-idstartinstallation)
 - [SystemPreferredUILanguages](language-pack-management-csp.md#languagesettingssystempreferreduilanguages)
 
+## LanmanServer
+
+- [AuditClientDoesNotSupportEncryption](policy-csp-lanmanserver.md#auditclientdoesnotsupportencryption)
+- [AuditClientDoesNotSupportSigning](policy-csp-lanmanserver.md#auditclientdoesnotsupportsigning)
+- [AuditInsecureGuestLogon](policy-csp-lanmanserver.md#auditinsecureguestlogon)
+- [AuthRateLimiterDelayInMs](policy-csp-lanmanserver.md#authratelimiterdelayinms)
+- [EnableAuthRateLimiter](policy-csp-lanmanserver.md#enableauthratelimiter)
+- [EnableMailslots](policy-csp-lanmanserver.md#enablemailslots)
+- [MaxSmb2Dialect](policy-csp-lanmanserver.md#maxsmb2dialect)
+- [MinSmb2Dialect](policy-csp-lanmanserver.md#minsmb2dialect)
+
+## LanmanWorkstation
+
+- [AuditInsecureGuestLogon](policy-csp-lanmanworkstation.md#auditinsecureguestlogon)
+- [AuditServerDoesNotSupportEncryption](policy-csp-lanmanworkstation.md#auditserverdoesnotsupportencryption)
+- [AuditServerDoesNotSupportSigning](policy-csp-lanmanworkstation.md#auditserverdoesnotsupportsigning)
+- [EnableMailslots](policy-csp-lanmanworkstation.md#enablemailslots)
+- [MaxSmb2Dialect](policy-csp-lanmanworkstation.md#maxsmb2dialect)
+- [MinSmb2Dialect](policy-csp-lanmanworkstation.md#minsmb2dialect)
+- [RequireEncryption](policy-csp-lanmanworkstation.md#requireencryption)
+
 ## LocalPoliciesSecurityOptions
 
 - [InteractiveLogon_NumberOfPreviousLogonsToCache](policy-csp-localpoliciessecurityoptions.md#interactivelogon_numberofpreviouslogonstocache)
+- [NetworkAccess_RemotelyAccessibleRegistryPaths](policy-csp-localpoliciessecurityoptions.md#networkaccess_remotelyaccessibleregistrypaths)
+- [NetworkAccess_RemotelyAccessibleRegistryPathsAndSubpaths](policy-csp-localpoliciessecurityoptions.md#networkaccess_remotelyaccessibleregistrypathsandsubpaths)
 - [UserAccountControl_BehaviorOfTheElevationPromptForAdministratorProtection](policy-csp-localpoliciessecurityoptions.md#useraccountcontrol_behavioroftheelevationpromptforadministratorprotection)
 - [UserAccountControl_TypeOfAdminApprovalMode](policy-csp-localpoliciessecurityoptions.md#useraccountcontrol_typeofadminapprovalmode)
 
@@ -133,6 +157,10 @@ This article lists the policies that are applicable for Windows Insider Preview 
 
 - [DisablePostLogonProvisioning](passportforwork-csp.md#devicetenantidpoliciesdisablepostlogonprovisioning)
 
+## Power
+
+- [EnableEnergySaver](policy-csp-power.md#enableenergysaver)
+
 ## Printers
 
 - [ConfigureIppTlsCertificatePolicy](policy-csp-printers.md#configureipptlscertificatepolicy)
@@ -141,9 +169,20 @@ This article lists the policies that are applicable for Windows Insider Preview 
 
 - [TS_SERVER_REMOTEAPP_USE_SHELLAPPRUNTIME](policy-csp-remotedesktopservices.md#ts_server_remoteapp_use_shellappruntime)
 
+## RemoteRemediation CSP
+
+- [EnableCloudRemediation](remoteremediation-csp.md#cloudremediationsettingsenablecloudremediation)
+- [EnableAutoRemediation](remoteremediation-csp.md#cloudremediationsettingsautoremediationsettingsenableautoremediation)
+- [SetTimeToReboot](remoteremediation-csp.md#cloudremediationsettingsautoremediationsettingssettimetoreboot)
+- [SetRetryInterval](remoteremediation-csp.md#cloudremediationsettingsautoremediationsettingssetretryinterval)
+- [NetworkSSID](remoteremediation-csp.md#cloudremediationsettingsnetworksettingsnetworkcredentialsnetworkssid)
+- [NetworkPassword](remoteremediation-csp.md#cloudremediationsettingsnetworksettingsnetworkcredentialsnetworkpassword)
+- [NetworkPasswordEncryptionType](remoteremediation-csp.md#cloudremediationsettingsnetworksettingsnetworkcredentialsnetworkpasswordencryptiontype)
+- [NetworkPasswordEncryptionStore](remoteremediation-csp.md#cloudremediationsettingsnetworksettingsnetworkcredentialsnetworkpasswordencryptionstore)
+
 ## SettingsSync
 
-- [EnableWindowsbackup](policy-csp-settingssync.md#enablewindowsbackup)
+- [EnableWindowsBackup](policy-csp-settingssync.md#enablewindowsbackup)
 
 ## Start
 
@@ -153,6 +192,10 @@ This article lists the policies that are applicable for Windows Insider Preview 
 ## SurfaceHub CSP
 
 - [ExchangeModernAuthEnabled](surfacehub-csp.md#deviceaccountexchangemodernauthenabled)
+
+## System
+
+- [DisableCHPE](policy-csp-system.md#disablechpe)
 
 ## TextInput
 
@@ -169,14 +212,20 @@ This article lists the policies that are applicable for Windows Insider Preview 
 
 ## WindowsAI
 
+- [DisableAIDataAnalysis](policy-csp-windowsai.md#disableaidataanalysis)
 - [SetDenyAppListForRecall](policy-csp-windowsai.md#setdenyapplistforrecall)
 - [SetDenyUriListForRecall](policy-csp-windowsai.md#setdenyurilistforrecall)
 - [SetMaximumStorageSpaceForRecallSnapshots](policy-csp-windowsai.md#setmaximumstoragespaceforrecallsnapshots)
 - [SetMaximumStorageDurationForRecallSnapshots](policy-csp-windowsai.md#setmaximumstoragedurationforrecallsnapshots)
+- [DisableClickToDo](policy-csp-windowsai.md#disableclicktodo)
 - [DisableImageCreator](policy-csp-windowsai.md#disableimagecreator)
 - [DisableCocreator](policy-csp-windowsai.md#disablecocreator)
 - [DisableGenerativeFill](policy-csp-windowsai.md#disablegenerativefill)
 - [AllowRecallEnablement](policy-csp-windowsai.md#allowrecallenablement)
+
+## WindowsBackupAndRestore CSP
+
+- [EnableWindowsRestore](windowsbackupandrestore-csp.md#enablewindowsrestore)
 
 ## WindowsLicensing CSP
 
@@ -186,6 +235,22 @@ This article lists the policies that are applicable for Windows Insider Preview 
 - [SubscriptionLastErrorDescription](windowslicensing-csp.md#subscriptionssubscriptionlasterrordescription)
 - [DisableSubscription](windowslicensing-csp.md#subscriptionsdisablesubscription)
 - [RemoveSubscription](windowslicensing-csp.md#subscriptionsremovesubscription)
+
+## WirelessNetworkPreference CSP
+
+- [IsEnabled](wirelessnetworkpreference-csp.md#isenabled)
+- [PreferCellularOverWiFi](wirelessnetworkpreference-csp.md#prefercellularoverwifi)
+- [eSIMprofilesCount](wirelessnetworkpreference-csp.md#statusesimprofilescount)
+- [eSIMprofilesMatched](wirelessnetworkpreference-csp.md#statusesimprofilesmatched)
+- [eSIMpolicyStatus](wirelessnetworkpreference-csp.md#statusesimpolicystatus)
+- [NetworkDiscoveryOption](wirelessnetworkpreference-csp.md#parameterscellularparametersnetworkdiscoveryoption)
+- [MaxRescanIntervalInSeconds](wirelessnetworkpreference-csp.md#parameterscellularparametersmaxrescanintervalinseconds)
+- [PreferredProfileWakeConnectionTimerInSeconds](wirelessnetworkpreference-csp.md#parameterscellularparameterspreferredprofilewakeconnectiontimerinseconds)
+- [ProfileRegistrationTimerInSeconds](wirelessnetworkpreference-csp.md#parameterscellularparametersprofileregistrationtimerinseconds)
+- [ScreenOffDurationToTriggerNetworkDiscoveryInMinutes](wirelessnetworkpreference-csp.md#parameterscellularparametersscreenoffdurationtotriggernetworkdiscoveryinminutes)
+- [Priority](wirelessnetworkpreference-csp.md#connectionprofilesconnectionprofileidpriority)
+- [WirelessType](wirelessnetworkpreference-csp.md#connectionprofilesconnectionprofileidwirelesstype)
+- [PLMNID](wirelessnetworkpreference-csp.md#connectionprofilesconnectionprofileidcellularplmnid)
 
 ## Related articles
 
